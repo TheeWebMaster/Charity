@@ -1,0 +1,42 @@
+.headline {
+  font-family: "Playfair Display", serif;
+  font-size: 3.4375rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 0;
+  margin-bottom: .5em;
+
+  &--black {
+    color: $mainBlack;
+  }
+  &--tiny {
+    font-size: 0.8125rem;
+  }
+  &--small {
+    font-size: 1.25rem;
+  }
+  &--medium {
+    font-size: 2.3125rem;
+  }
+  &--centered {
+    text-align: center;
+  }
+  &--light-grey {
+    color: $lightGrey;
+  }
+  &--letter-spread {
+    letter-spacing: 2px;
+  }
+  &--main-typo {
+    font-family: inherit;
+  }
+  &--thin {
+    font-weight: 500;
+  }
+  &--margin-bottom-large {
+    margin-bottom: 3em;
+  }
+  &--no-margins {
+    margin-bottom: 0;
+  }
+}

@@ -203,4 +203,93 @@ select { /* 1 */
   box-sizing: border-box;
 }body {
   font-family: Roboto, serif;
-}
+}p {
+  margin: 0;
+}.banner {
+  height: 100vh;
+  position: relative;
+  background: url('../../assets/images/banner_img.png');
+  background-size: cover;
+  background-position: center center;
+}.position-centered {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}.position-centered--semi-centered {
+    top: 43%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 46%;
+
+  }.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}.wrapper--fixed-width {
+    width: 490px;
+  }.headline {
+  font-family: "Playfair Display", serif;
+  font-size: 3.4375rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 0;
+  margin-bottom: .5em;
+}.headline--black {
+    color: #14182d;
+  }.headline--tiny {
+    font-size: 0.8125rem;
+  }.headline--small {
+    font-size: 1.25rem;
+  }.headline--medium {
+    font-size: 2.3125rem;
+  }.headline--centered {
+    text-align: center;
+  }.headline--light-grey {
+    color: #b3b4b3;
+  }.headline--letter-spread {
+    letter-spacing: 2px;
+  }.headline--main-typo {
+    font-family: inherit;
+  }.headline--thin {
+    font-weight: 500;
+  }.headline--margin-bottom-large {
+    margin-bottom: 3em;
+  }.headline--no-margins {
+    margin-bottom: 0;
+  }.paragraph {
+  color: white;
+  line-height: 1.8;
+  font-size: 0.9375rem;
+}.paragraph--grey {
+    color: #7f7f7f;
+  }.button {
+  text-decoration: none;
+  color: white;
+  background-color: #00c424;
+  padding: 1.2em 3em;
+  border-radius: 50px;
+  font-size: .9rem;
+  margin-top: 2em;
+  display: inline-block;
+
+}.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  grid-gap: 30px;
+  -webkit-box-pack: center;
+          justify-content: center;
+}.grid__item {
+    background-color: #f2f5f3;
+    padding: 2em 2em;
+  }.flex {
+  display: -webkit-box;
+  display: flex;
+}.flex__margin-right {
+    margin-right: 1.2em;
+  }.flex--align-items-end {
+    -webkit-box-align: end;
+            align-items: flex-end;
+  }.flex--margin-bottom {
+    margin-bottom: 1.5em;
+  }

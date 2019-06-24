@@ -1,0 +1,8 @@
+.paragraph {
+  color: white;
+  line-height: 1.8;
+  font-size: 0.9375rem;
+  &--grey {
+    color: $mainGrey;
+  }
+}

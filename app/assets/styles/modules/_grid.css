@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  grid-gap: 30px;
+  justify-content: center;
+
+  &__item {
+    background-color: #f2f5f3;
+    padding: 2em 2em;
+  }
+}

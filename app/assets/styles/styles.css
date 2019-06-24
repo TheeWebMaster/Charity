@@ -1,3 +1,12 @@
 @import 'normalize.css';
 @import './modules/_general';
-@import './modules/_fonts'
+@import './modules/_variables';
+@import './modules/_fonts';
+@import './modules/_banner';
+@import './modules/_position-centered';
+@import './modules/_wrapper';
+@import './modules/_headline';
+@import './modules/_paragraph';
+@import './modules/_button';
+@import './modules/_grid';
+@import './modules/_flex';

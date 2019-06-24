@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+  
+  &__margin-right {
+    margin-right: 1.2em;
+  }
+  &--align-items-end {
+    align-items: flex-end;
+  }
+  &--margin-bottom {
+    margin-bottom: 1.5em;
+  }
+}

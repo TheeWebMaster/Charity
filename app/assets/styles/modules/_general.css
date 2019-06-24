@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: Roboto, serif;
+}
+p {
+  margin: 0;
 }

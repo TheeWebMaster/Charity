@@ -1,0 +1,7 @@
+.banner {
+  height: 100vh;
+  position: relative;
+  background: url('../../assets/images/banner_img.png');
+  background-size: cover;
+  background-position: center center;
+}
