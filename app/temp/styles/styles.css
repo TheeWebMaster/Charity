@@ -254,7 +254,7 @@ select { /* 1 */
   }.headline--thin {
     font-weight: 500;
   }.headline--margin-bottom-large {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
   }.headline--no-margins {
     margin-bottom: 0;
   }.paragraph {
@@ -292,4 +292,6 @@ select { /* 1 */
             align-items: flex-end;
   }.flex--margin-bottom {
     margin-bottom: 1.5em;
-  }
+  }.page-section {
+  padding: 3em 0;
+}

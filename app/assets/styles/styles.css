@@ -1,7 +1,7 @@
 @import 'normalize.css';
-@import './modules/_general';
-@import './modules/_variables';
-@import './modules/_fonts';
+@import './base/_general.css';
+@import './base/_variables';
+@import './base/_fonts';
 @import './modules/_banner';
 @import './modules/_position-centered';
 @import './modules/_wrapper';
@@ -10,3 +10,4 @@
 @import './modules/_button';
 @import './modules/_grid';
 @import './modules/_flex';
+@import './modules/_page-section';
