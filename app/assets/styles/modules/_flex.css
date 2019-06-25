@@ -1,13 +1,24 @@
 .flex {
   display: flex;
-  
   &__margin-right {
-    margin-right: 1.2em;
+    margin-right: 1.8em;
+  }
+  &__align-self-end {
+    align-self: flex-end;
+  }
+  &--space-between {
+    justify-content: space-between;
   }
   &--align-items-end {
     align-items: flex-end;
   }
+  &--align-items-center {
+    align-items: center;
+  }
   &--margin-bottom {
     margin-bottom: 1.5em;
+  }
+  &--width {
+    width: 540px;
   }
 }

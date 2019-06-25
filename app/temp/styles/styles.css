@@ -218,16 +218,16 @@ select { /* 1 */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }.position-centered--semi-centered {
-    top: 43%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 46%;
-
+    top: 45%;
+    left: 70%;  
   }.wrapper {
+  width: 540px;
   margin-left: auto;
   margin-right: auto;
-}.wrapper--fixed-width {
-    width: 490px;
+}.wrapper--small-width {
+    max-width: 455px;
+  }.wrapper--on-top {
+    z-index: 1;
   }.headline {
   font-family: "Playfair Display", serif;
   font-size: 3.4375rem;
@@ -243,8 +243,12 @@ select { /* 1 */
     font-size: 1.25rem;
   }.headline--medium {
     font-size: 2.3125rem;
+  }.headline--more-than-medium {
+    font-size: 2.625rem;
   }.headline--centered {
     text-align: center;
+  }.headline--grey {
+    color: #7f7f7f;
   }.headline--light-grey {
     color: #b3b4b3;
   }.headline--letter-spread {
@@ -261,8 +265,15 @@ select { /* 1 */
   color: white;
   line-height: 1.8;
   font-size: 0.9375rem;
+  text-align: justify;
 }.paragraph--grey {
     color: #7f7f7f;
+  }.paragraph--black {
+    color: #14182d;
+  }.paragraph--bold {
+    font-weight: 800;
+  }.paragraph--large {
+    font-size: 1.6875rem
   }.button {
   text-decoration: none;
   color: white;
@@ -272,7 +283,6 @@ select { /* 1 */
   font-size: .9rem;
   margin-top: 2em;
   display: inline-block;
-
 }.grid {
   display: grid;
   grid-template-columns: repeat(2, 450px);
@@ -286,12 +296,42 @@ select { /* 1 */
   display: -webkit-box;
   display: flex;
 }.flex__margin-right {
-    margin-right: 1.2em;
+    margin-right: 1.8em;
+  }.flex__align-self-end {
+    align-self: flex-end;
+  }.flex--space-between {
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }.flex--align-items-end {
     -webkit-box-align: end;
             align-items: flex-end;
+  }.flex--align-items-center {
+    -webkit-box-align: center;
+            align-items: center;
   }.flex--margin-bottom {
     margin-bottom: 1.5em;
+  }.flex--width {
+    width: 540px;
   }.page-section {
-  padding: 3em 0;
-}
+  padding: 5em 0;
+}.learn-more {
+  position: relative;
+  height: 680px;
+  background:  url(../../assets/images/review_bg.png) no-repeat center center;
+  background-size: cover;
+}.learn-more::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(26, 29, 41, 0.8);
+  }.statistics {
+  position: relative;
+  height: 400px;
+}.statistics__row {
+    border-bottom: .4px solid rgb(223, 223, 223);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }

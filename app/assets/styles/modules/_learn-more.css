@@ -1,0 +1,16 @@
+.learn-more {
+  position: relative;
+  height: 680px;
+  background:  url(../../assets/images/review_bg.png) no-repeat center center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(26, 29, 41, 0.8);
+  }
+}

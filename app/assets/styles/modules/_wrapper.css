@@ -1,8 +1,12 @@
 .wrapper {
+  width: 540px;
   margin-left: auto;
   margin-right: auto;
-  
-  &--fixed-width {
-    width: 490px;
+
+  &--small-width {
+    max-width: 455px;
+  }
+  &--on-top {
+    z-index: 1;
   }
 }

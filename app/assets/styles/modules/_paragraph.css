@@ -2,7 +2,17 @@
   color: white;
   line-height: 1.8;
   font-size: 0.9375rem;
+  text-align: justify;
   &--grey {
     color: $mainGrey;
+  }
+  &--black {
+    color: $mainBlack;
+  }
+  &--bold {
+    font-weight: 800;
+  }
+  &--large {
+    font-size: 1.6875rem
   }
 }
