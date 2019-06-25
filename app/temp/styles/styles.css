@@ -208,7 +208,7 @@ select { /* 1 */
 }.banner {
   height: 100vh;
   position: relative;
-  background: url('../../assets/images/banner_img.png');
+  background: url('../../assets/images/banner_img.png') no-repeat;
   background-size: cover;
   background-position: center center;
 }.position-centered {
