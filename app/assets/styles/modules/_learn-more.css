@@ -1,9 +1,21 @@
 .learn-more {
   position: relative;
-  height: 680px;
+  height: 500px;
   background:  url(../../assets/images/review_bg.png) no-repeat center center;
   background-size: cover;
+  &__image-container {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    transform: translateY(50%);
+    z-index: 1;
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.8);
+    background: url(../../assets/images/Charity.jpg) no-repeat center center;
+    background-size: cover;
 
+  }
   &::after {
     content: '';
     position: absolute;

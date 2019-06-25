@@ -1,0 +1,6 @@
+.wrapper-left-restriction {
+  position: relative;
+  max-width: 60%;
+  height: 100%;
+  z-index: 44;
+}
