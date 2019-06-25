@@ -218,7 +218,6 @@ select { /* 1 */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }.position-centered--semi-centered {
-    top: 45%;
     left: 70%;  
   }.position-centered--to-left {
     left: 30%;
@@ -314,9 +313,7 @@ select { /* 1 */
     width: 540px;
   }.page-section {
   padding: 5em 0;
-}.page-section--top-margin-negative {
-    margin-top: -2em;
-  }.learn-more {
+}.learn-more {
   position: relative;
   height: 500px;
   background:  url(../../assets/images/review_bg.png) no-repeat center center;

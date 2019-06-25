@@ -5,14 +5,16 @@ const config = {
   mode : {
     css : {
       render : {
-        css: './app/temp/sdf.css'
+        css: {
+          template : './app/gulp/templates/sprite.css'
+        }
       }
     }
   }
 };
 const sprite  = () => {
-  return gulp.src('./app/assets/images/icon')
+  return gulp.src('./app/assets/images/icon/**/*.svg')
              .pipe(gulpSprite(config))
-             .pipe(gulp.dest(''));
+             .pipe(gulp.dest('./app/temp/sprite/'));
 };
 gulp.task('sprite', sprite);
