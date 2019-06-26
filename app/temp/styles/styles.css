@@ -288,19 +288,26 @@ select { /* 1 */
   font-size: .9rem;
   margin-top: 2em;
   display: inline-block;
-}.button--white {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}.button:hover {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+  }.button--full-width {
+    display: block;
+    text-align: center;
+  }.button--not-rounded {
+    border-radius: 0;
+  }.button--white {
     background-color: white;
     color: #14182d;
     border: 1px solid grey;
-    -webkit-transition: all 200ms;
-    transition: all 200ms;
-    border-radius: 0;
-    display: block;
-    text-align: center;
   }.button--white:hover {
       background-color: #00c424;
       border-color: #00c424;
-      color: white
+      color: white;
+      -webkit-transform: scale(1);
+              transform: scale(1);
     }.button--small {
     padding: 1em 2.5em
   }.button--margin-bottom {

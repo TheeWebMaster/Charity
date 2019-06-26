@@ -7,19 +7,26 @@
   font-size: .9rem;
   margin-top: 2em;
   display: inline-block;
-
+  transition: all 200ms;
+  &:hover {
+    transform: scale(1.07);
+  }
+  &--full-width {
+    display: block;
+    text-align: center;
+  }
+  &--not-rounded {
+    border-radius: 0;
+  }
   &--white {
     background-color: white;
     color: $mainBlack;
     border: 1px solid grey;
-    transition: all 200ms;
-    border-radius: 0;
-    display: block;
-    text-align: center;
     &:hover {
       background-color: $mainGreen;
       border-color: $mainGreen;
-      color: white
+      color: white;
+      transform: scale(1);
     }
   }
   &--small {
