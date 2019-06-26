@@ -1,10 +1,16 @@
 .wrapper {
   width: 540px;
-
-  &--small-width {
-    max-width: 455px;
+  margin: 0 auto;
+  &--1140px-width { 
+    width: 1140px;
   }
   &--on-top {
     z-index: 1;
   }
+}
+.wrapper-left-restriction {
+  position: relative;
+  max-width: 60%;
+  height: 100%;
+  z-index: 44;
 }

@@ -13,4 +13,6 @@
 @import './modules/_page-section';
 @import './modules/_learn-more';
 @import './modules/_statistics';
-@import './modules/__wrapper-left-restriction';
+@import './modules/_testimonial-image-wrapper';
+@import './modules/_edge-touch';
+@import './modules/_icon-positioning';

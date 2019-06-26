@@ -11,7 +11,7 @@
     bottom: 0;
     transform: translateY(50%);
     z-index: 1;
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background: url(../../assets/images/Charity.jpg) no-repeat center center;
     background-size: cover;
 

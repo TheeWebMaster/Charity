@@ -7,4 +7,25 @@
   font-size: .9rem;
   margin-top: 2em;
   display: inline-block;
+
+  &--white {
+    background-color: white;
+    color: $mainBlack;
+    border: 1px solid grey;
+    transition: all 200ms;
+    border-radius: 0;
+    display: block;
+    text-align: center;
+    &:hover {
+      background-color: $mainGreen;
+      border-color: $mainGreen;
+      color: white
+    }
+  }
+  &--small {
+    padding: 1em 2.5em
+  }
+  &--margin-bottom {
+    margin-bottom: 1em;
+  }
 }
