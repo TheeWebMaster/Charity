@@ -3,6 +3,7 @@
   height: 500px;
   background:  url(../../assets/images/review_bg.png) no-repeat center center;
   background-size: cover;
+  
   &__image-container {
     width: 40%;
     height: 100%;

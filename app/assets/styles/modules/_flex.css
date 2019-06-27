@@ -1,11 +1,15 @@
 .flex {
   display: flex;
-  flex-wrap: wrap;
+  
   &__margin-right {
     margin-right: 1.8em;
   }
   &__margin-right-tiny {
     margin-right: 0.9375em;
+  }
+  &__margin-left-100px {
+    margin-left: 100px;
+    border: 1px solid red;
   }
   &__margin-left-auto {
     margin-left: auto;
@@ -14,7 +18,7 @@
     align-self: flex-end;
   }
   &__fixed-width {
-    width: 360px;
+    flex-basis: 360px;
   }
   &--space-between {
     justify-content: space-between;

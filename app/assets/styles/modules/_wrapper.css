@@ -1,8 +1,16 @@
 .wrapper {
-  width: 540px;
+  max-width: 470px;
   padding-right: 15px;
   padding-left: 15px;
-  &--max-width-100per { 
+
+  &--no-max-width {
+    max-width: none;
+    width: 520px;
+  }
+  &--width-620 {
+    max-width: 620px;
+  }
+  &--max-width-100cent { 
     width: auto;
     max-width: 100%;
   }
