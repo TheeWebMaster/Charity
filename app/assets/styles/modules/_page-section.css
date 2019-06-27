@@ -1,6 +1,4 @@
 .page-section {
-  padding: 5em 0;
-  &__box-shadow {
-    box-shadow: 0 0 10px -3px rgba(0,0,0,0.4);
-  }
+  padding-top :5em;
+  padding-bottom: 5em;
 }

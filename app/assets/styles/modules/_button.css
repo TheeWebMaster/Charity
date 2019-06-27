@@ -11,6 +11,14 @@
   &:hover {
     transform: scale(1.07);
   }
+  &--horiz-centered {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+      transform: translateX(-50%) scale(1.07);
+    }
+  }
   &--full-width {
     display: block;
     text-align: center;
@@ -33,6 +41,6 @@
     padding: 1em 2.5em
   }
   &--margin-bottom {
-    margin-bottom: 1em;
+    margin-bottom: 5px;
   }
 }

@@ -12,7 +12,19 @@
   &--bold {
     font-weight: 800;
   }
+  &--thin {
+    font-weight: 300;
+  }
+  &--italic {
+    font-style: italic
+  }
   &--large {
     font-size: 1.6875rem
+  }
+  &--centered {
+    text-align: center;
+  }
+  &--margin-bottom-tiny {
+    margin-bottom: 5px;
   }
 }

@@ -1,6 +1,6 @@
 .statistics {
   position: relative;
-  height: 400px;
+  height: 300px;
   &__row {
     border-bottom: .4px solid rgb(223, 223, 223);
     padding-bottom: 2em;

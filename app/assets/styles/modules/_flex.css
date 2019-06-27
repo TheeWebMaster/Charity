@@ -7,11 +7,11 @@
   &__margin-right-tiny {
     margin-right: 0.9375em;
   }
-  &__align-self-end {
-    align-self: flex-end;
-  }
   &__margin-left-auto {
     margin-left: auto;
+  }
+  &__align-self-end {
+    align-self: flex-end;
   }
   &__fixed-width {
     width: 360px;
@@ -24,6 +24,9 @@
   }
   &--align-items-center {
     align-items: center;
+  }
+  &--justify-content-center {
+    justify-content: center;
   }
   &--margin-bottom {
     margin-bottom: 1.5em;

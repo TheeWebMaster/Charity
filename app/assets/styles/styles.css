@@ -11,8 +11,8 @@
 @import './modules/_grid';
 @import './modules/_flex';
 @import './modules/_page-section';
-@import './modules/_learn-more';
+@import './modules/_background-image-section';
 @import './modules/_statistics';
-@import './modules/_testimonial-image-wrapper';
+@import './modules/_testimonial';
 @import './modules/_edge-touch';
 @import './modules/_icon-positioning';

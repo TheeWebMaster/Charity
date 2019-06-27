@@ -1,16 +1,12 @@
 .wrapper {
   width: 540px;
-  margin: 0 auto;
-  &--1140px-width { 
-    width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  &--max-width-100per { 
+    width: auto;
+    max-width: 100%;
   }
   &--on-top {
     z-index: 1;
   }
-}
-.wrapper-left-restriction {
-  position: relative;
-  max-width: 60%;
-  height: 100%;
-  z-index: 44;
 }
