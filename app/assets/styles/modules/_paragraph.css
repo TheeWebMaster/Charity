@@ -3,6 +3,7 @@
   line-height: 1.8;
   font-size: 0.9375rem;
   text-align: justify;
+  transition-duration: 300ms;
   &--grey {
     color: $mainGrey;
   }

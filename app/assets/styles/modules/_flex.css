@@ -1,6 +1,27 @@
 .flex {
   display: flex;
   
+  &--space-between {
+    justify-content: space-between;
+  }
+  &--align-items-end {
+    align-items: flex-end;
+  }
+  &--align-items-center {
+    align-items: center;
+  }
+  &--justify-content-center {
+    justify-content: center;
+  }
+  &--margin-bottom {
+    margin-bottom: 1.5em;
+  }
+  &--width {
+    width: 540px;
+  }
+  &--gap > div:not(:last-child) {
+    margin-right: 1.8em;
+  }
   &__margin-right {
     margin-right: 1.8em;
   }
@@ -19,23 +40,5 @@
   }
   &__fixed-width {
     flex-basis: 360px;
-  }
-  &--space-between {
-    justify-content: space-between;
-  }
-  &--align-items-end {
-    align-items: flex-end;
-  }
-  &--align-items-center {
-    align-items: center;
-  }
-  &--justify-content-center {
-    justify-content: center;
-  }
-  &--margin-bottom {
-    margin-bottom: 1.5em;
-  }
-  &--width {
-    width: 540px;
   }
 }

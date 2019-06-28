@@ -5,6 +5,8 @@
   color: white;
   margin-top: 0;
   margin-bottom: .5em;
+  transition-duration: 300ms;
+
   &--centered {
     text-align: center;
   }
