@@ -10,8 +10,14 @@
   &--black {
     color: $mainBlack;
   }
+  &--green {
+    color: $mainGreen;
+  }
   &--bold {
     font-weight: 800;
+  }
+  &--small {
+    font-size: .875rem;
   }
   &--thin {
     font-weight: 300;
@@ -24,6 +30,12 @@
   }
   &--centered {
     text-align: center;
+  }
+  &--margin-bottom {
+    margin-bottom: .7em;
+  }
+  &--margin-bottom-big {
+    margin-bottom: 1em;
   }
   &--margin-bottom-tiny {
     margin-bottom: 5px;

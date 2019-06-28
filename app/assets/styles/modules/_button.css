@@ -7,7 +7,8 @@
   font-size: .9rem;
   margin-top: 2em;
   display: inline-block;
-  transition: all 200ms;
+  transition-duration: 200ms;
+
   &:hover {
     transform: scale(1.07);
   }
