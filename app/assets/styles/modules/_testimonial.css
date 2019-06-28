@@ -2,7 +2,13 @@
   box-shadow: 0 0 10px -3px rgba(0,0,0,0.4);
   position: relative;
 
-  &--hover-effect {
+  &--margin-bottom {
+    margin-bottom: 1.3em;
+  }
+  &--padding {
+    padding: .7em;
+  }
+  &--green-hover-effect {
     &::after {
       content: '';
       position: absolute;
@@ -33,9 +39,15 @@
     }
   }
   &--scale {
-    transition-duration: 300ms;
+    transition-duration: 200ms;
     &:hover {
       transform: scale(1.02);
+    }
+  }
+  &--focus {
+    cursor: pointer;
+    &:hover .headline{
+      text-decoration: underline;
     }
   }
   &__edge-touch {
@@ -52,5 +64,8 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
+  }
+  &__image--bottom-position {
+    object-position: center bottom;
   }
 }
