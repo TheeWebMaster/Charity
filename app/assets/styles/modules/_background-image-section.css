@@ -17,7 +17,7 @@
     background-size: cover;
   }
   &--new-image {
-    background-image: url(../../assets/images/intro_video_bg.png)
+    background-image: url(../../assets/images/intro_video_bg.png);
   }
   &::after {
     content: '';
