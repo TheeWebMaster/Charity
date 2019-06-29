@@ -10,8 +10,14 @@
   &--align-items-center {
     align-items: center;
   }
+  &--align-items-base {
+    align-items: baseline;
+  }
   &--justify-content-center {
     justify-content: center;
+  }
+  &--justify-content-end {
+    justify-content: flex-end;
   }
   &--margin-bottom {
     margin-bottom: 1.5em;

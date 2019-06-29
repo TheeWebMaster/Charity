@@ -8,4 +8,7 @@
   &--to-bottom {
     top: 5px
   }
+  &--margin-left {
+    margin-left: 4px;
+  }
 }
