@@ -41,7 +41,19 @@
   &--small {
     padding: 1em 2.5em
   }
+  &--long {
+    padding: 1em 4em;
+  }
   &--margin-bottom {
     margin-bottom: 5px;
+  }
+  &--no-top-margin {
+    margin-top: 0;
+  }
+  &--transparent {
+    background-color :transparent;
+  }
+  &--border {
+    border: 1px solid $mainGrey;
   }
 }
