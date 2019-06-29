@@ -1,5 +1,5 @@
 .footer {
-  background-color: #0d101d;
+  background-color: $footer;
   color: $mainGrey;
 
   &__form {
@@ -9,20 +9,20 @@
     width: 100%;
     height: 45px;
     background-color: inherit;
+    color: inherit;
     border: 1px solid $mainGrey;
     border-radius: 2px;
     padding-left: 1em;
     font-size: .8em;
     outline: none;
-    color: inherit;
   }
   &__button {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 5px;
-    height: 35px;
-    width: 36px;
+    margin: 4px;
+    height: 37px;
+    width: 38px;
     border: none;
     background-color: $mainGreen;
     color: white;
@@ -41,7 +41,7 @@
   }
   &__align-base-line {
     position: relative;
-    top: 12px;
+    top: 14px;
   }
   &__copyright {
     padding: 1.2em 0;

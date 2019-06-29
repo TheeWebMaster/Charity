@@ -635,20 +635,21 @@ p {
       -webkit-transform: scale(1.02);
               transform: scale(1.02);
     }
-.testimonials--scale {
-    -webkit-transition-duration: 200ms;
-            transition-duration: 200ms;
-  }
-.testimonials--scale:hover {
-      -webkit-transform: scale(1.02);
-              transform: scale(1.02);
-    }
-.testimonials--focus {
+.testimonials--pointer {
     cursor: pointer;
   }
-.testimonials--focus:hover .headline{
-      text-decoration: underline;
+.testimonials--scale {
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+  }
+.testimonials--scale:hover {
+      -webkit-transform: scale(1.04);
+              transform: scale(1.04);
     }
+.testimonials--icon-visibility:hover .testimonials__icon-container{
+    opacity: 1;    
+    top: 27%;
+  }
 .testimonials__edge-touch {
     padding-right: 5px;
     padding-left: 5px;
@@ -669,6 +670,27 @@ p {
 .testimonials__image--bottom-position {
     -o-object-position: center bottom;
        object-position: center bottom;
+  }
+.testimonials__icon-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    cursor: pointer;
+  }
+.testimonials__icon-container > i {
+    display: block;
+    font-size: 1.6rem;    
+    color: white;
+    margin-bottom: .3em;
+  }
+.testimonials__icon-container > i:hover {
+    color: #0d101d;
   }
 .icon-positioning {
   position: relative;
@@ -691,20 +713,20 @@ p {
     width: 100%;
     height: 45px;
     background-color: inherit;
+    color: inherit;
     border: 1px solid #7f7f7f;
     border-radius: 2px;
     padding-left: 1em;
     font-size: .8em;
     outline: none;
-    color: inherit;
   }
 .footer__button {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 5px;
-    height: 35px;
-    width: 36px;
+    margin: 4px;
+    height: 37px;
+    width: 38px;
     border: none;
     background-color: #00c424;
     color: white;
@@ -723,7 +745,7 @@ p {
   }
 .footer__align-base-line {
     position: relative;
-    top: 12px;
+    top: 14px;
   }
 .footer__copyright {
     padding: 1.2em 0;

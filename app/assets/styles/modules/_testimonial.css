@@ -38,17 +38,18 @@
       transform: scale(1.02);
     }
   }
+  &--pointer {
+    cursor: pointer;
+  }
   &--scale {
-    transition-duration: 200ms;
+    transition-duration: 300ms;
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.04);
     }
   }
-  &--focus {
-    cursor: pointer;
-    &:hover .headline{
-      text-decoration: underline;
-    }
+  &--icon-visibility:hover &__icon-container{
+    opacity: 1;    
+    top: 27%;
   }
   &__edge-touch {
     padding-right: 5px;
@@ -67,5 +68,24 @@
   }
   &__image--bottom-position {
     object-position: center bottom;
+  }
+  &__icon-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: 300ms;
+    cursor: pointer;
+  }
+  &__icon-container > i {
+    display: block;
+    font-size: 1.6rem;    
+    color: white;
+    margin-bottom: .3em;
+  }
+  &__icon-container > i:hover {
+    color: $footer;
   }
 }
