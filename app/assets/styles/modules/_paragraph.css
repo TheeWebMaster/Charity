@@ -1,9 +1,12 @@
 .paragraph {
   color: white;
   line-height: 1.8;
-  font-size: 0.9375rem;
+  font-size: .8rem;
   text-align: justify;
   transition-duration: 300ms;
+  @mixin  atSmall {
+    font-size: 0.9375rem;    
+  }
   &--grey {
     color: $mainGrey;
   }
@@ -14,7 +17,7 @@
     color: $mainGreen;
   }
   &--bold {
-    font-weight: 800;
+    font-weight: 500;
   }
   &--small {
     font-size: .875rem;

@@ -1,8 +1,13 @@
 .background-image-section {
   position: relative;
-  height: 500px;
+  height: 400px;
   background:  url(../../assets/images/review_bg.png) no-repeat center center;
   background-size: cover;
+
+  @mixin atSmall {
+    height: 500px;
+  }
+  
   
   &__image-container {
     width: 40%;
@@ -15,6 +20,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background: url(../../assets/images/Charity.jpg) no-repeat center center;
     background-size: cover;
+    display:none;
+    
+    @mixin atLarge {
+      display: block;
+    }
   }
   &--new-image {
     background-image: url(../../assets/images/intro_video_bg.png);

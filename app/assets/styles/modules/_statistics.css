@@ -3,7 +3,12 @@
   height: 300px;
   &__row {
     border-bottom: .4px solid rgb(223, 223, 223);
-    padding-bottom: 2em;
-    margin-bottom: 2em;
+    padding-bottom: 1.1em;
+    margin-bottom: 1.1em;
+
+    @mixin atSmall {
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+    }
   }
 }

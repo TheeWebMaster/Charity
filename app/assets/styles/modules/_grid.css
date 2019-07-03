@@ -1,11 +1,20 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 450px);
-  grid-gap: 30px;
+  grid-row-gap: 5px;
+  grid-template-columns: repeat(1, auto);
   justify-content: center;
-
+  @mixin atMedium {
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 5px;
+  }
+  @mixin atLarge {
+    grid-template-columns: repeat(2, 450px);
+  }
   &__item {
     background-color: #f2f5f3;
-    padding: 2em 2em;
+    padding: 1.4em;
+    @mixin atMedium {
+      padding: 2em;
+    }
   }
 }

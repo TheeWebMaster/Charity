@@ -4,4 +4,5 @@
   background: url('../../assets/images/banner_img.png') no-repeat;
   background-size: cover;
   background-position: center center;
+  margin-bottom: -3rem;
 }
