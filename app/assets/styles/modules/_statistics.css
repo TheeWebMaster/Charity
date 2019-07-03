@@ -1,14 +1,31 @@
 .statistics {
+
   position: relative;
   height: 300px;
-  &__row {
-    border-bottom: .4px solid rgb(223, 223, 223);
-    padding-bottom: 1.1em;
-    margin-bottom: 1.1em;
-
+  margin-top: 1em;
     @mixin atSmall {
-      padding-bottom: 2em;
-      margin-bottom: 2em;
+      margin-top: 0;
     }
+  &__row-line{
+    @mixin atSmall {
+      border-bottom: 1px solid rgb(223, 223, 223);
+      padding-bottom: 1.5em;
+      margin-bottom: 1.1em;
+    }
+  }
+
+  &__border-b-until-small {
+    border-bottom: 1px solid rgb(223, 223, 223);
+      @mixin atSmall {
+        border-bottom: none;
+      }
+  }
+  &__space-b-until-small {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+      @mixin atSmall {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
   }
 }

@@ -27,6 +27,7 @@
     }
   }
   &--new-image {
+    height: 270px;
     background-image: url(../../assets/images/intro_video_bg.png);
   }
   &::after {

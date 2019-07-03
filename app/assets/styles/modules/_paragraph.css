@@ -29,7 +29,10 @@
     font-style: italic
   }
   &--large {
-    font-size: 1.6875rem
+    font-size: 1.3rem;
+    @mixin atSmall {
+      font-size: 1.6875rem      
+    }
   }
   &--centered {
     text-align: center;
