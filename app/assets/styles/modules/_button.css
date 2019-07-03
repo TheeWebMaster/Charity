@@ -3,14 +3,23 @@
   color: white;
   background-color: $mainGreen;
   padding: 1.2em 3em;
-  border-radius: 50px;
-  font-size: .9rem;
+  font-size: .6rem;
   margin-top: 2em;
-  display: inline-block;
+  display: block;
+  text-align: center;
   transition-duration: 200ms;
+
+  @mixin atLarge {
+    display: inline-block;
+    border-radius: 30px;
+  }
+  @mixin atSmall {
+    font-size: .9rem;
+  }
 
   &:hover {
     transform: scale(1.07);
+    text-decoration: underline;
   }
   &--horiz-centered {
     position: relative;

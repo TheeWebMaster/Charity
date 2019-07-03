@@ -1,6 +1,7 @@
 @import 'normalize.css';
 @import './base/_general.css';
 @import './base/_variables';
+@import './base/_mixin';
 @import './base/_fonts';
 @import './modules/_banner';
 @import './modules/_position-centered';

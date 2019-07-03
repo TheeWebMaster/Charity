@@ -1,8 +1,12 @@
 .flex {
   display: flex;
-  
+  flex-wrap: wrap;
+
   &--space-between {
+    justify-content: center;
+    @mixin atSmall {
     justify-content: space-between;
+    }
   }
   &--align-items-end {
     align-items: flex-end;

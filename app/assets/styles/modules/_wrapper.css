@@ -1,11 +1,22 @@
 .wrapper {
-  max-width: 470px;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+    @mixin atMedium {
+      width: 100%;
+      max-width:620px;
+    }
+    @mixin atSmall{
+      width: 100%;
+      max-width: 490px;
+    }
 
-  &--no-max-width {
-    max-width: none;
-    width: 520px;
+
+  &--no-max-width-until-small {   
+      @mixin atSmall {
+        max-width: none;
+        width: 520px;
+      }
   }
   &--width-620 {
     max-width: 620px;
