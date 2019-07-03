@@ -6,6 +6,7 @@
   @mixin atMedium {
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 5px;
+    padding: 0 5px;
   }
   @mixin atLarge {
     grid-template-columns: repeat(2, 450px);

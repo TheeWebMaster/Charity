@@ -1,6 +1,10 @@
 .flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  @mixin atLarge {
+    flex-wrap: nowrap
+  }
 
   &--space-between {
     justify-content: center;
@@ -29,8 +33,16 @@
   &--width {
     width: 540px;
   }
+  &--gap > div:nth-child(odd) {
+    @mixin atMedium {
+      margin-right: 1em;  
+      margin-bottom: 1em;   
+    }
+  }
   &--gap > div:not(:last-child) {
-    margin-right: 1.8em;
+    @mixin atLarge {
+      margin-right: 1em;     
+    }
   }
   &__margin-right {
     margin-right: 1.8em;
@@ -56,10 +68,13 @@
   &__fixed-width--300px {
     flex-basis: 300px;
   }
-  &__fixed-width-360px {
-    flex-basis: 360px;
-  }
   &__fixed-width-500px {
     max-width: 500px;
+  }
+  &__full-width-until-small {
+    width: 100%;
+      @mixin atSmall {
+        width: auto;        
+      }
   }
 }

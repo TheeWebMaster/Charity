@@ -6,6 +6,7 @@
 @import './modules/_banner';
 @import './modules/_position-centered';
 @import './modules/_wrapper';
+@import './modules/_wrapper-responsive';
 @import './modules/_headline';
 @import './modules/_paragraph';
 @import './modules/_button';

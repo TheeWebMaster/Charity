@@ -2,15 +2,12 @@
   font-family: "Playfair Display", serif;
   font-weight: 700;
   color: white;
+  text-align: center;
   margin-top: 0;
   margin-bottom: .5em;
   transition-duration: 300ms;
   @mixin atSmall {
     font-size: 3.4375rem;
-  }
-
-  &--centered {
-    text-align: center;
   }
   &--justify {
     text-align: justify;

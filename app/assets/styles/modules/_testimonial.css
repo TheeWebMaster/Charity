@@ -1,6 +1,13 @@
 .testimonials {
-  box-shadow: 0 0 10px -3px rgba(0,0,0,0.4);
   position: relative;
+  width: 100%;
+  @mixin atMedium {
+    max-width: 400px;    
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  }
+  @mixin atLarge {
+    max-width: 350px;    
+  }
   
   &--margin-bottom {
     margin-bottom: 1.3em;

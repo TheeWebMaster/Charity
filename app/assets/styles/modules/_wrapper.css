@@ -10,8 +10,6 @@
       width: 100%;
       max-width: 490px;
     }
-
-
   &--no-max-width-until-small {   
       @mixin atSmall {
         max-width: none;

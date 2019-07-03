@@ -1,0 +1,10 @@
+.wrapper-responsive {
+  margin: auto;
+  @mixin atMedium {
+    width: 900px; 
+    padding: 0 15px;   
+  }
+  @mixin atLarge {
+    width: 100%    
+  }
+}
