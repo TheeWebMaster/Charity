@@ -768,6 +768,7 @@ p {
 .testimonials {
   position: relative;
   width: 100%;
+  padding-bottom: 5px;
 }
 @media (min-width: 750px) {
 .testimonials {

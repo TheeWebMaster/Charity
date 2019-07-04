@@ -1,6 +1,7 @@
 .testimonials {
   position: relative;
   width: 100%;
+  padding-bottom: 5px;
   @mixin atMedium {
     max-width: 400px;    
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
