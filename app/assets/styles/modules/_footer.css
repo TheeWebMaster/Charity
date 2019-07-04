@@ -1,7 +1,26 @@
 .footer {
   background-color: $footer;
   color: $mainGrey;
+  width: 100%;
+  &__fixed-width {
+    width: 100%;
+    @mixin atMedium {
+      width: 200px;      
+    }
+    @mixin atLarge {
+      width: 300px;      
+    }
+  }
+  &__logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 
+    @mixin atLarge {
+      left: 0;
+      transform: translateX(0);
+    }
+  }
   &__form {
     position: relative;
   }
@@ -37,7 +56,13 @@
     padding: 3.5em 0;
   }
   &__headline-text-space {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    @mixin atLarge {
+      margin-bottom: 40px;      
+    }
+  }
+  &__margin-b {
+    margin-bottom: 3em;
   }
   &__align-base-line {
     position: relative;

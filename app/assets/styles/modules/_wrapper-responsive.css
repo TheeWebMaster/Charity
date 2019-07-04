@@ -1,10 +1,14 @@
 .wrapper-responsive {
   margin: auto;
   @mixin atMedium {
-    width: 900px; 
+    width: 750px; 
     padding: 0 15px;   
   }
   @mixin atLarge {
     width: 100%    
+  }
+
+  &--edge-touch {
+    padding: 0 15px;  
   }
 }
