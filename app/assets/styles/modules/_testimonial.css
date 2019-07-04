@@ -3,61 +3,89 @@
   width: 100%;
   padding-bottom: 5px;
   @mixin atMedium {
-    max-width: 400px;    
-    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 3px -2px rgba(0,0,0,0.4);
+    max-width: 400px;
   }
   @mixin atLarge {
     max-width: 350px;    
   }
-  
-  &--margin-bottom {
-    margin-bottom: 1.3em;
+  &--500px-w-atLarge{
+    @mixin atLarge {
+      max-width: 500px;    
+    }
+  } 
+  &--margin-bottom-until-m {
+    @mixin atMedium {
+      margin-bottom: 57.5px;      
+    }
+    @mixin atLarge {
+      margin-bottom: 35px;      
+    }
+  }
+  &--bottom-shadow {
+    box-shadow: 0 2px 3px -2px rgba(0,0,0,0.4);
   }
   &--padding {
     padding: .7em;
   }
   &--green-hover-effect {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right:0;
-      width: 100%;
-      height: 400px;
-      background-color: $mainGreen;
-      opacity: 0;
+    @mixin atLarge {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right:0;
+        width: 100%;
+        height: 400px;
+        background-color: $mainGreen;
+        opacity: 0;
+        transition-duration: 300ms;
+      }
+      &:hover::after {
+        opacity: .7;
+        top: -30px;
+      }
+      &:hover .paragraph {
+        letter-spacing: 4px
+      }
+      &:hover .headline {
+        color: $mainGreen;
+      }
+    }
+  }
+  &--move-up {
+    @mixin atLarge {
       transition-duration: 300ms;
+      &:hover {
+        transform: translateY(-7px);
+      }
     }
-    &:hover::after {
-      opacity: .7;
-      top: -30px;
-    }
-    &:hover .paragraph {
-      letter-spacing: 4px
-    }
-    &:hover .headline {
-      color: $mainGreen;
-    }
-  }
-  &--increase-shadow {
-    transition-duration: 300ms;
-    &:hover {
-      box-shadow: 0 0 25px 2px rgba(0,0,0,0.4);
-      transform: scale(1.02);
-    }
-  }
-  &--pointer {
-    cursor: pointer;
   }
   &--scale {
-    transition-duration: 300ms;
-    &:hover {
-      transform: scale(1.04);
+    @mixin atLarge {
+      transition-duration: 300ms;
+      &:hover {
+        transform: scale(1.02);
+      }
     }
   }
+
+  &--pointer {
+   @mixin atLarge {
+    cursor: pointer;
+   }
+  }
   &--icon-visibility:hover &__icon-container{
-    opacity: 1;    
-    top: 27%;
+    @mixin atLarge {
+      opacity: 1;    
+      top: 27%;      
+    }
+  }
+  &--border-top-until-m {
+    border-top: 1px solid $borderGrey;
+    @mixin atMedium {
+      border-top: none;
+    }
   }
   &__edge-touch {
     padding-right: 5px;

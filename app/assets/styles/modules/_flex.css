@@ -62,15 +62,6 @@
   &__align-self-end {
     align-self: flex-end;
   }
-  &__fixed-width--255px {
-    flex-basis: 255px;
-  }
-  &__fixed-width--300px {
-    flex-basis: 300px;
-  }
-  &__fixed-width-500px {
-    max-width: 500px;
-  }
   &__full-width-until-small {
     width: 100%;
       @mixin atSmall {

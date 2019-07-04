@@ -19,10 +19,6 @@
   &--width-620 {
     max-width: 620px;
   }
-  &--max-width-100cent { 
-    width: auto;
-    max-width: 100%;
-  }
   &--on-top {
     z-index: 1;
   }
