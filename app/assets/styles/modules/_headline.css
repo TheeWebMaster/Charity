@@ -9,6 +9,9 @@
   @mixin atSmall {
     font-size: 3.4375rem;
   }
+  &--to-left {
+    text-align: left;
+  }
   &--justify {
     text-align: justify;
   }

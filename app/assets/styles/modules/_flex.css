@@ -6,6 +6,12 @@
     flex-wrap: nowrap
   }
 
+  &--no-wrap-at-m {
+    @mixin atMedium {
+      flex-wrap: nowrap
+    }
+  }
+
   &--space-between {
     justify-content: center;
     @mixin atSmall {
@@ -48,7 +54,12 @@
     margin-right: 1.8em;
   }
   &__margin-right--big {
-    margin-right: 7em;
+    @mixin atMedium {
+      margin-right: 3em;      
+    }
+    @mixin atLarge {
+      margin-right: 7em;      
+    }
   }
   &__margin-right-tiny {
     margin-right: 0.9375em;

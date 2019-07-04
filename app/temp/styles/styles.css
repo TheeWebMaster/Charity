@@ -344,7 +344,7 @@ p {
 }
 @media (min-width: 750px) {
 .wrapper-responsive {
-    width: 900px; 
+    width: 750px; 
     padding: 0 15px
 }
   }
@@ -352,6 +352,9 @@ p {
 .wrapper-responsive {
     width: 100%
 }
+  }
+.wrapper-responsive--edge-touch {
+    padding: 0 15px;  
   }
 .headline {
   font-family: "Playfair Display", serif;
@@ -367,6 +370,9 @@ p {
 .headline {
     font-size: 3.4375rem
 }
+  }
+.headline--to-left {
+    text-align: left;
   }
 .headline--justify {
     text-align: justify;
@@ -496,7 +502,8 @@ p {
 }
 @media (min-width: 1200px) {
 .button {
-    display: inline-block
+    display: inline-block;
+    border-radius: 30px
 }
   }
 @media (min-width: 530px) {
@@ -507,7 +514,6 @@ p {
 .button:hover {
     -webkit-transform: scale(1.07);
             transform: scale(1.07);
-    text-decoration: underline;
   }
 .button--horiz-centered {
     position: relative;
@@ -553,6 +559,9 @@ p {
 .button--border {
     border: 1px solid #7f7f7f;
   }
+.button--not-rounded {
+    border-radius: 0;
+  }
 .grid {
   display: grid;
   grid-row-gap: 5px;
@@ -592,6 +601,11 @@ p {
 .flex {
     flex-wrap: nowrap
 }
+  }
+@media (min-width: 750px) {
+.flex--no-wrap-at-m {
+      flex-wrap: nowrap
+  }
   }
 .flex--space-between {
     -webkit-box-pack: center;
@@ -643,8 +657,15 @@ p {
 .flex__margin-right {
     margin-right: 1.8em;
   }
+@media (min-width: 750px) {
 .flex__margin-right--big {
-    margin-right: 7em;
+      margin-right: 3em
+  }
+  }
+@media (min-width: 1200px) {
+.flex__margin-right--big {
+      margin-right: 7em
+  }
   }
 .flex__margin-right-tiny {
     margin-right: 0.9375em;
@@ -705,6 +726,11 @@ p {
     height: 270px;
     background-image: url(../../assets/images/intro_video_bg.png);
   }
+@media (min-width: 1200px) {
+.background-image-section--new-image {
+        height: 400px
+  }
+  }
 .background-image-section::after {
     content: '';
     position: absolute;
@@ -759,12 +785,7 @@ p {
 }
 @media (min-width: 750px) {
 .testimonials {
-    box-shadow: 2px 2px 3px -2px rgba(0,0,0,0.4);
-    max-width: 400px
-}
-  }
-@media (min-width: 1200px) {
-.testimonials {
+    box-shadow:0 0 5px -2px rgba(0,0,0,0.4);
     max-width: 350px
 }
   }
@@ -775,7 +796,7 @@ p {
   }
 @media (min-width: 750px) {
 .testimonials--margin-bottom-until-m {
-      margin-bottom: 57.5px
+      margin-bottom: 46px
   }
   }
 @media (min-width: 1200px) {
@@ -784,7 +805,7 @@ p {
   }
   }
 .testimonials--bottom-shadow {
-    box-shadow: 0 2px 3px -2px rgba(0,0,0,0.4);
+    box-shadow:0 0 5px -2px rgba(0,0,0,0.4);
   }
 .testimonials--padding {
     padding: .7em;
@@ -814,23 +835,22 @@ p {
       }
   }
 @media (min-width: 1200px) {
-.testimonials--move-up {
-      -webkit-transition-duration: 300ms;
-              transition-duration: 300ms
-  }
-      .testimonials--move-up:hover {
-        -webkit-transform: translateY(-7px);
-                transform: translateY(-7px);
-      }
-  }
-@media (min-width: 1200px) {
 .testimonials--scale {
       -webkit-transition-duration: 300ms;
               transition-duration: 300ms
   }
       .testimonials--scale:hover {
-        -webkit-transform: scale(1.02);
-                transform: scale(1.02);
+        box-shadow:0 0 10px -2px rgba(0,0,0,0.4);
+      }
+  }
+@media (min-width: 1200px) {
+.testimonials--increase-shadow {
+      -webkit-transition-duration: 300ms;
+              transition-duration: 300ms
+  }
+      .testimonials--increase-shadow:hover {
+        -webkit-transform: scale(1.01);
+                transform: scale(1.01);
       }
   }
 @media (min-width: 1200px) {
@@ -910,7 +930,34 @@ p {
 .footer {
   background-color: #0d101d;
   color: #7f7f7f;
+  width: 100%;
 }
+.footer__fixed-width {
+    width: 100%;
+  }
+@media (min-width: 750px) {
+.footer__fixed-width {
+      width: 200px
+  }
+  }
+@media (min-width: 1200px) {
+.footer__fixed-width {
+      width: 300px
+  }
+  }
+.footer__logo {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+@media (min-width: 1200px) {
+.footer__logo {
+      left: 0;
+      -webkit-transform: translateX(0);
+              transform: translateX(0)
+  }
+  }
 .footer__form {
     position: relative;
   }
@@ -946,7 +993,15 @@ p {
     padding: 3.5em 0;
   }
 .footer__headline-text-space {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+  }
+@media (min-width: 1200px) {
+.footer__headline-text-space {
+      margin-bottom: 40px
+  }
+  }
+.footer__margin-b {
+    margin-bottom: 3em;
   }
 .footer__align-base-line {
     position: relative;
