@@ -4,25 +4,62 @@
   color: white;
   background-color: #14182dc5;
   width: 100%;
+  height: 50px;
+  @mixin atMedium {
+    height: auto;
+  }
 
   &__list {
     padding: 0;
     margin: 0;
+    display: none;
+    @mixin atMedium {
+      height: auto;;
+      display: block;
+    }
   }
   &__list > li {
     display: inline-block;
+    margin-right: 1.5em;
+    padding: 1.3em 0;
+   @mixin atLarge {
     margin-right: 3.125em;
-    cursor: pointer;
     padding: 1.9em 0;
+   }
+    cursor: pointer;
+
   }
   &__list > li:hover {
     text-decoration: underline;
   }
+  &__button {
+    display: none;
+    padding: .8em 2em;
+    @mixin atMedium {
+      display: block;
+    }
+  }
   &__logo {
     position: absolute;
-    top: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
     cursor: pointer;
-    left: 1%;
+    width: 100px;
+    @mixin atMedium {
+      width: 130px;
+    }
+    @mixin atLarge {
+      width: auto;
+    }
+  }
+  &__bars {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @mixin atMedium {
+      visibility: hidden;
+    }
   }
   &__item-menu {
     position: relative;

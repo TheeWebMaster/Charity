@@ -16,6 +16,9 @@
         width: 520px;
       }
   }
+  &--max-width-100cent {
+    max-width: 100%;
+  }
   &--width-620 {
     max-width: 620px;
   }
