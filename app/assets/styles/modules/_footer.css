@@ -34,6 +34,9 @@
     padding-left: 1em;
     font-size: .8em;
     outline: none;
+    @mixin atSmall {
+      margin-bottom: 1em;
+    }
   }
   &__button {
     position: absolute;
@@ -62,7 +65,10 @@
     }
   }
   &__margin-b {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+    @mixin atSmall {
+      margin-bottom: 0;
+    }
   }
   &__align-base-line {
     position: relative;

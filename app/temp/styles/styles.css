@@ -975,6 +975,11 @@ p {
     font-size: .8em;
     outline: none;
   }
+@media (min-width: 530px) {
+.footer__input {
+      margin-bottom: 1em
+  }
+  }
 .footer__button {
     position: absolute;
     top: 0;
@@ -1004,7 +1009,12 @@ p {
   }
   }
 .footer__margin-b {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+  }
+@media (min-width: 530px) {
+.footer__margin-b {
+      margin-bottom: 0
+  }
   }
 .footer__align-base-line {
     position: relative;
