@@ -7,3 +7,6 @@ body {
 p {
   margin: 0;
 }
+picture img{
+  width: 100%;
+}

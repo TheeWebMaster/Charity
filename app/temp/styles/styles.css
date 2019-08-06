@@ -285,13 +285,11 @@ body {
 p {
   margin: 0;
 }
-.banner {
-  height: 100vh;
+picture img{
+  width: 100%;
+}
+.large-hero {
   position: relative;
-  background: url('../images/banner_img.png') no-repeat;
-  background-size: cover;
-  background-position: center center;
-  margin-bottom: -3rem;
 }
 .position-centered {
   position: absolute;
@@ -700,7 +698,7 @@ p {
 .background-image-section {
   position: relative;
   height: 400px;
-  background:  url(../images/review_bg.png) no-repeat center center;
+  background:  url(../../assets/images/review_bg.png) no-repeat center center;
   background-size: cover;
   margin-bottom: 2.4em;
 }
@@ -719,7 +717,7 @@ p {
             transform: translateY(50%);
     z-index: 1; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background: url(../images/Charity.jpg) no-repeat center center;
+    background: url(../../assets/images/Charity.jpg) no-repeat center center;
     background-size: cover;
     display:none;
   }
@@ -730,7 +728,7 @@ p {
   }
 .background-image-section--new-image {
     height: 270px;
-    background-image: url(../images/intro_video_bg.png);
+    background-image: url(../../assets/images/intro_video_bg.png);
   }
 @media (min-width: 1200px) {
 .background-image-section--new-image {
