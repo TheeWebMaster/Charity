@@ -698,14 +698,20 @@ picture img{
 .background-image-section {
   position: relative;
   height: 400px;
-  background:  url(../../assets/images/doctor--smaller.jpg) no-repeat center center;
-  background-size: cover;
-  margin-bottom: 2.4em;
+  margin-bottom: 2.4em;  
 }
 @media (min-width: 530px) {
 .background-image-section {
-    height: 500px
+      height: 500px  
 }
+  }
+.background-image-section__image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
   }
 .background-image-section__image-container {
     width: 40%;
@@ -717,22 +723,19 @@ picture img{
             transform: translateY(50%);
     z-index: 1; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background: url(../../assets/images/Charity.jpg) no-repeat center center;
-    background-size: cover;
     display:none;
   }
 @media (min-width: 1200px) {
 .background-image-section__image-container {
-      display: block
+        display: block
   }
   }
-.background-image-section--new-image {
+.background-image-section--smaller {
     height: 270px;
-    background-image: url(../../assets/images/intro_video_bg.png);
   }
 @media (min-width: 1200px) {
-.background-image-section--new-image {
-        height: 400px
+.background-image-section--smaller {
+        height: 350px
   }
   }
 .background-image-section::after {
