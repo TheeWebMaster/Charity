@@ -299,7 +299,7 @@ picture img{
           transform: translate(-50%, -50%);
 }
 .position-centered--semi-centered {
-    top: 45%;
+    top: 52%;
   }
 @media (min-width: 1200px) {
 .position-centered--semi-centered {

@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   &--semi-centered {
-    top: 45%;
+    top: 52%;
     @mixin atLarge {
       left: 70%;  
     }
