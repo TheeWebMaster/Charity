@@ -1,18 +1,14 @@
-const gulp = require('gulp'),
-      watch = require('gulp-watch'),
-      browserSync = require('browser-sync').create();
-const cssInjection = () => {
-  return gulp.src('./app/temp/styles/styles.css')
-             .pipe(browserSync.stream());
+const gulp  = require('gulp'),
+      watch = require('gulp-watch');
+
+const server = require('./server'),
+      scripts = require('./scripts'),
+      styles = require('./styles');
+
+const eye = () => {
+  watch('./app/*.html', server.reloadBrowser);
+  watch('./app/assets/styles/**/*.css', gulp.series(styles.compileStyles, server.injectStyles));
+  watch('./app/assets/scripts/**/*.js', gulp.series(scripts.bundle, scripts.es5,server.reloadBrowser));
 };
- const eye = () => {
-  browserSync.init({
-    notify: false,
-    server: {
-       baseDir: 'app'
-    }
-  });
-  watch('./app/*.html', browserSync.reload);
-  watch('./app/assets/styles/**/*.css', gulp.series(css, cssInjection));
-};
+
 gulp.task('default', eye);

@@ -1,12 +1,17 @@
 const gulp = require('gulp'),
-      autoprefixer = require('autoprefixer'),
       postcss = require('gulp-postcss'),
-      vars = require('postcss-simple-vars'),
+      imports = require('postcss-import'),
+      mixins = require('postcss-mixins'),
+      variables = require('postcss-simple-vars'),
       nested = require('postcss-nested'),
-      mixins = require('postcss-mixins');
-      cssImport = require('postcss-import');
-css  = () => {  
+      autoprefixer = require('autoprefixer'),
+      hexrgba = require('postcss-hexrgba');
+
+const compileStyles = () => {  
   return gulp.src('./app/assets/styles/styles.css')
-             .pipe(postcss([cssImport, mixins, autoprefixer, nested, vars]))
+             .pipe(postcss([imports, mixins, autoprefixer, nested, variables, hexrgba]))
              .pipe(gulp.dest('./app/temp/styles/')); 
+};
+module.exports = {
+  compileStyles
 };
