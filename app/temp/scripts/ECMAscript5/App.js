@@ -4434,7 +4434,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "createWaypoints",
       value: function createWaypoints() {
-        var e = this.offset;
+        var e = this;
         this.items.each(function () {
           var t = this;
           new Waypoint({
@@ -4442,7 +4442,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             handler: function handler() {
               i()(t).addClass("reveal-item--is-visible");
             },
-            offset: e
+            offset: e.offset
           });
         });
       }

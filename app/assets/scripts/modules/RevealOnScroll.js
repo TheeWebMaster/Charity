@@ -12,7 +12,7 @@ class RevealOnScroll {
     this.items.addClass('reveal-item');
   } 
   createWaypoints() {
-    const offset = this.offset;
+    const that = this;
     this.items.each(function() {
       const item = this;
       new Waypoint({
@@ -20,7 +20,7 @@ class RevealOnScroll {
         handler: function() {
           $(item).addClass('reveal-item--is-visible');
         },
-        offset
+        offset: that.offset
       });
     });
   }

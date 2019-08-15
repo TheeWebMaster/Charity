@@ -528,12 +528,12 @@ template {
     text-decoration: underline;
   }
 .header__button {
-    display: none;
+    opacity: 0;
     padding: .8em 2em;
   }
 @media (min-width: 750px) {
 .header__button {
-      display: block
+      opacity: 1
   }
   }
 .header__logo {
