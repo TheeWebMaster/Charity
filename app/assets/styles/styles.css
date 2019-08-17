@@ -20,3 +20,5 @@
 @import './modules/components/_wrapper-responsive';
 @import './modules/components/_wrapper';
 @import './modules/components/_reveal-item';
+@import './modules/components/_slide-right-on-scroll';
+@import './modules/components/_slide-left-on-scroll';

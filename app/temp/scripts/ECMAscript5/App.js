@@ -4417,19 +4417,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var r = n(0),
       i = n.n(r);
   n(1);
-  new (
+
+  var o =
   /*#__PURE__*/
   function () {
-    function _class(e, t) {
-      _classCallCheck(this, _class);
+    function o(e, t, n) {
+      _classCallCheck(this, o);
 
-      this.items = e, this.offset = t, this.hiddenInitially(), this.createWaypoints();
+      this.items = e, this.offset = t, this.animationClass = n, this.initialState(), this.createWaypoints();
     }
 
-    _createClass(_class, [{
-      key: "hiddenInitially",
-      value: function hiddenInitially() {
-        this.items.addClass("reveal-item");
+    _createClass(o, [{
+      key: "initialState",
+      value: function initialState() {
+        this.items.addClass(this.animationClass);
       }
     }, {
       key: "createWaypoints",
@@ -4440,7 +4441,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           new Waypoint({
             element: t,
             handler: function handler() {
-              i()(t).addClass("reveal-item--is-visible");
+              i()(t).addClass("".concat(e.animationClass, "--is-visible"));
             },
             offset: e.offset
           });
@@ -4448,6 +4449,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return _class;
-  }())(i()(".grid__item"), "85%");
+    return o;
+  }();
+
+  new o(i()(".grid__item"), "85%", "reveal-item"), new o(i()(".slide-right"), "85%", "slide-right-on-scroll"), new o(i()(".slide-left"), "55%", "slide-left-on-scroll");
 }]);
