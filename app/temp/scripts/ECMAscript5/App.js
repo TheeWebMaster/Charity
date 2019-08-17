@@ -4503,7 +4503,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return s;
   }();
 
-  new o(i()(".grid__item"), "85%", "reveal-item"), new o(i()(".slide-right"), "85%", "slide-right-on-scroll"), new o(i()(".slide-left"), "55%", "slide-left-on-scroll"), new s(i()("#total-collections"), "90%", {
+  new o(i()(".grid__item"), "75%", "reveal-item"), new o(i()(".slide-right"), "80%", "slide-right-on-scroll"), new o(i()(".slide-left"), "55%", "slide-left-on-scroll"), new s(i()("#total-collections"), "90%", {
     number: 589393600,
     speed: 1233041
   }), new s(i()("#helped-people"), "90%", {
