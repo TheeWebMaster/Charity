@@ -656,6 +656,7 @@ picture img{
       background-color:rgb(33,37,41, .8);
     }
 .button {
+  position: relative;
   text-decoration: none;
   color: white;
   background-color: #00c424;
@@ -665,6 +666,7 @@ picture img{
   display: block;
   text-align: center;
   transition-duration: 200ms;
+  box-shadow: 0 3px 10px -3px rgba(0,0,0, .3);
 }
 @media (min-width: 1200px) {
 .button {
@@ -677,8 +679,31 @@ picture img{
     font-size: .9rem
 }
   }
+@media (min-width: 1200px) {
+      .button--hover-effect::after {
+        content: "" attr(name) "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        font-size:  inherit;
+        padding: inherit;
+        background-color: #00c424;
+        border-radius: inherit;
+        transition: all 200ms;
+        z-index: -1;
+      }
+  }
 .button:hover {
-    transform: scale(1.07);
+    box-shadow: 0 3px 10px rgba(0,0,0, .3);
+    transform: translateY(-2px);
+  }
+.button:hover::after { 
+      transform: scale(1.23);
+      opacity: 0;
+    }
+.button:focus {
+    box-shadow: 0 3px 10px -3px rgba(0,0,0, .3);
+    transform: translateY(-1px);
   }
 .button--horiz-centered {
     position: relative;
@@ -686,7 +711,10 @@ picture img{
     transform: translateX(-50%);
   }
 .button--horiz-centered:hover {
-      transform: translateX(-50%) scale(1.07);
+      transform: translateY(-2px) translateX(-50%);
+    }
+.button--horiz-centered:focus {
+      transform: translateY(-1px) translateX(-50%);
     }
 .button--full-width {
     display: block;
