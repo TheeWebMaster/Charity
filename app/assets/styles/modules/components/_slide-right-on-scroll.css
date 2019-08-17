@@ -1,0 +1,8 @@
+.slide-right-on-scroll {
+  left: -50%;
+  transition: left 1000ms;
+  
+  &--is-visible {
+    left: 30%;
+  }
+}

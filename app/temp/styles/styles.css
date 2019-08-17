@@ -1141,3 +1141,17 @@ picture img{
 .reveal-item--is-visible {
     opacity: 1;
   }
+.slide-right-on-scroll {
+  left: -50%;
+  transition: left 1000ms;
+}
+.slide-right-on-scroll--is-visible {
+    left: 30%;
+  }
+.slide-left-on-scroll {
+  right: -100%;
+  transition: right 1000ms;
+}
+.slide-left-on-scroll--is-visible {
+    right: 40px;
+  }
