@@ -690,7 +690,6 @@ picture img{
         background-color: #00c424;
         border-radius: inherit;
         transition: all 200ms;
-        z-index: -1;
       }
   }
 .button:hover {
@@ -698,7 +697,7 @@ picture img{
     transform: translateY(-2px);
   }
 .button:hover::after { 
-      transform: scale(1.23);
+      transform: scale(1.3, 1.35);
       opacity: 0;
     }
 .button:focus {
@@ -1137,7 +1136,7 @@ picture img{
   }
 .reveal-item {
   opacity: 0;
-  transition: opacity 1.4s;
+  transition: opacity 850ms;
 }
 .reveal-item--is-visible {
     opacity: 1;
