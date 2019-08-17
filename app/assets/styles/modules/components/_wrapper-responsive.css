@@ -2,13 +2,15 @@
   margin: auto;
   @mixin atMedium {
     width: 750px; 
-    padding: 0 15px;   
+    padding-right: 15px;   
+    padding-left: 15px;   
   }
   @mixin atLarge {
     width: 100%    
   }
 
   &--edge-touch {
-    padding: 0 15px;  
+    padding-right: 15px;   
+    padding-left: 15px; 
   }
 }

@@ -457,7 +457,7 @@ template {
     border-bottom: 1px solid; 
   }
 .footer__page-section {
-    padding: 3.5em 0;
+    padding: 2.5em 0;
   }
 .footer__headline-text-space {
     margin-bottom: 15px;
@@ -1091,7 +1091,8 @@ picture img{
 @media (min-width: 750px) {
 .wrapper-responsive {
     width: 750px; 
-    padding: 0 15px
+    padding-right: 15px;   
+    padding-left: 15px
 }
   }
 @media (min-width: 1200px) {
@@ -1100,7 +1101,8 @@ picture img{
 }
   }
 .wrapper-responsive--edge-touch {
-    padding: 0 15px;  
+    padding-right: 15px;   
+    padding-left: 15px; 
   }
 .wrapper {
   width: 100%;
