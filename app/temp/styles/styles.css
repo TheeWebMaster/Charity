@@ -510,21 +510,23 @@ template {
       display: block
   }
   }
-.header__list > li {
+.header__list-item {
     display: inline-block;
     margin-right: 1.5em;
     padding: 1.3em 0;
     cursor: pointer;
-
   }
 @media (min-width: 1200px) {
-.header__list > li {
+.header__list-item {
     margin-right: 3.125em;
-    padding: 1.9em 0;
-
+    padding: 1.9em 0
   }
   }
-.header__list > li:hover {
+.header__link {
+    text-decoration: none;
+    color: white;
+  }
+.header__list-item:hover {
     text-decoration: underline;
   }
 .header__button {
@@ -603,8 +605,7 @@ picture img{
 }
 .background-image-section {
   position: relative;
-  height: 400px;
-  margin-bottom: 2.4em;  
+  height: 400px;  
 }
 @media (min-width: 530px) {
 .background-image-section {
@@ -848,6 +849,9 @@ picture img{
   padding-top :2em;
   padding-bottom: 2em;
 }
+.page-section--no-padding-bottom {
+    padding-bottom: 0;
+  }
 .paragraph {
   color: white;
   line-height: 1.8;
@@ -1157,3 +1161,6 @@ picture img{
 .slide-left-on-scroll--is-visible {
     right: 40px;
   }
+.highlight-on-scroll {
+  color: #00c424;
+}

@@ -18,18 +18,23 @@
       display: block;
     }
   }
-  &__list > li {
+  &__list-item {
     display: inline-block;
     margin-right: 1.5em;
     padding: 1.3em 0;
+    cursor: pointer;
+
    @mixin atLarge {
     margin-right: 3.125em;
     padding: 1.9em 0;
    }
-    cursor: pointer;
-
   }
-  &__list > li:hover {
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+  &__list-item:hover {
     text-decoration: underline;
   }
   &__button {

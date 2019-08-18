@@ -1,5 +1,6 @@
 import RevealOnScroll from './modules/RevealOnScroll';
 import CounterOnScroll from './modules/CounterOnScroll';
+import highlightLinksOnScroll from './modules/highlightLinksOnScroll';
 import $ from 'jquery';
 
 new RevealOnScroll($('.grid__item'), '75%', 'reveal-item');
@@ -22,3 +23,5 @@ new CounterOnScroll($('#succeeded-missions'), '90%', {
   number :834329,
   speed: 1832
 });
+
+new highlightLinksOnScroll();

@@ -6,6 +6,7 @@ class CounterOnScroll {
     this.elements = elements;
     this.offset = offset;
     this.info = info;
+    this.completed = false;
     this.intialState();
     this.createWaypoints();
   }
@@ -18,15 +19,17 @@ class CounterOnScroll {
       new Waypoint({
         element: item,
         handler: direction => {
-          let counter = 2;
-          const interval = setInterval(() => {
-            $(item).text(that.adjust(counter));
-            counter += that.info.speed;
-            if (counter > that.info.number) {
-              clearInterval(interval);
-            }
-          }, 1); 
-          console.log(direction);
+          if (!that.completed) {
+            let counter = 2;
+            const interval = setInterval(() => {
+              $(item).text(that.adjust(counter));
+              counter += that.info.speed;
+              if (counter > that.info.number) {
+                clearInterval(interval);
+              }
+            }, 1); 
+            that.completed = true;
+          }
         },
         offset: that.offset
       });

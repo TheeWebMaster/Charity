@@ -1,7 +1,6 @@
 .background-image-section {
   position: relative;
   height: 400px;
-  margin-bottom: 2.4em;
   
     @mixin atSmall {
       height: 500px;
