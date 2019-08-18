@@ -14,19 +14,11 @@
     <img class="header__logo" src="./assets/images/logo.png" alt="site logo">
     <div class="flex flex--justify-content-end flex--align-items-base">
       <ul class="header__list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Causes</li>
-          <li class="header__item-menu">
-              Pages 
-              <i class="fas fa-sort-down icon-positioning icon-positioning--margin-left"></i>
-              <ul class="header__drop-down">
-                <li>Our Team</li>
-                <li>Page Map</li>
-              </ul>
-          </li>
-          <li class="header__item-menu">
-              Blog 
+          <li class="header__list-item"><a href="#our-features" id="our-features-link" class="header__link">Our Features</a></li>
+          <li class="header__list-item"><a href="#donations" id="donation-link" class="header__link">Donations</a></li>
+          <li class="header__list-item"><a href="#our-volunteers" id="our-volunteers-link" class="header__link">Volunteers</a></li>
+          <li class="header__item-menu header__list-item">
+              <a href="#our-blog" id="our-blog-link" class="header__link">Blog</a> 
               <i class="fas fa-sort-down icon-positioning icon-positioning--margin-left"></i>
               <ul class="header__drop-down">
                 <li>Our Blog</li>
@@ -52,7 +44,7 @@
     </div>
   </div>
 
-  <div class="page-section">
+  <div class="page-section" id="our-features" data-link="#our-features-link">
     <h6 class="headline headline--light-grey  headline--tiny headline--letter-spread headline--main-typo headline--thin">AWESOME FEATURE</h6>
     <h1 class="headline headline--black headline--medium  headline--margin-bottom-large">How Could You Help</h1>
       <div class="grid">
@@ -143,7 +135,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="wrapper-responsive page-section">
+  <div id="donations" class="wrapper-responsive page-section" data-link="#donation-link">
       <h6 class="headline headline--light-grey  headline--tiny headline--letter-spread headline--main-typo headline--thin">DONATION SHOWS PASSION</h6>
       <h1 class="headline headline--black headline--medium  headline--margin-bottom-large">Featured causes</h1>
       <div class="flex flex--justify-content-center flex--gap">
@@ -223,7 +215,7 @@
     </div>
   </div>
   
-  <div class="wrapper-responsive">
+  <div class="wrapper-responsive page-section page-section--no-padding-bottom" id="our-volunteers" data-link="#our-volunteers-link">
     <h6 class="headline headline--light-grey headline--centered headline--tiny headline--letter-spread headline--main-typo headline--thin">VOLUNTEERS</h6>
     <h1 class="headline headline--black headline--medium headline--centered headline--margin-bottom-large">Expert Volunteers</h1>
     <div class="flex flex--justify-content-center flex--gap">
@@ -290,7 +282,7 @@
     </div>
   </div>
 
-  <div class="wrapper-responsive page-section">
+  <div class="wrapper-responsive page-section" id="our-blog" data-link="#our-blog-link">
       <h6 class="headline headline--light-grey  headline--tiny headline--letter-spread headline--main-typo headline--thin">OUR BLOG</h6>
       <h1 class="headline headline--black headline--medium  headline--margin-bottom-large">Every Single Update</h1>
     <div class="flex flex--no-wrap-at-m flex--gap flex--justify-content-center">
