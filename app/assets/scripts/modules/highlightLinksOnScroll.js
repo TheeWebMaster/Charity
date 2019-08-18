@@ -1,10 +1,12 @@
 import $ from 'jquery';
+import smoothScroll from 'jquery-smooth-scroll'; 
 
 class highlightLinksOnScroll {
   constructor() {
     this.pageSections = $('.page-section');
     this.links = $('.header__link')
     this.createPageSectionsWaypoints();
+    this.enableSmoothScroll();
   }
   createPageSectionsWaypoints() {
     const that = this;
@@ -31,6 +33,9 @@ class highlightLinksOnScroll {
         offset: '-40%'
       });
     });
+  }
+  enableSmoothScroll() {
+    this.links.smoothScroll();
   }
 };
 
