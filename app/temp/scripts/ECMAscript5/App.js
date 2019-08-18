@@ -135,10 +135,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return null == e ? e + "" : "object" == _typeof(e) || "function" == typeof e ? p[d.call(e)] || "object" : _typeof(e);
     }
 
-    var S = function S(e, t) {
-      return new S.fn.init(e, t);
+    var C = function C(e, t) {
+      return new C.fn.init(e, t);
     },
-        C = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        S = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 
     function k(e) {
       var t = !!e && "length" in e && e.length,
@@ -146,9 +146,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return !y(e) && !x(e) && ("array" === n || 0 === t || "number" == typeof t && t > 0 && t - 1 in e);
     }
 
-    S.fn = S.prototype = {
+    C.fn = C.prototype = {
       jquery: "3.4.1",
-      constructor: S,
+      constructor: C,
       length: 0,
       toArray: function toArray() {
         return l.call(this);
@@ -157,14 +157,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return null == e ? l.call(this) : e < 0 ? this[e + this.length] : this[e];
       },
       pushStack: function pushStack(e) {
-        var t = S.merge(this.constructor(), e);
+        var t = C.merge(this.constructor(), e);
         return t.prevObject = this, t;
       },
       each: function each(e) {
-        return S.each(this, e);
+        return C.each(this, e);
       },
       map: function map(e) {
-        return this.pushStack(S.map(this, function (t, n) {
+        return this.pushStack(C.map(this, function (t, n) {
           return e.call(t, n, t);
         }));
       },
@@ -188,7 +188,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       push: c,
       sort: o.sort,
       splice: o.splice
-    }, S.extend = S.fn.extend = function () {
+    }, C.extend = C.fn.extend = function () {
       var e,
           t,
           n,
@@ -202,12 +202,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       for ("boolean" == typeof s && (u = s, s = arguments[a] || {}, a++), "object" == _typeof(s) || y(s) || (s = {}), a === l && (s = this, a--); a < l; a++) {
         if (null != (e = arguments[a])) for (t in e) {
-          r = e[t], "__proto__" !== t && s !== r && (u && r && (S.isPlainObject(r) || (i = Array.isArray(r))) ? (n = s[t], o = i && !Array.isArray(n) ? [] : i || S.isPlainObject(n) ? n : {}, i = !1, s[t] = S.extend(u, o, r)) : void 0 !== r && (s[t] = r));
+          r = e[t], "__proto__" !== t && s !== r && (u && r && (C.isPlainObject(r) || (i = Array.isArray(r))) ? (n = s[t], o = i && !Array.isArray(n) ? [] : i || C.isPlainObject(n) ? n : {}, i = !1, s[t] = C.extend(u, o, r)) : void 0 !== r && (s[t] = r));
         }
       }
 
       return s;
-    }, S.extend({
+    }, C.extend({
       expando: "jQuery" + ("3.4.1" + Math.random()).replace(/\D/g, ""),
       isReady: !0,
       error: function error(e) {
@@ -243,11 +243,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return e;
       },
       trim: function trim(e) {
-        return null == e ? "" : (e + "").replace(C, "");
+        return null == e ? "" : (e + "").replace(S, "");
       },
       makeArray: function makeArray(e, t) {
         var n = t || [];
-        return null != e && (k(Object(e)) ? S.merge(n, "string" == typeof e ? [e] : e) : c.call(n, e)), n;
+        return null != e && (k(Object(e)) ? C.merge(n, "string" == typeof e ? [e] : e) : c.call(n, e)), n;
       },
       inArray: function inArray(e, t, n) {
         return null == t ? -1 : f.call(t, e, n);
@@ -280,7 +280,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       guid: 1,
       support: v
-    }), "function" == typeof Symbol && (S.fn[Symbol.iterator] = o[Symbol.iterator]), S.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "), function (e, t) {
+    }), "function" == typeof Symbol && (C.fn[Symbol.iterator] = o[Symbol.iterator]), C.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "), function (e, t) {
       p["[object " + t + "]"] = t.toLowerCase();
     });
 
@@ -318,8 +318,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           b = "sizzle" + 1 * new Date(),
           w = e.document,
           T = 0,
-          S = 0,
-          C = le(),
+          C = 0,
+          S = le(),
           k = le(),
           E = le(),
           A = le(),
@@ -733,8 +733,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             };
           },
           CLASS: function CLASS(e) {
-            var t = C[e + " "];
-            return t || (t = new RegExp("(^|" + W + ")" + e + "(" + W + "|$)")) && C(e, function (e) {
+            var t = S[e + " "];
+            return t || (t = new RegExp("(^|" + W + ")" + e + "(" + W + "|$)")) && S(e, function (e) {
               return t.test("string" == typeof e.className && e.className || void 0 !== e.getAttribute && e.getAttribute("class") || "");
             });
           },
@@ -950,7 +950,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             i = t.next,
             o = i || r,
             s = n && "parentNode" === o,
-            a = S++;
+            a = C++;
         return t.first ? function (t, n, i) {
           for (; t = t[r];) {
             if (1 === t.nodeType || s) return e(t, n, i);
@@ -996,8 +996,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return s;
       }
 
-      function Se(e, t, n, r, i, o) {
-        return r && !r[b] && (r = Se(r)), i && !i[b] && (i = Se(i, o)), ue(function (o, s, a, l) {
+      function Ce(e, t, n, r, i, o) {
+        return r && !r[b] && (r = Ce(r)), i && !i[b] && (i = Ce(i, o)), ue(function (o, s, a, l) {
           var u,
               c,
               f,
@@ -1036,7 +1036,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         });
       }
 
-      function Ce(e) {
+      function Se(e) {
         for (var t, n, i, o = e.length, s = r.relative[e[0].type], a = s || r.relative[" "], l = s ? 1 : 0, c = be(function (e) {
           return e === t;
         }, a, !0), f = be(function (e) {
@@ -1051,9 +1051,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 ;
               }
 
-              return Se(l > 1 && we(p), l > 1 && xe(e.slice(0, l - 1).concat({
+              return Ce(l > 1 && we(p), l > 1 && xe(e.slice(0, l - 1).concat({
                 value: " " === e[l - 2].type ? "*" : ""
-              })).replace($, "$1"), n, l < i && Ce(e.slice(l, i)), i < o && Ce(e = e.slice(i)), i < o && xe(e));
+              })).replace($, "$1"), n, l < i && Se(e.slice(l, i)), i < o && Se(e = e.slice(i)), i < o && xe(e));
             }
 
             p.push(n);
@@ -1098,7 +1098,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         if (!a) {
           for (t || (t = s(e)), n = t.length; n--;) {
-            (a = Ce(t[n]))[b] ? i.push(a) : o.push(a);
+            (a = Se(t[n]))[b] ? i.push(a) : o.push(a);
           }
 
           (a = E(e, function (e, t) {
@@ -1113,11 +1113,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                   x = _o && [],
                   b = [],
                   w = u,
-                  S = _o || i && r.find.TAG("*", c),
-                  C = T += null == w ? 1 : Math.random() || .1,
-                  k = S.length;
+                  C = _o || i && r.find.TAG("*", c),
+                  S = T += null == w ? 1 : Math.random() || .1,
+                  k = C.length;
 
-              for (c && (u = s === d || s || c); y !== k && null != (f = S[y]); y++) {
+              for (c && (u = s === d || s || c); y !== k && null != (f = C[y]); y++) {
                 if (i && f) {
                   for (h = 0, s || f.ownerDocument === d || (p(f), a = !g); m = e[h++];) {
                     if (m(f, s || d, a)) {
@@ -1126,7 +1126,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                     }
                   }
 
-                  c && (T = C);
+                  c && (T = S);
                 }
 
                 n && ((f = !m && f) && v--, _o && x.push(f));
@@ -1147,7 +1147,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 H.apply(l, b), c && !_o && b.length > 0 && v + t.length > 1 && ae.uniqueSort(l);
               }
 
-              return c && (T = C, u = w), x;
+              return c && (T = S, u = w), x;
             };
 
             return n ? ue(o) : o;
@@ -1197,12 +1197,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }), ae;
     }(n);
 
-    S.find = E, S.expr = E.selectors, S.expr[":"] = S.expr.pseudos, S.uniqueSort = S.unique = E.uniqueSort, S.text = E.getText, S.isXMLDoc = E.isXML, S.contains = E.contains, S.escapeSelector = E.escape;
+    C.find = E, C.expr = E.selectors, C.expr[":"] = C.expr.pseudos, C.uniqueSort = C.unique = E.uniqueSort, C.text = E.getText, C.isXMLDoc = E.isXML, C.contains = E.contains, C.escapeSelector = E.escape;
 
     var A = function A(e, t, n) {
       for (var r = [], i = void 0 !== n; (e = e[t]) && 9 !== e.nodeType;) {
         if (1 === e.nodeType) {
-          if (i && S(e).is(n)) break;
+          if (i && C(e).is(n)) break;
           r.push(e);
         }
       }
@@ -1216,7 +1216,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       return n;
     },
-        j = S.expr.match.needsContext;
+        j = C.expr.match.needsContext;
 
     function N(e, t) {
       return e.nodeName && e.nodeName.toLowerCase() === t.toLowerCase();
@@ -1225,37 +1225,37 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var q = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
 
     function L(e, t, n) {
-      return y(t) ? S.grep(e, function (e, r) {
+      return y(t) ? C.grep(e, function (e, r) {
         return !!t.call(e, r, e) !== n;
-      }) : t.nodeType ? S.grep(e, function (e) {
+      }) : t.nodeType ? C.grep(e, function (e) {
         return e === t !== n;
-      }) : "string" != typeof t ? S.grep(e, function (e) {
+      }) : "string" != typeof t ? C.grep(e, function (e) {
         return f.call(t, e) > -1 !== n;
-      }) : S.filter(t, e, n);
+      }) : C.filter(t, e, n);
     }
 
-    S.filter = function (e, t, n) {
+    C.filter = function (e, t, n) {
       var r = t[0];
-      return n && (e = ":not(" + e + ")"), 1 === t.length && 1 === r.nodeType ? S.find.matchesSelector(r, e) ? [r] : [] : S.find.matches(e, S.grep(t, function (e) {
+      return n && (e = ":not(" + e + ")"), 1 === t.length && 1 === r.nodeType ? C.find.matchesSelector(r, e) ? [r] : [] : C.find.matches(e, C.grep(t, function (e) {
         return 1 === e.nodeType;
       }));
-    }, S.fn.extend({
+    }, C.fn.extend({
       find: function find(e) {
         var t,
             n,
             r = this.length,
             i = this;
-        if ("string" != typeof e) return this.pushStack(S(e).filter(function () {
+        if ("string" != typeof e) return this.pushStack(C(e).filter(function () {
           for (t = 0; t < r; t++) {
-            if (S.contains(i[t], this)) return !0;
+            if (C.contains(i[t], this)) return !0;
           }
         }));
 
         for (n = this.pushStack([]), t = 0; t < r; t++) {
-          S.find(e, i[t], n);
+          C.find(e, i[t], n);
         }
 
-        return r > 1 ? S.uniqueSort(n) : n;
+        return r > 1 ? C.uniqueSort(n) : n;
       },
       filter: function filter(e) {
         return this.pushStack(L(this, e || [], !1));
@@ -1264,12 +1264,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return this.pushStack(L(this, e || [], !0));
       },
       is: function is(e) {
-        return !!L(this, "string" == typeof e && j.test(e) ? S(e) : e || [], !1).length;
+        return !!L(this, "string" == typeof e && j.test(e) ? C(e) : e || [], !1).length;
       }
     });
     var H,
         O = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;
-    (S.fn.init = function (e, t, n) {
+    (C.fn.init = function (e, t, n) {
       var r, i;
       if (!e) return this;
 
@@ -1277,7 +1277,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (!(r = "<" === e[0] && ">" === e[e.length - 1] && e.length >= 3 ? [null, e, null] : O.exec(e)) || !r[1] && t) return !t || t.jquery ? (t || n).find(e) : this.constructor(t).find(e);
 
         if (r[1]) {
-          if (t = t instanceof S ? t[0] : t, S.merge(this, S.parseHTML(r[1], t && t.nodeType ? t.ownerDocument || t : s, !0)), q.test(r[1]) && S.isPlainObject(t)) for (r in t) {
+          if (t = t instanceof C ? t[0] : t, C.merge(this, C.parseHTML(r[1], t && t.nodeType ? t.ownerDocument || t : s, !0)), q.test(r[1]) && C.isPlainObject(t)) for (r in t) {
             y(this[r]) ? this[r](t[r]) : this.attr(r, t[r]);
           }
           return this;
@@ -1286,8 +1286,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return (i = s.getElementById(r[2])) && (this[0] = i, this.length = 1), this;
       }
 
-      return e.nodeType ? (this[0] = e, this.length = 1, this) : y(e) ? void 0 !== n.ready ? n.ready(e) : e(S) : S.makeArray(e, this);
-    }).prototype = S.fn, H = S(s);
+      return e.nodeType ? (this[0] = e, this.length = 1, this) : y(e) ? void 0 !== n.ready ? n.ready(e) : e(C) : C.makeArray(e, this);
+    }).prototype = C.fn, H = C(s);
     var P = /^(?:parents|prev(?:Until|All))/,
         R = {
       children: !0,
@@ -1304,13 +1304,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return e;
     }
 
-    S.fn.extend({
+    C.fn.extend({
       has: function has(e) {
-        var t = S(e, this),
+        var t = C(e, this),
             n = t.length;
         return this.filter(function () {
           for (var e = 0; e < n; e++) {
-            if (S.contains(this, t[e])) return !0;
+            if (C.contains(this, t[e])) return !0;
           }
         });
       },
@@ -1319,27 +1319,27 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             r = 0,
             i = this.length,
             o = [],
-            s = "string" != typeof e && S(e);
+            s = "string" != typeof e && C(e);
         if (!j.test(e)) for (; r < i; r++) {
           for (n = this[r]; n && n !== t; n = n.parentNode) {
-            if (n.nodeType < 11 && (s ? s.index(n) > -1 : 1 === n.nodeType && S.find.matchesSelector(n, e))) {
+            if (n.nodeType < 11 && (s ? s.index(n) > -1 : 1 === n.nodeType && C.find.matchesSelector(n, e))) {
               o.push(n);
               break;
             }
           }
         }
-        return this.pushStack(o.length > 1 ? S.uniqueSort(o) : o);
+        return this.pushStack(o.length > 1 ? C.uniqueSort(o) : o);
       },
       index: function index(e) {
-        return e ? "string" == typeof e ? f.call(S(e), this[0]) : f.call(this, e.jquery ? e[0] : e) : this[0] && this[0].parentNode ? this.first().prevAll().length : -1;
+        return e ? "string" == typeof e ? f.call(C(e), this[0]) : f.call(this, e.jquery ? e[0] : e) : this[0] && this[0].parentNode ? this.first().prevAll().length : -1;
       },
       add: function add(e, t) {
-        return this.pushStack(S.uniqueSort(S.merge(this.get(), S(e, t))));
+        return this.pushStack(C.uniqueSort(C.merge(this.get(), C(e, t))));
       },
       addBack: function addBack(e) {
         return this.add(null == e ? this.prevObject : this.prevObject.filter(e));
       }
-    }), S.each({
+    }), C.each({
       parent: function parent(e) {
         var t = e.parentNode;
         return t && 11 !== t.nodeType ? t : null;
@@ -1375,12 +1375,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return D(e.firstChild);
       },
       contents: function contents(e) {
-        return void 0 !== e.contentDocument ? e.contentDocument : (N(e, "template") && (e = e.content || e), S.merge([], e.childNodes));
+        return void 0 !== e.contentDocument ? e.contentDocument : (N(e, "template") && (e = e.content || e), C.merge([], e.childNodes));
       }
     }, function (e, t) {
-      S.fn[e] = function (n, r) {
-        var i = S.map(this, t, n);
-        return "Until" !== e.slice(-5) && (r = n), r && "string" == typeof r && (i = S.filter(r, i)), this.length > 1 && (R[e] || S.uniqueSort(i), P.test(e) && i.reverse()), this.pushStack(i);
+      C.fn[e] = function (n, r) {
+        var i = C.map(this, t, n);
+        return "Until" !== e.slice(-5) && (r = n), r && "string" == typeof r && (i = C.filter(r, i)), this.length > 1 && (R[e] || C.uniqueSort(i), P.test(e) && i.reverse()), this.pushStack(i);
       };
     });
     var M = /[^\x20\t\r\n\f]+/g;
@@ -1403,13 +1403,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }
 
-    S.Callbacks = function (e) {
+    C.Callbacks = function (e) {
       e = "string" == typeof e ? function (e) {
         var t = {};
-        return S.each(e.match(M) || [], function (e, n) {
+        return C.each(e.match(M) || [], function (e, n) {
           t[n] = !0;
         }), t;
-      }(e) : S.extend({}, e);
+      }(e) : C.extend({}, e);
 
       var t,
           n,
@@ -1430,20 +1430,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           u = {
         add: function add() {
           return o && (n && !t && (a = o.length - 1, s.push(n)), function t(n) {
-            S.each(n, function (n, r) {
+            C.each(n, function (n, r) {
               y(r) ? e.unique && u.has(r) || o.push(r) : r && r.length && "string" !== T(r) && t(r);
             });
           }(arguments), n && !t && l()), this;
         },
         remove: function remove() {
-          return S.each(arguments, function (e, t) {
-            for (var n; (n = S.inArray(t, o, n)) > -1;) {
+          return C.each(arguments, function (e, t) {
+            for (var n; (n = C.inArray(t, o, n)) > -1;) {
               o.splice(n, 1), n <= a && a--;
             }
           }), this;
         },
         has: function has(e) {
-          return e ? S.inArray(e, o) > -1 : o.length > 0;
+          return e ? C.inArray(e, o) > -1 : o.length > 0;
         },
         empty: function empty() {
           return o && (o = []), this;
@@ -1472,9 +1472,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       };
 
       return u;
-    }, S.extend({
+    }, C.extend({
       Deferred: function Deferred(e) {
-        var t = [["notify", "progress", S.Callbacks("memory"), S.Callbacks("memory"), 2], ["resolve", "done", S.Callbacks("once memory"), S.Callbacks("once memory"), 0, "resolved"], ["reject", "fail", S.Callbacks("once memory"), S.Callbacks("once memory"), 1, "rejected"]],
+        var t = [["notify", "progress", C.Callbacks("memory"), C.Callbacks("memory"), 2], ["resolve", "done", C.Callbacks("once memory"), C.Callbacks("once memory"), 0, "resolved"], ["reject", "fail", C.Callbacks("once memory"), C.Callbacks("once memory"), 1, "rejected"]],
             r = "pending",
             i = {
           state: function state() {
@@ -1488,8 +1488,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           },
           pipe: function pipe() {
             var e = arguments;
-            return S.Deferred(function (n) {
-              S.each(t, function (t, r) {
+            return C.Deferred(function (n) {
+              C.each(t, function (t, r) {
                 var i = y(e[r[4]]) && e[r[4]];
                 o[r[1]](function () {
                   var e = i && i.apply(this, arguments);
@@ -1517,24 +1517,24 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                   try {
                     u();
                   } catch (n) {
-                    S.Deferred.exceptionHook && S.Deferred.exceptionHook(n, c.stackTrace), e + 1 >= o && (r !== F && (a = void 0, l = [n]), t.rejectWith(a, l));
+                    C.Deferred.exceptionHook && C.Deferred.exceptionHook(n, c.stackTrace), e + 1 >= o && (r !== F && (a = void 0, l = [n]), t.rejectWith(a, l));
                   }
                 };
 
-                e ? c() : (S.Deferred.getStackHook && (c.stackTrace = S.Deferred.getStackHook()), n.setTimeout(c));
+                e ? c() : (C.Deferred.getStackHook && (c.stackTrace = C.Deferred.getStackHook()), n.setTimeout(c));
               };
             }
 
-            return S.Deferred(function (n) {
+            return C.Deferred(function (n) {
               t[0][3].add(s(0, n, y(i) ? i : I, n.notifyWith)), t[1][3].add(s(0, n, y(e) ? e : I)), t[2][3].add(s(0, n, y(r) ? r : F));
             }).promise();
           },
           promise: function promise(e) {
-            return null != e ? S.extend(e, i) : i;
+            return null != e ? C.extend(e, i) : i;
           }
         },
             o = {};
-        return S.each(t, function (e, n) {
+        return C.each(t, function (e, n) {
           var s = n[2],
               a = n[5];
           i[n[1]] = s.add, a && s.add(function () {
@@ -1549,7 +1549,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             n = t,
             r = Array(n),
             i = l.call(arguments),
-            o = S.Deferred(),
+            o = C.Deferred(),
             s = function s(e) {
           return function (n) {
             r[e] = this, i[e] = arguments.length > 1 ? l.call(arguments) : n, --t || o.resolveWith(r, i);
@@ -1566,31 +1566,31 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     });
     var $ = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
-    S.Deferred.exceptionHook = function (e, t) {
+    C.Deferred.exceptionHook = function (e, t) {
       n.console && n.console.warn && e && $.test(e.name) && n.console.warn("jQuery.Deferred exception: " + e.message, e.stack, t);
-    }, S.readyException = function (e) {
+    }, C.readyException = function (e) {
       n.setTimeout(function () {
         throw e;
       });
     };
 
-    var _ = S.Deferred();
+    var _ = C.Deferred();
 
     function z() {
-      s.removeEventListener("DOMContentLoaded", z), n.removeEventListener("load", z), S.ready();
+      s.removeEventListener("DOMContentLoaded", z), n.removeEventListener("load", z), C.ready();
     }
 
-    S.fn.ready = function (e) {
+    C.fn.ready = function (e) {
       return _.then(e)["catch"](function (e) {
-        S.readyException(e);
+        C.readyException(e);
       }), this;
-    }, S.extend({
+    }, C.extend({
       isReady: !1,
       readyWait: 1,
       ready: function ready(e) {
-        (!0 === e ? --S.readyWait : S.isReady) || (S.isReady = !0, !0 !== e && --S.readyWait > 0 || _.resolveWith(s, [S]));
+        (!0 === e ? --C.readyWait : C.isReady) || (C.isReady = !0, !0 !== e && --C.readyWait > 0 || _.resolveWith(s, [C]));
       }
-    }), S.ready.then = _.then, "complete" === s.readyState || "loading" !== s.readyState && !s.documentElement.doScroll ? n.setTimeout(S.ready) : (s.addEventListener("DOMContentLoaded", z), n.addEventListener("load", z));
+    }), C.ready.then = _.then, "complete" === s.readyState || "loading" !== s.readyState && !s.documentElement.doScroll ? n.setTimeout(C.ready) : (s.addEventListener("DOMContentLoaded", z), n.addEventListener("load", z));
 
     var X = function X(e, t, n, r, i, o, s) {
       var a = 0,
@@ -1599,7 +1599,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       if ("object" === T(n)) for (a in i = !0, n) {
         X(e, t, a, n[a], !0, o, s);
       } else if (void 0 !== r && (i = !0, y(r) || (s = !0), u && (s ? (t.call(e, r), t = null) : (u = t, t = function t(e, _t2, n) {
-        return u.call(S(e), n);
+        return u.call(C(e), n);
       })), t)) for (; a < l; a++) {
         t(e[a], n, s ? r : r.call(e[a], a, t(e[a], n)));
       }
@@ -1621,7 +1621,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     function K() {
-      this.expando = S.expando + K.uid++;
+      this.expando = C.expando + K.uid++;
     }
 
     K.uid = 1, K.prototype = {
@@ -1659,12 +1659,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }
           }
 
-          (void 0 === t || S.isEmptyObject(r)) && (e.nodeType ? e[this.expando] = void 0 : delete e[this.expando]);
+          (void 0 === t || C.isEmptyObject(r)) && (e.nodeType ? e[this.expando] = void 0 : delete e[this.expando]);
         }
       },
       hasData: function hasData(e) {
         var t = e[this.expando];
-        return void 0 !== t && !S.isEmptyObject(t);
+        return void 0 !== t && !C.isEmptyObject(t);
       }
     };
     var J = new K(),
@@ -1686,7 +1686,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return n;
     }
 
-    S.extend({
+    C.extend({
       hasData: function hasData(e) {
         return Z.hasData(e) || J.hasData(e);
       },
@@ -1702,7 +1702,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       _removeData: function _removeData(e, t) {
         J.remove(e, t);
       }
-    }), S.fn.extend({
+    }), C.fn.extend({
       data: function data(e, t) {
         var n,
             r,
@@ -1737,42 +1737,42 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           Z.remove(this, e);
         });
       }
-    }), S.extend({
+    }), C.extend({
       queue: function queue(e, t, n) {
         var r;
-        if (e) return t = (t || "fx") + "queue", r = J.get(e, t), n && (!r || Array.isArray(n) ? r = J.access(e, t, S.makeArray(n)) : r.push(n)), r || [];
+        if (e) return t = (t || "fx") + "queue", r = J.get(e, t), n && (!r || Array.isArray(n) ? r = J.access(e, t, C.makeArray(n)) : r.push(n)), r || [];
       },
       dequeue: function dequeue(e, t) {
         t = t || "fx";
 
-        var n = S.queue(e, t),
+        var n = C.queue(e, t),
             r = n.length,
             i = n.shift(),
-            o = S._queueHooks(e, t);
+            o = C._queueHooks(e, t);
 
         "inprogress" === i && (i = n.shift(), r--), i && ("fx" === t && n.unshift("inprogress"), delete o.stop, i.call(e, function () {
-          S.dequeue(e, t);
+          C.dequeue(e, t);
         }, o)), !r && o && o.empty.fire();
       },
       _queueHooks: function _queueHooks(e, t) {
         var n = t + "queueHooks";
         return J.get(e, n) || J.access(e, n, {
-          empty: S.Callbacks("once memory").add(function () {
+          empty: C.Callbacks("once memory").add(function () {
             J.remove(e, [t + "queue", n]);
           })
         });
       }
-    }), S.fn.extend({
+    }), C.fn.extend({
       queue: function queue(e, t) {
         var n = 2;
-        return "string" != typeof e && (t = e, e = "fx", n--), arguments.length < n ? S.queue(this[0], e) : void 0 === t ? this : this.each(function () {
-          var n = S.queue(this, e, t);
-          S._queueHooks(this, e), "fx" === e && "inprogress" !== n[0] && S.dequeue(this, e);
+        return "string" != typeof e && (t = e, e = "fx", n--), arguments.length < n ? C.queue(this[0], e) : void 0 === t ? this : this.each(function () {
+          var n = C.queue(this, e, t);
+          C._queueHooks(this, e), "fx" === e && "inprogress" !== n[0] && C.dequeue(this, e);
         });
       },
       dequeue: function dequeue(e) {
         return this.each(function () {
-          S.dequeue(this, e);
+          C.dequeue(this, e);
         });
       },
       clearQueue: function clearQueue(e) {
@@ -1781,7 +1781,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       promise: function promise(e, t) {
         var n,
             r = 1,
-            i = S.Deferred(),
+            i = C.Deferred(),
             o = this,
             s = this.length,
             a = function a() {
@@ -1801,18 +1801,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         oe = ["Top", "Right", "Bottom", "Left"],
         se = s.documentElement,
         ae = function ae(e) {
-      return S.contains(e.ownerDocument, e);
+      return C.contains(e.ownerDocument, e);
     },
         le = {
       composed: !0
     };
 
     se.getRootNode && (ae = function ae(e) {
-      return S.contains(e.ownerDocument, e) || e.getRootNode(le) === e.ownerDocument;
+      return C.contains(e.ownerDocument, e) || e.getRootNode(le) === e.ownerDocument;
     });
 
     var ue = function ue(e, t) {
-      return "none" === (e = t || e).style.display || "" === e.style.display && ae(e) && "none" === S.css(e, "display");
+      return "none" === (e = t || e).style.display || "" === e.style.display && ae(e) && "none" === C.css(e, "display");
     },
         ce = function ce(e, t, n, r) {
       var i,
@@ -1837,18 +1837,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           a = r ? function () {
         return r.cur();
       } : function () {
-        return S.css(e, t, "");
+        return C.css(e, t, "");
       },
           l = a(),
-          u = n && n[3] || (S.cssNumber[t] ? "" : "px"),
-          c = e.nodeType && (S.cssNumber[t] || "px" !== u && +l) && ie.exec(S.css(e, t));
+          u = n && n[3] || (C.cssNumber[t] ? "" : "px"),
+          c = e.nodeType && (C.cssNumber[t] || "px" !== u && +l) && ie.exec(C.css(e, t));
 
       if (c && c[3] !== u) {
         for (l /= 2, u = u || c[3], c = +l || 1; s--;) {
-          S.style(e, t, c + u), (1 - o) * (1 - (o = a() / l || .5)) <= 0 && (s = 0), c /= o;
+          C.style(e, t, c + u), (1 - o) * (1 - (o = a() / l || .5)) <= 0 && (s = 0), c /= o;
         }
 
-        c *= 2, S.style(e, t, c + u), n = n || [];
+        c *= 2, C.style(e, t, c + u), n = n || [];
       }
 
       return n && (c = +c || +l || 0, i = n[1] ? c + (n[1] + 1) * n[2] : +n[2], r && (r.unit = u, r.start = c, r.end = i)), i;
@@ -1861,7 +1861,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           n = e.ownerDocument,
           r = e.nodeName,
           i = pe[r];
-      return i || (t = n.body.appendChild(n.createElement(r)), i = S.css(t, "display"), t.parentNode.removeChild(t), "none" === i && (i = "block"), pe[r] = i, i);
+      return i || (t = n.body.appendChild(n.createElement(r)), i = C.css(t, "display"), t.parentNode.removeChild(t), "none" === i && (i = "block"), pe[r] = i, i);
     }
 
     function he(e, t) {
@@ -1876,7 +1876,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return e;
     }
 
-    S.fn.extend({
+    C.fn.extend({
       show: function show() {
         return he(this, !0);
       },
@@ -1885,7 +1885,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       toggle: function toggle(e) {
         return "boolean" == typeof e ? e ? this.show() : this.hide() : this.each(function () {
-          ue(this) ? S(this).show() : S(this).hide();
+          ue(this) ? C(this).show() : C(this).hide();
         });
       }
     });
@@ -1903,7 +1903,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     function xe(e, t) {
       var n;
-      return n = void 0 !== e.getElementsByTagName ? e.getElementsByTagName(t || "*") : void 0 !== e.querySelectorAll ? e.querySelectorAll(t || "*") : [], void 0 === t || t && N(e, t) ? S.merge([e], n) : n;
+      return n = void 0 !== e.getElementsByTagName ? e.getElementsByTagName(t || "*") : void 0 !== e.querySelectorAll ? e.querySelectorAll(t || "*") : [], void 0 === t || t && N(e, t) ? C.merge([e], n) : n;
     }
 
     function be(e, t) {
@@ -1915,21 +1915,21 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ye.optgroup = ye.option, ye.tbody = ye.tfoot = ye.colgroup = ye.caption = ye.thead, ye.th = ye.td;
     var we,
         Te,
-        Se = /<|&#?\w+;/;
+        Ce = /<|&#?\w+;/;
 
-    function Ce(e, t, n, r, i) {
+    function Se(e, t, n, r, i) {
       for (var o, s, a, l, u, c, f = t.createDocumentFragment(), p = [], d = 0, h = e.length; d < h; d++) {
-        if ((o = e[d]) || 0 === o) if ("object" === T(o)) S.merge(p, o.nodeType ? [o] : o);else if (Se.test(o)) {
-          for (s = s || f.appendChild(t.createElement("div")), a = (me.exec(o) || ["", ""])[1].toLowerCase(), l = ye[a] || ye._default, s.innerHTML = l[1] + S.htmlPrefilter(o) + l[2], c = l[0]; c--;) {
+        if ((o = e[d]) || 0 === o) if ("object" === T(o)) C.merge(p, o.nodeType ? [o] : o);else if (Ce.test(o)) {
+          for (s = s || f.appendChild(t.createElement("div")), a = (me.exec(o) || ["", ""])[1].toLowerCase(), l = ye[a] || ye._default, s.innerHTML = l[1] + C.htmlPrefilter(o) + l[2], c = l[0]; c--;) {
             s = s.lastChild;
           }
 
-          S.merge(p, s.childNodes), (s = f.firstChild).textContent = "";
+          C.merge(p, s.childNodes), (s = f.firstChild).textContent = "";
         } else p.push(t.createTextNode(o));
       }
 
       for (f.textContent = "", d = 0; o = p[d++];) {
-        if (r && S.inArray(o, r) > -1) i && i.push(o);else if (u = ae(o), s = xe(f.appendChild(o), "script"), u && be(s), n) for (c = 0; o = s[c++];) {
+        if (r && C.inArray(o, r) > -1) i && i.push(o);else if (u = ae(o), s = xe(f.appendChild(o), "script"), u && be(s), n) for (c = 0; o = s[c++];) {
           ve.test(o.type || "") && n.push(o);
         }
       }
@@ -1971,14 +1971,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (null == r && null == i ? (i = n, r = n = void 0) : null == i && ("string" == typeof n ? (i = r, r = void 0) : (i = r, r = n, n = void 0)), !1 === i) i = je;else if (!i) return e;
       return 1 === o && (s = i, (i = function i(e) {
-        return S().off(e), s.apply(this, arguments);
-      }).guid = s.guid || (s.guid = S.guid++)), e.each(function () {
-        S.event.add(this, t, i, r, n);
+        return C().off(e), s.apply(this, arguments);
+      }).guid = s.guid || (s.guid = C.guid++)), e.each(function () {
+        C.event.add(this, t, i, r, n);
       });
     }
 
     function Le(e, t, n) {
-      n ? (J.set(e, t, !1), S.event.add(e, t, {
+      n ? (J.set(e, t, !1), C.event.add(e, t, {
         namespace: !1,
         handler: function handler(e) {
           var r,
@@ -1986,15 +1986,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               o = J.get(this, t);
 
           if (1 & e.isTrigger && this[t]) {
-            if (o.length) (S.event.special[t] || {}).delegateType && e.stopPropagation();else if (o = l.call(arguments), J.set(this, t, o), r = n(this, t), this[t](), o !== (i = J.get(this, t)) || r ? J.set(this, t, !1) : i = {}, o !== i) return e.stopImmediatePropagation(), e.preventDefault(), i.value;
+            if (o.length) (C.event.special[t] || {}).delegateType && e.stopPropagation();else if (o = l.call(arguments), J.set(this, t, o), r = n(this, t), this[t](), o !== (i = J.get(this, t)) || r ? J.set(this, t, !1) : i = {}, o !== i) return e.stopImmediatePropagation(), e.preventDefault(), i.value;
           } else o.length && (J.set(this, t, {
-            value: S.event.trigger(S.extend(o[0], S.Event.prototype), o.slice(1), this)
+            value: C.event.trigger(C.extend(o[0], C.Event.prototype), o.slice(1), this)
           }), e.stopImmediatePropagation());
         }
-      })) : void 0 === J.get(e, t) && S.event.add(e, t, De);
+      })) : void 0 === J.get(e, t) && C.event.add(e, t, De);
     }
 
-    S.event = {
+    C.event = {
       global: {},
       add: function add(e, t, n, r, i) {
         var o,
@@ -2009,19 +2009,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             h,
             g,
             m = J.get(e);
-        if (m) for (n.handler && (n = (o = n).handler, i = o.selector), i && S.find.matchesSelector(se, i), n.guid || (n.guid = S.guid++), (l = m.events) || (l = m.events = {}), (s = m.handle) || (s = m.handle = function (t) {
-          return void 0 !== S && S.event.triggered !== t.type ? S.event.dispatch.apply(e, arguments) : void 0;
+        if (m) for (n.handler && (n = (o = n).handler, i = o.selector), i && C.find.matchesSelector(se, i), n.guid || (n.guid = C.guid++), (l = m.events) || (l = m.events = {}), (s = m.handle) || (s = m.handle = function (t) {
+          return void 0 !== C && C.event.triggered !== t.type ? C.event.dispatch.apply(e, arguments) : void 0;
         }), u = (t = (t || "").match(M) || [""]).length; u--;) {
-          d = g = (a = Ae.exec(t[u]) || [])[1], h = (a[2] || "").split(".").sort(), d && (f = S.event.special[d] || {}, d = (i ? f.delegateType : f.bindType) || d, f = S.event.special[d] || {}, c = S.extend({
+          d = g = (a = Ae.exec(t[u]) || [])[1], h = (a[2] || "").split(".").sort(), d && (f = C.event.special[d] || {}, d = (i ? f.delegateType : f.bindType) || d, f = C.event.special[d] || {}, c = C.extend({
             type: d,
             origType: g,
             data: r,
             handler: n,
             guid: n.guid,
             selector: i,
-            needsContext: i && S.expr.match.needsContext.test(i),
+            needsContext: i && C.expr.match.needsContext.test(i),
             namespace: h.join(".")
-          }, o), (p = l[d]) || ((p = l[d] = []).delegateCount = 0, f.setup && !1 !== f.setup.call(e, r, h, s) || e.addEventListener && e.addEventListener(d, s)), f.add && (f.add.call(e, c), c.handler.guid || (c.handler.guid = n.guid)), i ? p.splice(p.delegateCount++, 0, c) : p.push(c), S.event.global[d] = !0);
+          }, o), (p = l[d]) || ((p = l[d] = []).delegateCount = 0, f.setup && !1 !== f.setup.call(e, r, h, s) || e.addEventListener && e.addEventListener(d, s)), f.add && (f.add.call(e, c), c.handler.guid || (c.handler.guid = n.guid)), i ? p.splice(p.delegateCount++, 0, c) : p.push(c), C.event.global[d] = !0);
         }
       },
       remove: function remove(e, t, n, r, i) {
@@ -2041,17 +2041,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (m && (l = m.events)) {
           for (u = (t = (t || "").match(M) || [""]).length; u--;) {
             if (d = g = (a = Ae.exec(t[u]) || [])[1], h = (a[2] || "").split(".").sort(), d) {
-              for (f = S.event.special[d] || {}, p = l[d = (r ? f.delegateType : f.bindType) || d] || [], a = a[2] && new RegExp("(^|\\.)" + h.join("\\.(?:.*\\.|)") + "(\\.|$)"), s = o = p.length; o--;) {
+              for (f = C.event.special[d] || {}, p = l[d = (r ? f.delegateType : f.bindType) || d] || [], a = a[2] && new RegExp("(^|\\.)" + h.join("\\.(?:.*\\.|)") + "(\\.|$)"), s = o = p.length; o--;) {
                 c = p[o], !i && g !== c.origType || n && n.guid !== c.guid || a && !a.test(c.namespace) || r && r !== c.selector && ("**" !== r || !c.selector) || (p.splice(o, 1), c.selector && p.delegateCount--, f.remove && f.remove.call(e, c));
               }
 
-              s && !p.length && (f.teardown && !1 !== f.teardown.call(e, h, m.handle) || S.removeEvent(e, d, m.handle), delete l[d]);
+              s && !p.length && (f.teardown && !1 !== f.teardown.call(e, h, m.handle) || C.removeEvent(e, d, m.handle), delete l[d]);
             } else for (d in l) {
-              S.event.remove(e, d + t[u], n, r, !0);
+              C.event.remove(e, d + t[u], n, r, !0);
             }
           }
 
-          S.isEmptyObject(l) && J.remove(e, "handle events");
+          C.isEmptyObject(l) && J.remove(e, "handle events");
         }
       },
       dispatch: function dispatch(e) {
@@ -2061,19 +2061,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             i,
             o,
             s,
-            a = S.event.fix(e),
+            a = C.event.fix(e),
             l = new Array(arguments.length),
             u = (J.get(this, "events") || {})[a.type] || [],
-            c = S.event.special[a.type] || {};
+            c = C.event.special[a.type] || {};
 
         for (l[0] = a, t = 1; t < arguments.length; t++) {
           l[t] = arguments[t];
         }
 
         if (a.delegateTarget = this, !c.preDispatch || !1 !== c.preDispatch.call(this, a)) {
-          for (s = S.event.handlers.call(this, a, u), t = 0; (i = s[t++]) && !a.isPropagationStopped();) {
+          for (s = C.event.handlers.call(this, a, u), t = 0; (i = s[t++]) && !a.isPropagationStopped();) {
             for (a.currentTarget = i.elem, n = 0; (o = i.handlers[n++]) && !a.isImmediatePropagationStopped();) {
-              a.rnamespace && !1 !== o.namespace && !a.rnamespace.test(o.namespace) || (a.handleObj = o, a.data = o.data, void 0 !== (r = ((S.event.special[o.origType] || {}).handle || o.handler).apply(i.elem, l)) && !1 === (a.result = r) && (a.preventDefault(), a.stopPropagation()));
+              a.rnamespace && !1 !== o.namespace && !a.rnamespace.test(o.namespace) || (a.handleObj = o, a.data = o.data, void 0 !== (r = ((C.event.special[o.origType] || {}).handle || o.handler).apply(i.elem, l)) && !1 === (a.result = r) && (a.preventDefault(), a.stopPropagation()));
             }
           }
 
@@ -2092,7 +2092,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (l && u.nodeType && !("click" === e.type && e.button >= 1)) for (; u !== this; u = u.parentNode || this) {
           if (1 === u.nodeType && ("click" !== e.type || !0 !== u.disabled)) {
             for (o = [], s = {}, n = 0; n < l; n++) {
-              void 0 === s[i = (r = t[n]).selector + " "] && (s[i] = r.needsContext ? S(i, this).index(u) > -1 : S.find(i, this, null, [u]).length), s[i] && o.push(r);
+              void 0 === s[i = (r = t[n]).selector + " "] && (s[i] = r.needsContext ? C(i, this).index(u) > -1 : C.find(i, this, null, [u]).length), s[i] && o.push(r);
             }
 
             o.length && a.push({
@@ -2107,7 +2107,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }), a;
       },
       addProp: function addProp(e, t) {
-        Object.defineProperty(S.Event.prototype, e, {
+        Object.defineProperty(C.Event.prototype, e, {
           enumerable: !0,
           configurable: !0,
           get: y(t) ? function () {
@@ -2126,7 +2126,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         });
       },
       fix: function fix(e) {
-        return e[S.expando] ? e : new S.Event(e);
+        return e[C.expando] ? e : new C.Event(e);
       },
       special: {
         load: {
@@ -2152,13 +2152,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }
       }
-    }, S.removeEvent = function (e, t, n) {
+    }, C.removeEvent = function (e, t, n) {
       e.removeEventListener && e.removeEventListener(t, n);
-    }, S.Event = function (e, t) {
-      if (!(this instanceof S.Event)) return new S.Event(e, t);
-      e && e.type ? (this.originalEvent = e, this.type = e.type, this.isDefaultPrevented = e.defaultPrevented || void 0 === e.defaultPrevented && !1 === e.returnValue ? De : je, this.target = e.target && 3 === e.target.nodeType ? e.target.parentNode : e.target, this.currentTarget = e.currentTarget, this.relatedTarget = e.relatedTarget) : this.type = e, t && S.extend(this, t), this.timeStamp = e && e.timeStamp || Date.now(), this[S.expando] = !0;
-    }, S.Event.prototype = {
-      constructor: S.Event,
+    }, C.Event = function (e, t) {
+      if (!(this instanceof C.Event)) return new C.Event(e, t);
+      e && e.type ? (this.originalEvent = e, this.type = e.type, this.isDefaultPrevented = e.defaultPrevented || void 0 === e.defaultPrevented && !1 === e.returnValue ? De : je, this.target = e.target && 3 === e.target.nodeType ? e.target.parentNode : e.target, this.currentTarget = e.currentTarget, this.relatedTarget = e.relatedTarget) : this.type = e, t && C.extend(this, t), this.timeStamp = e && e.timeStamp || Date.now(), this[C.expando] = !0;
+    }, C.Event.prototype = {
+      constructor: C.Event,
       isDefaultPrevented: je,
       isPropagationStopped: je,
       isImmediatePropagationStopped: je,
@@ -2175,7 +2175,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var e = this.originalEvent;
         this.isImmediatePropagationStopped = De, e && !this.isSimulated && e.stopImmediatePropagation(), this.stopPropagation();
       }
-    }, S.each({
+    }, C.each({
       altKey: !0,
       bubbles: !0,
       cancelable: !0,
@@ -2210,11 +2210,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var t = e.button;
         return null == e.which && ke.test(e.type) ? null != e.charCode ? e.charCode : e.keyCode : !e.which && void 0 !== t && Ee.test(e.type) ? 1 & t ? 1 : 2 & t ? 3 : 4 & t ? 2 : 0 : e.which;
       }
-    }, S.event.addProp), S.each({
+    }, C.event.addProp), C.each({
       focus: "focusin",
       blur: "focusout"
     }, function (e, t) {
-      S.event.special[e] = {
+      C.event.special[e] = {
         setup: function setup() {
           return Le(this, e, Ne), !1;
         },
@@ -2223,13 +2223,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         },
         delegateType: t
       };
-    }), S.each({
+    }), C.each({
       mouseenter: "mouseover",
       mouseleave: "mouseout",
       pointerenter: "pointerover",
       pointerleave: "pointerout"
     }, function (e, t) {
-      S.event.special[e] = {
+      C.event.special[e] = {
         delegateType: t,
         bindType: t,
         handle: function handle(e) {
@@ -2237,10 +2237,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               r = this,
               i = e.relatedTarget,
               o = e.handleObj;
-          return i && (i === r || S.contains(r, i)) || (e.type = o.origType, n = o.handler.apply(this, arguments), e.type = t), n;
+          return i && (i === r || C.contains(r, i)) || (e.type = o.origType, n = o.handler.apply(this, arguments), e.type = t), n;
         }
       };
-    }), S.fn.extend({
+    }), C.fn.extend({
       on: function on(e, t, n, r) {
         return qe(this, e, t, n, r);
       },
@@ -2249,7 +2249,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       off: function off(e, t, n) {
         var r, i;
-        if (e && e.preventDefault && e.handleObj) return r = e.handleObj, S(e.delegateTarget).off(r.namespace ? r.origType + "." + r.namespace : r.origType, r.selector, r.handler), this;
+        if (e && e.preventDefault && e.handleObj) return r = e.handleObj, C(e.delegateTarget).off(r.namespace ? r.origType + "." + r.namespace : r.origType, r.selector, r.handler), this;
 
         if ("object" == _typeof(e)) {
           for (i in e) {
@@ -2260,7 +2260,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         return !1 !== t && "function" != typeof t || (n = t, t = void 0), !1 === n && (n = je), this.each(function () {
-          S.event.remove(this, e, n, t);
+          C.event.remove(this, e, n, t);
         });
       }
     });
@@ -2270,7 +2270,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         Re = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;
 
     function We(e, t) {
-      return N(e, "table") && N(11 !== t.nodeType ? t : t.firstChild, "tr") && S(e).children("tbody")[0] || e;
+      return N(e, "table") && N(11 !== t.nodeType ? t : t.firstChild, "tr") && C(e).children("tbody")[0] || e;
     }
 
     function Me(e) {
@@ -2287,10 +2287,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       if (1 === t.nodeType) {
         if (J.hasData(e) && (o = J.access(e), s = J.set(t, o), u = o.events)) for (i in delete s.handle, s.events = {}, u) {
           for (n = 0, r = u[i].length; n < r; n++) {
-            S.event.add(t, i, u[i][n]);
+            C.event.add(t, i, u[i][n]);
           }
         }
-        Z.hasData(e) && (a = Z.access(e), l = S.extend({}, a), Z.set(t, l));
+        Z.hasData(e) && (a = Z.access(e), l = C.extend({}, a), Z.set(t, l));
       }
     }
 
@@ -2317,13 +2317,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         g && (t[0] = h.call(this, i, o.html())), $e(o, t, n, r);
       });
 
-      if (p && (o = (i = Ce(t, e[0].ownerDocument, !1, e, r)).firstChild, 1 === i.childNodes.length && (i = o), o || r)) {
-        for (a = (s = S.map(xe(i, "script"), Me)).length; f < p; f++) {
-          l = i, f !== d && (l = S.clone(l, !0, !0), a && S.merge(s, xe(l, "script"))), n.call(e[f], l, f);
+      if (p && (o = (i = Se(t, e[0].ownerDocument, !1, e, r)).firstChild, 1 === i.childNodes.length && (i = o), o || r)) {
+        for (a = (s = C.map(xe(i, "script"), Me)).length; f < p; f++) {
+          l = i, f !== d && (l = C.clone(l, !0, !0), a && C.merge(s, xe(l, "script"))), n.call(e[f], l, f);
         }
 
-        if (a) for (c = s[s.length - 1].ownerDocument, S.map(s, Ie), f = 0; f < a; f++) {
-          l = s[f], ve.test(l.type || "") && !J.access(l, "globalEval") && S.contains(c, l) && (l.src && "module" !== (l.type || "").toLowerCase() ? S._evalUrl && !l.noModule && S._evalUrl(l.src, {
+        if (a) for (c = s[s.length - 1].ownerDocument, C.map(s, Ie), f = 0; f < a; f++) {
+          l = s[f], ve.test(l.type || "") && !J.access(l, "globalEval") && C.contains(c, l) && (l.src && "module" !== (l.type || "").toLowerCase() ? C._evalUrl && !l.noModule && C._evalUrl(l.src, {
             nonce: l.nonce || l.getAttribute("nonce")
           }) : w(l.textContent.replace(Re, ""), l, c));
         }
@@ -2333,14 +2333,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
 
     function _e(e, t, n) {
-      for (var r, i = t ? S.filter(t, e) : e, o = 0; null != (r = i[o]); o++) {
-        n || 1 !== r.nodeType || S.cleanData(xe(r)), r.parentNode && (n && ae(r) && be(xe(r, "script")), r.parentNode.removeChild(r));
+      for (var r, i = t ? C.filter(t, e) : e, o = 0; null != (r = i[o]); o++) {
+        n || 1 !== r.nodeType || C.cleanData(xe(r)), r.parentNode && (n && ae(r) && be(xe(r, "script")), r.parentNode.removeChild(r));
       }
 
       return e;
     }
 
-    S.extend({
+    C.extend({
       htmlPrefilter: function htmlPrefilter(e) {
         return e.replace(He, "<$1></$2>");
       },
@@ -2351,7 +2351,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             s,
             a = e.cloneNode(!0),
             l = ae(e);
-        if (!(v.noCloneChecked || 1 !== e.nodeType && 11 !== e.nodeType || S.isXMLDoc(e))) for (s = xe(a), r = 0, i = (o = xe(e)).length; r < i; r++) {
+        if (!(v.noCloneChecked || 1 !== e.nodeType && 11 !== e.nodeType || C.isXMLDoc(e))) for (s = xe(a), r = 0, i = (o = xe(e)).length; r < i; r++) {
           Be(o[r], s[r]);
         }
         if (t) if (n) for (o = o || xe(e), s = s || xe(a), r = 0, i = o.length; r < i; r++) {
@@ -2360,11 +2360,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return (s = xe(a, "script")).length > 0 && be(s, !l && xe(e, "script")), a;
       },
       cleanData: function cleanData(e) {
-        for (var t, n, r, i = S.event.special, o = 0; void 0 !== (n = e[o]); o++) {
+        for (var t, n, r, i = C.event.special, o = 0; void 0 !== (n = e[o]); o++) {
           if (G(n)) {
             if (t = n[J.expando]) {
               if (t.events) for (r in t.events) {
-                i[r] ? S.event.remove(n, r) : S.removeEvent(n, r, t.handle);
+                i[r] ? C.event.remove(n, r) : C.removeEvent(n, r, t.handle);
               }
               n[J.expando] = void 0;
             }
@@ -2373,7 +2373,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }
       }
-    }), S.fn.extend({
+    }), C.fn.extend({
       detach: function detach(e) {
         return _e(this, e, !0);
       },
@@ -2382,7 +2382,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       text: function text(e) {
         return X(this, function (e) {
-          return void 0 === e ? S.text(this) : this.empty().each(function () {
+          return void 0 === e ? C.text(this) : this.empty().each(function () {
             1 !== this.nodeType && 11 !== this.nodeType && 9 !== this.nodeType || (this.textContent = e);
           });
         }, null, e, arguments.length);
@@ -2412,14 +2412,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       empty: function empty() {
         for (var e, t = 0; null != (e = this[t]); t++) {
-          1 === e.nodeType && (S.cleanData(xe(e, !1)), e.textContent = "");
+          1 === e.nodeType && (C.cleanData(xe(e, !1)), e.textContent = "");
         }
 
         return this;
       },
       clone: function clone(e, t) {
         return e = null != e && e, t = null == t ? e : t, this.map(function () {
-          return S.clone(this, e, t);
+          return C.clone(this, e, t);
         });
       },
       html: function html(e) {
@@ -2430,11 +2430,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           if (void 0 === e && 1 === t.nodeType) return t.innerHTML;
 
           if ("string" == typeof e && !Oe.test(e) && !ye[(me.exec(e) || ["", ""])[1].toLowerCase()]) {
-            e = S.htmlPrefilter(e);
+            e = C.htmlPrefilter(e);
 
             try {
               for (; n < r; n++) {
-                1 === (t = this[n] || {}).nodeType && (S.cleanData(xe(t, !1)), t.innerHTML = e);
+                1 === (t = this[n] || {}).nodeType && (C.cleanData(xe(t, !1)), t.innerHTML = e);
               }
 
               t = 0;
@@ -2448,19 +2448,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var e = [];
         return $e(this, arguments, function (t) {
           var n = this.parentNode;
-          S.inArray(this, e) < 0 && (S.cleanData(xe(this)), n && n.replaceChild(t, this));
+          C.inArray(this, e) < 0 && (C.cleanData(xe(this)), n && n.replaceChild(t, this));
         }, e);
       }
-    }), S.each({
+    }), C.each({
       appendTo: "append",
       prependTo: "prepend",
       insertBefore: "before",
       insertAfter: "after",
       replaceAll: "replaceWith"
     }, function (e, t) {
-      S.fn[e] = function (e) {
-        for (var n, r = [], i = S(e), o = i.length - 1, s = 0; s <= o; s++) {
-          n = s === o ? this : this.clone(!0), S(i[s])[t](n), c.apply(r, n.get());
+      C.fn[e] = function (e) {
+        for (var n, r = [], i = C(e), o = i.length - 1, s = 0; s <= o; s++) {
+          n = s === o ? this : this.clone(!0), C(i[s])[t](n), c.apply(r, n.get());
         }
 
         return this.pushStack(r);
@@ -2480,7 +2480,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           o,
           s,
           a = e.style;
-      return (n = n || Xe(e)) && ("" !== (s = n.getPropertyValue(t) || n[t]) || ae(e) || (s = S.style(e, t)), !v.pixelBoxStyles() && ze.test(s) && Ue.test(t) && (r = a.width, i = a.minWidth, o = a.maxWidth, a.minWidth = a.maxWidth = a.width = s, s = n.width, a.width = r, a.minWidth = i, a.maxWidth = o)), void 0 !== s ? s + "" : s;
+      return (n = n || Xe(e)) && ("" !== (s = n.getPropertyValue(t) || n[t]) || ae(e) || (s = C.style(e, t)), !v.pixelBoxStyles() && ze.test(s) && Ue.test(t) && (r = a.width, i = a.minWidth, o = a.maxWidth, a.minWidth = a.maxWidth = a.width = s, s = n.width, a.width = r, a.minWidth = i, a.maxWidth = o)), void 0 !== s ? s + "" : s;
     }
 
     function Qe(e, t) {
@@ -2512,7 +2512,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           l,
           u = s.createElement("div"),
           c = s.createElement("div");
-      c.style && (c.style.backgroundClip = "content-box", c.cloneNode(!0).style.backgroundClip = "", v.clearCloneStyle = "content-box" === c.style.backgroundClip, S.extend(v, {
+      c.style && (c.style.backgroundClip = "content-box", c.cloneNode(!0).style.backgroundClip = "", v.clearCloneStyle = "content-box" === c.style.backgroundClip, C.extend(v, {
         boxSizingReliable: function boxSizingReliable() {
           return e(), i;
         },
@@ -2535,7 +2535,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         Ke = {};
 
     function Je(e) {
-      var t = S.cssProps[e] || Ke[e];
+      var t = C.cssProps[e] || Ke[e];
       return t || (e in Ge ? e : Ke[e] = function (e) {
         for (var t = e[0].toUpperCase() + e.slice(1), n = Ye.length; n--;) {
           if ((e = Ye[n] + t) in Ge) return e;
@@ -2567,7 +2567,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       if (n === (r ? "border" : "content")) return 0;
 
       for (; s < 4; s += 2) {
-        "margin" === n && (l += S.css(e, n + oe[s], !0, i)), r ? ("content" === n && (l -= S.css(e, "padding" + oe[s], !0, i)), "margin" !== n && (l -= S.css(e, "border" + oe[s] + "Width", !0, i))) : (l += S.css(e, "padding" + oe[s], !0, i), "padding" !== n ? l += S.css(e, "border" + oe[s] + "Width", !0, i) : a += S.css(e, "border" + oe[s] + "Width", !0, i));
+        "margin" === n && (l += C.css(e, n + oe[s], !0, i)), r ? ("content" === n && (l -= C.css(e, "padding" + oe[s], !0, i)), "margin" !== n && (l -= C.css(e, "border" + oe[s] + "Width", !0, i))) : (l += C.css(e, "padding" + oe[s], !0, i), "padding" !== n ? l += C.css(e, "border" + oe[s] + "Width", !0, i) : a += C.css(e, "border" + oe[s] + "Width", !0, i));
       }
 
       return !r && o >= 0 && (l += Math.max(0, Math.ceil(e["offset" + t[0].toUpperCase() + t.slice(1)] - o - l - a - .5)) || 0), l;
@@ -2575,7 +2575,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     function ot(e, t, n) {
       var r = Xe(e),
-          i = (!v.boxSizingReliable() || n) && "border-box" === S.css(e, "boxSizing", !1, r),
+          i = (!v.boxSizingReliable() || n) && "border-box" === C.css(e, "boxSizing", !1, r),
           o = i,
           s = Ve(e, t, r),
           a = "offset" + t[0].toUpperCase() + t.slice(1);
@@ -2585,14 +2585,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         s = "auto";
       }
 
-      return (!v.boxSizingReliable() && i || "auto" === s || !parseFloat(s) && "inline" === S.css(e, "display", !1, r)) && e.getClientRects().length && (i = "border-box" === S.css(e, "boxSizing", !1, r), (o = a in e) && (s = e[a])), (s = parseFloat(s) || 0) + it(e, t, n || (i ? "border" : "content"), o, r, s) + "px";
+      return (!v.boxSizingReliable() && i || "auto" === s || !parseFloat(s) && "inline" === C.css(e, "display", !1, r)) && e.getClientRects().length && (i = "border-box" === C.css(e, "boxSizing", !1, r), (o = a in e) && (s = e[a])), (s = parseFloat(s) || 0) + it(e, t, n || (i ? "border" : "content"), o, r, s) + "px";
     }
 
     function st(e, t, n, r, i) {
       return new st.prototype.init(e, t, n, r, i);
     }
 
-    S.extend({
+    C.extend({
       cssHooks: {
         opacity: {
           get: function get(e, t) {
@@ -2634,8 +2634,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               a = Y(t),
               l = et.test(t),
               u = e.style;
-          if (l || (t = Je(a)), s = S.cssHooks[t] || S.cssHooks[a], void 0 === n) return s && "get" in s && void 0 !== (i = s.get(e, !1, r)) ? i : u[t];
-          "string" === (o = _typeof(n)) && (i = ie.exec(n)) && i[1] && (n = fe(e, t, i), o = "number"), null != n && n == n && ("number" !== o || l || (n += i && i[3] || (S.cssNumber[a] ? "" : "px")), v.clearCloneStyle || "" !== n || 0 !== t.indexOf("background") || (u[t] = "inherit"), s && "set" in s && void 0 === (n = s.set(e, n, r)) || (l ? u.setProperty(t, n) : u[t] = n));
+          if (l || (t = Je(a)), s = C.cssHooks[t] || C.cssHooks[a], void 0 === n) return s && "get" in s && void 0 !== (i = s.get(e, !1, r)) ? i : u[t];
+          "string" === (o = _typeof(n)) && (i = ie.exec(n)) && i[1] && (n = fe(e, t, i), o = "number"), null != n && n == n && ("number" !== o || l || (n += i && i[3] || (C.cssNumber[a] ? "" : "px")), v.clearCloneStyle || "" !== n || 0 !== t.indexOf("background") || (u[t] = "inherit"), s && "set" in s && void 0 === (n = s.set(e, n, r)) || (l ? u.setProperty(t, n) : u[t] = n));
         }
       },
       css: function css(e, t, n, r) {
@@ -2643,12 +2643,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             o,
             s,
             a = Y(t);
-        return et.test(t) || (t = Je(a)), (s = S.cssHooks[t] || S.cssHooks[a]) && "get" in s && (i = s.get(e, !0, n)), void 0 === i && (i = Ve(e, t, r)), "normal" === i && t in nt && (i = nt[t]), "" === n || n ? (o = parseFloat(i), !0 === n || isFinite(o) ? o || 0 : i) : i;
+        return et.test(t) || (t = Je(a)), (s = C.cssHooks[t] || C.cssHooks[a]) && "get" in s && (i = s.get(e, !0, n)), void 0 === i && (i = Ve(e, t, r)), "normal" === i && t in nt && (i = nt[t]), "" === n || n ? (o = parseFloat(i), !0 === n || isFinite(o) ? o || 0 : i) : i;
       }
-    }), S.each(["height", "width"], function (e, t) {
-      S.cssHooks[t] = {
+    }), C.each(["height", "width"], function (e, t) {
+      C.cssHooks[t] = {
         get: function get(e, n, r) {
-          if (n) return !Ze.test(S.css(e, "display")) || e.getClientRects().length && e.getBoundingClientRect().width ? ot(e, t, r) : ce(e, tt, function () {
+          if (n) return !Ze.test(C.css(e, "display")) || e.getClientRects().length && e.getBoundingClientRect().width ? ot(e, t, r) : ce(e, tt, function () {
             return ot(e, t, r);
           });
         },
@@ -2656,23 +2656,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           var i,
               o = Xe(e),
               s = !v.scrollboxSize() && "absolute" === o.position,
-              a = (s || r) && "border-box" === S.css(e, "boxSizing", !1, o),
+              a = (s || r) && "border-box" === C.css(e, "boxSizing", !1, o),
               l = r ? it(e, t, r, a, o) : 0;
-          return a && s && (l -= Math.ceil(e["offset" + t[0].toUpperCase() + t.slice(1)] - parseFloat(o[t]) - it(e, t, "border", !1, o) - .5)), l && (i = ie.exec(n)) && "px" !== (i[3] || "px") && (e.style[t] = n, n = S.css(e, t)), rt(0, n, l);
+          return a && s && (l -= Math.ceil(e["offset" + t[0].toUpperCase() + t.slice(1)] - parseFloat(o[t]) - it(e, t, "border", !1, o) - .5)), l && (i = ie.exec(n)) && "px" !== (i[3] || "px") && (e.style[t] = n, n = C.css(e, t)), rt(0, n, l);
         }
       };
-    }), S.cssHooks.marginLeft = Qe(v.reliableMarginLeft, function (e, t) {
+    }), C.cssHooks.marginLeft = Qe(v.reliableMarginLeft, function (e, t) {
       if (t) return (parseFloat(Ve(e, "marginLeft")) || e.getBoundingClientRect().left - ce(e, {
         marginLeft: 0
       }, function () {
         return e.getBoundingClientRect().left;
       })) + "px";
-    }), S.each({
+    }), C.each({
       margin: "",
       padding: "",
       border: "Width"
     }, function (e, t) {
-      S.cssHooks[e + t] = {
+      C.cssHooks[e + t] = {
         expand: function expand(n) {
           for (var r = 0, i = {}, o = "string" == typeof n ? n.split(" ") : [n]; r < 4; r++) {
             i[e + oe[r] + t] = o[r] || o[r - 2] || o[0];
@@ -2680,8 +2680,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
           return i;
         }
-      }, "margin" !== e && (S.cssHooks[e + t].set = rt);
-    }), S.fn.extend({
+      }, "margin" !== e && (C.cssHooks[e + t].set = rt);
+    }), C.fn.extend({
       css: function css(e, t) {
         return X(this, function (e, t, n) {
           var r,
@@ -2691,19 +2691,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
           if (Array.isArray(t)) {
             for (r = Xe(e), i = t.length; s < i; s++) {
-              o[t[s]] = S.css(e, t[s], !1, r);
+              o[t[s]] = C.css(e, t[s], !1, r);
             }
 
             return o;
           }
 
-          return void 0 !== n ? S.style(e, t, n) : S.css(e, t);
+          return void 0 !== n ? C.style(e, t, n) : C.css(e, t);
         }, e, t, arguments.length > 1);
       }
-    }), S.Tween = st, st.prototype = {
+    }), C.Tween = st, st.prototype = {
       constructor: st,
       init: function init(e, t, n, r, i, o) {
-        this.elem = e, this.prop = n, this.easing = i || S.easing._default, this.options = t, this.start = this.now = this.cur(), this.end = r, this.unit = o || (S.cssNumber[n] ? "" : "px");
+        this.elem = e, this.prop = n, this.easing = i || C.easing._default, this.options = t, this.start = this.now = this.cur(), this.end = r, this.unit = o || (C.cssNumber[n] ? "" : "px");
       },
       cur: function cur() {
         var e = st.propHooks[this.prop];
@@ -2712,23 +2712,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       run: function run(e) {
         var t,
             n = st.propHooks[this.prop];
-        return this.options.duration ? this.pos = t = S.easing[this.easing](e, this.options.duration * e, 0, 1, this.options.duration) : this.pos = t = e, this.now = (this.end - this.start) * t + this.start, this.options.step && this.options.step.call(this.elem, this.now, this), n && n.set ? n.set(this) : st.propHooks._default.set(this), this;
+        return this.options.duration ? this.pos = t = C.easing[this.easing](e, this.options.duration * e, 0, 1, this.options.duration) : this.pos = t = e, this.now = (this.end - this.start) * t + this.start, this.options.step && this.options.step.call(this.elem, this.now, this), n && n.set ? n.set(this) : st.propHooks._default.set(this), this;
       }
     }, st.prototype.init.prototype = st.prototype, st.propHooks = {
       _default: {
         get: function get(e) {
           var t;
-          return 1 !== e.elem.nodeType || null != e.elem[e.prop] && null == e.elem.style[e.prop] ? e.elem[e.prop] : (t = S.css(e.elem, e.prop, "")) && "auto" !== t ? t : 0;
+          return 1 !== e.elem.nodeType || null != e.elem[e.prop] && null == e.elem.style[e.prop] ? e.elem[e.prop] : (t = C.css(e.elem, e.prop, "")) && "auto" !== t ? t : 0;
         },
         set: function set(e) {
-          S.fx.step[e.prop] ? S.fx.step[e.prop](e) : 1 !== e.elem.nodeType || !S.cssHooks[e.prop] && null == e.elem.style[Je(e.prop)] ? e.elem[e.prop] = e.now : S.style(e.elem, e.prop, e.now + e.unit);
+          C.fx.step[e.prop] ? C.fx.step[e.prop](e) : 1 !== e.elem.nodeType || !C.cssHooks[e.prop] && null == e.elem.style[Je(e.prop)] ? e.elem[e.prop] = e.now : C.style(e.elem, e.prop, e.now + e.unit);
         }
       }
     }, st.propHooks.scrollTop = st.propHooks.scrollLeft = {
       set: function set(e) {
         e.elem.nodeType && e.elem.parentNode && (e.elem[e.prop] = e.now);
       }
-    }, S.easing = {
+    }, C.easing = {
       linear: function linear(e) {
         return e;
       },
@@ -2736,14 +2736,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return .5 - Math.cos(e * Math.PI) / 2;
       },
       _default: "swing"
-    }, S.fx = st.prototype.init, S.fx.step = {};
+    }, C.fx = st.prototype.init, C.fx.step = {};
     var at,
         lt,
         ut = /^(?:toggle|show|hide)$/,
         ct = /queueHooks$/;
 
     function ft() {
-      lt && (!1 === s.hidden && n.requestAnimationFrame ? n.requestAnimationFrame(ft) : n.setTimeout(ft, S.fx.interval), S.fx.tick());
+      lt && (!1 === s.hidden && n.requestAnimationFrame ? n.requestAnimationFrame(ft) : n.setTimeout(ft, C.fx.interval), C.fx.tick());
     }
 
     function pt() {
@@ -2777,7 +2777,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           i,
           o = 0,
           s = gt.prefilters.length,
-          a = S.Deferred().always(function () {
+          a = C.Deferred().always(function () {
         delete l.elem;
       }),
           l = function l() {
@@ -2791,10 +2791,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
           u = a.promise({
         elem: e,
-        props: S.extend({}, t),
-        opts: S.extend(!0, {
+        props: C.extend({}, t),
+        opts: C.extend(!0, {
           specialEasing: {},
-          easing: S.easing._default
+          easing: C.easing._default
         }, n),
         originalProperties: t,
         originalOptions: n,
@@ -2802,7 +2802,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         duration: n.duration,
         tweens: [],
         createTween: function createTween(t, n) {
-          var r = S.Tween(e, u.opts, t, n, u.opts.specialEasing[t] || u.opts.easing);
+          var r = C.Tween(e, u.opts, t, n, u.opts.specialEasing[t] || u.opts.easing);
           return u.tweens.push(r), r;
         },
         stop: function stop(t) {
@@ -2823,22 +2823,22 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var n, r, i, o, s;
 
         for (n in e) {
-          if (i = t[r = Y(n)], o = e[n], Array.isArray(o) && (i = o[1], o = e[n] = o[0]), n !== r && (e[r] = o, delete e[n]), (s = S.cssHooks[r]) && ("expand" in s)) for (n in o = s.expand(o), delete e[r], o) {
+          if (i = t[r = Y(n)], o = e[n], Array.isArray(o) && (i = o[1], o = e[n] = o[0]), n !== r && (e[r] = o, delete e[n]), (s = C.cssHooks[r]) && ("expand" in s)) for (n in o = s.expand(o), delete e[r], o) {
             (n in e) || (e[n] = o[n], t[n] = i);
           } else t[r] = i;
         }
       }(c, u.opts.specialEasing); o < s; o++) {
-        if (r = gt.prefilters[o].call(u, e, c, u.opts)) return y(r.stop) && (S._queueHooks(u.elem, u.opts.queue).stop = r.stop.bind(r)), r;
+        if (r = gt.prefilters[o].call(u, e, c, u.opts)) return y(r.stop) && (C._queueHooks(u.elem, u.opts.queue).stop = r.stop.bind(r)), r;
       }
 
-      return S.map(c, ht, u), y(u.opts.start) && u.opts.start.call(e, u), u.progress(u.opts.progress).done(u.opts.done, u.opts.complete).fail(u.opts.fail).always(u.opts.always), S.fx.timer(S.extend(l, {
+      return C.map(c, ht, u), y(u.opts.start) && u.opts.start.call(e, u), u.progress(u.opts.progress).done(u.opts.done, u.opts.complete).fail(u.opts.fail).always(u.opts.always), C.fx.timer(C.extend(l, {
         elem: e,
         anim: u,
         queue: u.opts.queue
       })), u;
     }
 
-    S.Animation = S.extend(gt, {
+    C.Animation = C.extend(gt, {
       tweeners: {
         "*": [function (e, t) {
           var n = this.createTween(e, t);
@@ -2868,11 +2868,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             g = e.nodeType && ue(e),
             m = J.get(e, "fxshow");
 
-        for (r in n.queue || (null == (s = S._queueHooks(e, "fx")).unqueued && (s.unqueued = 0, a = s.empty.fire, s.empty.fire = function () {
+        for (r in n.queue || (null == (s = C._queueHooks(e, "fx")).unqueued && (s.unqueued = 0, a = s.empty.fire, s.empty.fire = function () {
           s.unqueued || a();
         }), s.unqueued++, p.always(function () {
           p.always(function () {
-            s.unqueued--, S.queue(e, "fx").length || s.empty.fire();
+            s.unqueued--, C.queue(e, "fx").length || s.empty.fire();
           });
         })), t) {
           if (i = t[r], ut.test(i)) {
@@ -2881,11 +2881,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               g = !0;
             }
 
-            d[r] = m && m[r] || S.style(e, r);
+            d[r] = m && m[r] || C.style(e, r);
           }
         }
 
-        if ((l = !S.isEmptyObject(t)) || !S.isEmptyObject(d)) for (r in f && 1 === e.nodeType && (n.overflow = [h.overflow, h.overflowX, h.overflowY], null == (u = m && m.display) && (u = J.get(e, "display")), "none" === (c = S.css(e, "display")) && (u ? c = u : (he([e], !0), u = e.style.display || u, c = S.css(e, "display"), he([e]))), ("inline" === c || "inline-block" === c && null != u) && "none" === S.css(e, "float") && (l || (p.done(function () {
+        if ((l = !C.isEmptyObject(t)) || !C.isEmptyObject(d)) for (r in f && 1 === e.nodeType && (n.overflow = [h.overflow, h.overflowX, h.overflowY], null == (u = m && m.display) && (u = J.get(e, "display")), "none" === (c = C.css(e, "display")) && (u ? c = u : (he([e], !0), u = e.style.display || u, c = C.css(e, "display"), he([e]))), ("inline" === c || "inline-block" === c && null != u) && "none" === C.css(e, "float") && (l || (p.done(function () {
           h.display = u;
         }), null == u && (c = h.display, u = "none" === c ? "" : c)), h.display = "inline-block")), n.overflow && (h.overflow = "hidden", p.always(function () {
           h.overflow = n.overflow[0], h.overflowX = n.overflow[1], h.overflowY = n.overflow[2];
@@ -2894,7 +2894,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             display: u
           }), o && (m.hidden = !g), g && he([e], !0), p.done(function () {
             for (r in g || he([e]), J.remove(e, "fxshow"), d) {
-              S.style(e, r, d[r]);
+              C.style(e, r, d[r]);
             }
           })), l = ht(g ? m[r] : 0, r, p), r in m || (m[r] = l.start, g && (l.end = l.start, l.start = 0));
         }
@@ -2902,26 +2902,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       prefilter: function prefilter(e, t) {
         t ? gt.prefilters.unshift(e) : gt.prefilters.push(e);
       }
-    }), S.speed = function (e, t, n) {
-      var r = e && "object" == _typeof(e) ? S.extend({}, e) : {
+    }), C.speed = function (e, t, n) {
+      var r = e && "object" == _typeof(e) ? C.extend({}, e) : {
         complete: n || !n && t || y(e) && e,
         duration: e,
         easing: n && t || t && !y(t) && t
       };
-      return S.fx.off ? r.duration = 0 : "number" != typeof r.duration && (r.duration in S.fx.speeds ? r.duration = S.fx.speeds[r.duration] : r.duration = S.fx.speeds._default), null != r.queue && !0 !== r.queue || (r.queue = "fx"), r.old = r.complete, r.complete = function () {
-        y(r.old) && r.old.call(this), r.queue && S.dequeue(this, r.queue);
+      return C.fx.off ? r.duration = 0 : "number" != typeof r.duration && (r.duration in C.fx.speeds ? r.duration = C.fx.speeds[r.duration] : r.duration = C.fx.speeds._default), null != r.queue && !0 !== r.queue || (r.queue = "fx"), r.old = r.complete, r.complete = function () {
+        y(r.old) && r.old.call(this), r.queue && C.dequeue(this, r.queue);
       }, r;
-    }, S.fn.extend({
+    }, C.fn.extend({
       fadeTo: function fadeTo(e, t, n, r) {
         return this.filter(ue).css("opacity", 0).show().end().animate({
           opacity: t
         }, e, n, r);
       },
       animate: function animate(e, t, n, r) {
-        var i = S.isEmptyObject(e),
-            o = S.speed(t, n, r),
+        var i = C.isEmptyObject(e),
+            o = C.speed(t, n, r),
             s = function s() {
-          var t = gt(this, S.extend({}, e), o);
+          var t = gt(this, C.extend({}, e), o);
           (i || J.get(this, "finish")) && t.stop(!0);
         };
 
@@ -2936,7 +2936,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return "string" != typeof e && (n = t, t = e, e = void 0), t && !1 !== e && this.queue(e || "fx", []), this.each(function () {
           var t = !0,
               i = null != e && e + "queueHooks",
-              o = S.timers,
+              o = C.timers,
               s = J.get(this);
           if (i) s[i] && s[i].stop && r(s[i]);else for (i in s) {
             s[i] && s[i].stop && ct.test(i) && r(s[i]);
@@ -2946,7 +2946,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             o[i].elem !== this || null != e && o[i].queue !== e || (o[i].anim.stop(n), t = !1, o.splice(i, 1));
           }
 
-          !t && n || S.dequeue(this, e);
+          !t && n || C.dequeue(this, e);
         });
       },
       finish: function finish(e) {
@@ -2955,10 +2955,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               n = J.get(this),
               r = n[e + "queue"],
               i = n[e + "queueHooks"],
-              o = S.timers,
+              o = C.timers,
               s = r ? r.length : 0;
 
-          for (n.finish = !0, S.queue(this, e, []), i && i.stop && i.stop.call(this, !0), t = o.length; t--;) {
+          for (n.finish = !0, C.queue(this, e, []), i && i.stop && i.stop.call(this, !0), t = o.length; t--;) {
             o[t].elem === this && o[t].queue === e && (o[t].anim.stop(!0), o.splice(t, 1));
           }
 
@@ -2969,13 +2969,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           delete n.finish;
         });
       }
-    }), S.each(["toggle", "show", "hide"], function (e, t) {
-      var n = S.fn[t];
+    }), C.each(["toggle", "show", "hide"], function (e, t) {
+      var n = C.fn[t];
 
-      S.fn[t] = function (e, r, i) {
+      C.fn[t] = function (e, r, i) {
         return null == e || "boolean" == typeof e ? n.apply(this, arguments) : this.animate(dt(t, !0), e, r, i);
       };
-    }), S.each({
+    }), C.each({
       slideDown: dt("show"),
       slideUp: dt("hide"),
       slideToggle: dt("toggle"),
@@ -2989,31 +2989,31 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         opacity: "toggle"
       }
     }, function (e, t) {
-      S.fn[e] = function (e, n, r) {
+      C.fn[e] = function (e, n, r) {
         return this.animate(t, e, n, r);
       };
-    }), S.timers = [], S.fx.tick = function () {
+    }), C.timers = [], C.fx.tick = function () {
       var e,
           t = 0,
-          n = S.timers;
+          n = C.timers;
 
       for (at = Date.now(); t < n.length; t++) {
         (e = n[t])() || n[t] !== e || n.splice(t--, 1);
       }
 
-      n.length || S.fx.stop(), at = void 0;
-    }, S.fx.timer = function (e) {
-      S.timers.push(e), S.fx.start();
-    }, S.fx.interval = 13, S.fx.start = function () {
+      n.length || C.fx.stop(), at = void 0;
+    }, C.fx.timer = function (e) {
+      C.timers.push(e), C.fx.start();
+    }, C.fx.interval = 13, C.fx.start = function () {
       lt || (lt = !0, ft());
-    }, S.fx.stop = function () {
+    }, C.fx.stop = function () {
       lt = null;
-    }, S.fx.speeds = {
+    }, C.fx.speeds = {
       slow: 600,
       fast: 200,
       _default: 400
-    }, S.fn.delay = function (e, t) {
-      return e = S.fx && S.fx.speeds[e] || e, t = t || "fx", this.queue(t, function (t, r) {
+    }, C.fn.delay = function (e, t) {
+      return e = C.fx && C.fx.speeds[e] || e, t = t || "fx", this.queue(t, function (t, r) {
         var i = n.setTimeout(t, e);
 
         r.stop = function () {
@@ -3026,22 +3026,22 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       e.type = "checkbox", v.checkOn = "" !== e.value, v.optSelected = t.selected, (e = s.createElement("input")).value = "t", e.type = "radio", v.radioValue = "t" === e.value;
     }();
     var mt,
-        vt = S.expr.attrHandle;
-    S.fn.extend({
+        vt = C.expr.attrHandle;
+    C.fn.extend({
       attr: function attr(e, t) {
-        return X(this, S.attr, e, t, arguments.length > 1);
+        return X(this, C.attr, e, t, arguments.length > 1);
       },
       removeAttr: function removeAttr(e) {
         return this.each(function () {
-          S.removeAttr(this, e);
+          C.removeAttr(this, e);
         });
       }
-    }), S.extend({
+    }), C.extend({
       attr: function attr(e, t, n) {
         var r,
             i,
             o = e.nodeType;
-        if (3 !== o && 8 !== o && 2 !== o) return void 0 === e.getAttribute ? S.prop(e, t, n) : (1 === o && S.isXMLDoc(e) || (i = S.attrHooks[t.toLowerCase()] || (S.expr.match.bool.test(t) ? mt : void 0)), void 0 !== n ? null === n ? void S.removeAttr(e, t) : i && "set" in i && void 0 !== (r = i.set(e, n, t)) ? r : (e.setAttribute(t, n + ""), n) : i && "get" in i && null !== (r = i.get(e, t)) ? r : null == (r = S.find.attr(e, t)) ? void 0 : r);
+        if (3 !== o && 8 !== o && 2 !== o) return void 0 === e.getAttribute ? C.prop(e, t, n) : (1 === o && C.isXMLDoc(e) || (i = C.attrHooks[t.toLowerCase()] || (C.expr.match.bool.test(t) ? mt : void 0)), void 0 !== n ? null === n ? void C.removeAttr(e, t) : i && "set" in i && void 0 !== (r = i.set(e, n, t)) ? r : (e.setAttribute(t, n + ""), n) : i && "get" in i && null !== (r = i.get(e, t)) ? r : null == (r = C.find.attr(e, t)) ? void 0 : r);
       },
       attrHooks: {
         type: {
@@ -3063,10 +3063,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }), mt = {
       set: function set(e, t, n) {
-        return !1 === t ? S.removeAttr(e, n) : e.setAttribute(n, n), n;
+        return !1 === t ? C.removeAttr(e, n) : e.setAttribute(n, n), n;
       }
-    }, S.each(S.expr.match.bool.source.match(/\w+/g), function (e, t) {
-      var n = vt[t] || S.find.attr;
+    }, C.each(C.expr.match.bool.source.match(/\w+/g), function (e, t) {
+      var n = vt[t] || C.find.attr;
 
       vt[t] = function (e, t, r) {
         var i,
@@ -3090,26 +3090,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return Array.isArray(e) ? e : "string" == typeof e && e.match(M) || [];
     }
 
-    S.fn.extend({
+    C.fn.extend({
       prop: function prop(e, t) {
-        return X(this, S.prop, e, t, arguments.length > 1);
+        return X(this, C.prop, e, t, arguments.length > 1);
       },
       removeProp: function removeProp(e) {
         return this.each(function () {
-          delete this[S.propFix[e] || e];
+          delete this[C.propFix[e] || e];
         });
       }
-    }), S.extend({
+    }), C.extend({
       prop: function prop(e, t, n) {
         var r,
             i,
             o = e.nodeType;
-        if (3 !== o && 8 !== o && 2 !== o) return 1 === o && S.isXMLDoc(e) || (t = S.propFix[t] || t, i = S.propHooks[t]), void 0 !== n ? i && "set" in i && void 0 !== (r = i.set(e, n, t)) ? r : e[t] = n : i && "get" in i && null !== (r = i.get(e, t)) ? r : e[t];
+        if (3 !== o && 8 !== o && 2 !== o) return 1 === o && C.isXMLDoc(e) || (t = C.propFix[t] || t, i = C.propHooks[t]), void 0 !== n ? i && "set" in i && void 0 !== (r = i.set(e, n, t)) ? r : e[t] = n : i && "get" in i && null !== (r = i.get(e, t)) ? r : e[t];
       },
       propHooks: {
         tabIndex: {
           get: function get(e) {
-            var t = S.find.attr(e, "tabindex");
+            var t = C.find.attr(e, "tabindex");
             return t ? parseInt(t, 10) : yt.test(e.nodeName) || xt.test(e.nodeName) && e.href ? 0 : -1;
           }
         }
@@ -3118,7 +3118,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         "for": "htmlFor",
         "class": "className"
       }
-    }), v.optSelected || (S.propHooks.selected = {
+    }), v.optSelected || (C.propHooks.selected = {
       get: function get(e) {
         var t = e.parentNode;
         return t && t.parentNode && t.parentNode.selectedIndex, null;
@@ -3127,9 +3127,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var t = e.parentNode;
         t && (t.selectedIndex, t.parentNode && t.parentNode.selectedIndex);
       }
-    }), S.each(["tabIndex", "readOnly", "maxLength", "cellSpacing", "cellPadding", "rowSpan", "colSpan", "useMap", "frameBorder", "contentEditable"], function () {
-      S.propFix[this.toLowerCase()] = this;
-    }), S.fn.extend({
+    }), C.each(["tabIndex", "readOnly", "maxLength", "cellSpacing", "cellPadding", "rowSpan", "colSpan", "useMap", "frameBorder", "contentEditable"], function () {
+      C.propFix[this.toLowerCase()] = this;
+    }), C.fn.extend({
       addClass: function addClass(e) {
         var t,
             n,
@@ -3140,7 +3140,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a,
             l = 0;
         if (y(e)) return this.each(function (t) {
-          S(this).addClass(e.call(this, t, wt(this)));
+          C(this).addClass(e.call(this, t, wt(this)));
         });
         if ((t = Tt(e)).length) for (; n = this[l++];) {
           if (i = wt(n), r = 1 === n.nodeType && " " + bt(i) + " ") {
@@ -3163,7 +3163,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a,
             l = 0;
         if (y(e)) return this.each(function (t) {
-          S(this).removeClass(e.call(this, t, wt(this)));
+          C(this).removeClass(e.call(this, t, wt(this)));
         });
         if (!arguments.length) return this.attr("class", "");
         if ((t = Tt(e)).length) for (; n = this[l++];) {
@@ -3184,10 +3184,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             r = "string" === n || Array.isArray(e);
 
         return "boolean" == typeof t && r ? t ? this.addClass(e) : this.removeClass(e) : y(e) ? this.each(function (n) {
-          S(this).toggleClass(e.call(this, n, wt(this), t), t);
+          C(this).toggleClass(e.call(this, n, wt(this), t), t);
         }) : this.each(function () {
           var t, i, o, s;
-          if (r) for (i = 0, o = S(this), s = Tt(e); t = s[i++];) {
+          if (r) for (i = 0, o = C(this), s = Tt(e); t = s[i++];) {
             o.hasClass(t) ? o.removeClass(t) : o.addClass(t);
           } else void 0 !== e && "boolean" !== n || ((t = wt(this)) && J.set(this, "__className__", t), this.setAttribute && this.setAttribute("class", t || !1 === e ? "" : J.get(this, "__className__") || ""));
         });
@@ -3204,8 +3204,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return !1;
       }
     });
-    var St = /\r/g;
-    S.fn.extend({
+    var Ct = /\r/g;
+    C.fn.extend({
       val: function val(e) {
         var t,
             n,
@@ -3213,17 +3213,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             i = this[0];
         return arguments.length ? (r = y(e), this.each(function (n) {
           var i;
-          1 === this.nodeType && (null == (i = r ? e.call(this, n, S(this).val()) : e) ? i = "" : "number" == typeof i ? i += "" : Array.isArray(i) && (i = S.map(i, function (e) {
+          1 === this.nodeType && (null == (i = r ? e.call(this, n, C(this).val()) : e) ? i = "" : "number" == typeof i ? i += "" : Array.isArray(i) && (i = C.map(i, function (e) {
             return null == e ? "" : e + "";
-          })), (t = S.valHooks[this.type] || S.valHooks[this.nodeName.toLowerCase()]) && "set" in t && void 0 !== t.set(this, i, "value") || (this.value = i));
-        })) : i ? (t = S.valHooks[i.type] || S.valHooks[i.nodeName.toLowerCase()]) && "get" in t && void 0 !== (n = t.get(i, "value")) ? n : "string" == typeof (n = i.value) ? n.replace(St, "") : null == n ? "" : n : void 0;
+          })), (t = C.valHooks[this.type] || C.valHooks[this.nodeName.toLowerCase()]) && "set" in t && void 0 !== t.set(this, i, "value") || (this.value = i));
+        })) : i ? (t = C.valHooks[i.type] || C.valHooks[i.nodeName.toLowerCase()]) && "get" in t && void 0 !== (n = t.get(i, "value")) ? n : "string" == typeof (n = i.value) ? n.replace(Ct, "") : null == n ? "" : n : void 0;
       }
-    }), S.extend({
+    }), C.extend({
       valHooks: {
         option: {
           get: function get(e) {
-            var t = S.find.attr(e, "value");
-            return null != t ? t : bt(S.text(e));
+            var t = C.find.attr(e, "value");
+            return null != t ? t : bt(C.text(e));
           }
         },
         select: {
@@ -3239,7 +3239,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
             for (r = o < 0 ? l : s ? o : 0; r < l; r++) {
               if (((n = i[r]).selected || r === o) && !n.disabled && (!n.parentNode.disabled || !N(n.parentNode, "optgroup"))) {
-                if (t = S(n).val(), s) return t;
+                if (t = C(n).val(), s) return t;
                 a.push(t);
               }
             }
@@ -3247,30 +3247,30 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             return a;
           },
           set: function set(e, t) {
-            for (var n, r, i = e.options, o = S.makeArray(t), s = i.length; s--;) {
-              ((r = i[s]).selected = S.inArray(S.valHooks.option.get(r), o) > -1) && (n = !0);
+            for (var n, r, i = e.options, o = C.makeArray(t), s = i.length; s--;) {
+              ((r = i[s]).selected = C.inArray(C.valHooks.option.get(r), o) > -1) && (n = !0);
             }
 
             return n || (e.selectedIndex = -1), o;
           }
         }
       }
-    }), S.each(["radio", "checkbox"], function () {
-      S.valHooks[this] = {
+    }), C.each(["radio", "checkbox"], function () {
+      C.valHooks[this] = {
         set: function set(e, t) {
-          if (Array.isArray(t)) return e.checked = S.inArray(S(e).val(), t) > -1;
+          if (Array.isArray(t)) return e.checked = C.inArray(C(e).val(), t) > -1;
         }
-      }, v.checkOn || (S.valHooks[this].get = function (e) {
+      }, v.checkOn || (C.valHooks[this].get = function (e) {
         return null === e.getAttribute("value") ? "on" : e.value;
       });
     }), v.focusin = "onfocusin" in n;
 
-    var Ct = /^(?:focusinfocus|focusoutblur)$/,
+    var St = /^(?:focusinfocus|focusoutblur)$/,
         kt = function kt(e) {
       e.stopPropagation();
     };
 
-    S.extend(S.event, {
+    C.extend(C.event, {
       trigger: function trigger(e, t, r, i) {
         var o,
             a,
@@ -3284,9 +3284,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             m = h.call(e, "type") ? e.type : e,
             v = h.call(e, "namespace") ? e.namespace.split(".") : [];
 
-        if (a = d = l = r = r || s, 3 !== r.nodeType && 8 !== r.nodeType && !Ct.test(m + S.event.triggered) && (m.indexOf(".") > -1 && (v = m.split("."), m = v.shift(), v.sort()), c = m.indexOf(":") < 0 && "on" + m, (e = e[S.expando] ? e : new S.Event(m, "object" == _typeof(e) && e)).isTrigger = i ? 2 : 3, e.namespace = v.join("."), e.rnamespace = e.namespace ? new RegExp("(^|\\.)" + v.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, e.result = void 0, e.target || (e.target = r), t = null == t ? [e] : S.makeArray(t, [e]), p = S.event.special[m] || {}, i || !p.trigger || !1 !== p.trigger.apply(r, t))) {
+        if (a = d = l = r = r || s, 3 !== r.nodeType && 8 !== r.nodeType && !St.test(m + C.event.triggered) && (m.indexOf(".") > -1 && (v = m.split("."), m = v.shift(), v.sort()), c = m.indexOf(":") < 0 && "on" + m, (e = e[C.expando] ? e : new C.Event(m, "object" == _typeof(e) && e)).isTrigger = i ? 2 : 3, e.namespace = v.join("."), e.rnamespace = e.namespace ? new RegExp("(^|\\.)" + v.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, e.result = void 0, e.target || (e.target = r), t = null == t ? [e] : C.makeArray(t, [e]), p = C.event.special[m] || {}, i || !p.trigger || !1 !== p.trigger.apply(r, t))) {
           if (!i && !p.noBubble && !x(r)) {
-            for (u = p.delegateType || m, Ct.test(u + m) || (a = a.parentNode); a; a = a.parentNode) {
+            for (u = p.delegateType || m, St.test(u + m) || (a = a.parentNode); a; a = a.parentNode) {
               g.push(a), l = a;
             }
 
@@ -3297,35 +3297,35 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             d = a, e.type = o > 1 ? u : p.bindType || m, (f = (J.get(a, "events") || {})[e.type] && J.get(a, "handle")) && f.apply(a, t), (f = c && a[c]) && f.apply && G(a) && (e.result = f.apply(a, t), !1 === e.result && e.preventDefault());
           }
 
-          return e.type = m, i || e.isDefaultPrevented() || p._default && !1 !== p._default.apply(g.pop(), t) || !G(r) || c && y(r[m]) && !x(r) && ((l = r[c]) && (r[c] = null), S.event.triggered = m, e.isPropagationStopped() && d.addEventListener(m, kt), r[m](), e.isPropagationStopped() && d.removeEventListener(m, kt), S.event.triggered = void 0, l && (r[c] = l)), e.result;
+          return e.type = m, i || e.isDefaultPrevented() || p._default && !1 !== p._default.apply(g.pop(), t) || !G(r) || c && y(r[m]) && !x(r) && ((l = r[c]) && (r[c] = null), C.event.triggered = m, e.isPropagationStopped() && d.addEventListener(m, kt), r[m](), e.isPropagationStopped() && d.removeEventListener(m, kt), C.event.triggered = void 0, l && (r[c] = l)), e.result;
         }
       },
       simulate: function simulate(e, t, n) {
-        var r = S.extend(new S.Event(), n, {
+        var r = C.extend(new C.Event(), n, {
           type: e,
           isSimulated: !0
         });
-        S.event.trigger(r, null, t);
+        C.event.trigger(r, null, t);
       }
-    }), S.fn.extend({
+    }), C.fn.extend({
       trigger: function trigger(e, t) {
         return this.each(function () {
-          S.event.trigger(e, t, this);
+          C.event.trigger(e, t, this);
         });
       },
       triggerHandler: function triggerHandler(e, t) {
         var n = this[0];
-        if (n) return S.event.trigger(e, t, n, !0);
+        if (n) return C.event.trigger(e, t, n, !0);
       }
-    }), v.focusin || S.each({
+    }), v.focusin || C.each({
       focus: "focusin",
       blur: "focusout"
     }, function (e, t) {
       var n = function n(e) {
-        S.event.simulate(t, e.target, S.event.fix(e));
+        C.event.simulate(t, e.target, C.event.fix(e));
       };
 
-      S.event.special[t] = {
+      C.event.special[t] = {
         setup: function setup() {
           var r = this.ownerDocument || this,
               i = J.access(r, t);
@@ -3342,7 +3342,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         At = Date.now(),
         Dt = /\?/;
 
-    S.parseXML = function (e) {
+    C.parseXML = function (e) {
       var t;
       if (!e || "string" != typeof e) return null;
 
@@ -3352,7 +3352,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         t = void 0;
       }
 
-      return t && !t.getElementsByTagName("parsererror").length || S.error("Invalid XML: " + e), t;
+      return t && !t.getElementsByTagName("parsererror").length || C.error("Invalid XML: " + e), t;
     };
 
     var jt = /\[\]$/,
@@ -3362,14 +3362,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     function Ht(e, t, n, r) {
       var i;
-      if (Array.isArray(t)) S.each(t, function (t, i) {
+      if (Array.isArray(t)) C.each(t, function (t, i) {
         n || jt.test(e) ? r(e, i) : Ht(e + "[" + ("object" == _typeof(i) && null != i ? t : "") + "]", i, n, r);
       });else if (n || "object" !== T(t)) r(e, t);else for (i in t) {
         Ht(e + "[" + i + "]", t[i], n, r);
       }
     }
 
-    S.param = function (e, t) {
+    C.param = function (e, t) {
       var n,
           r = [],
           i = function i(e, t) {
@@ -3378,26 +3378,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       };
 
       if (null == e) return "";
-      if (Array.isArray(e) || e.jquery && !S.isPlainObject(e)) S.each(e, function () {
+      if (Array.isArray(e) || e.jquery && !C.isPlainObject(e)) C.each(e, function () {
         i(this.name, this.value);
       });else for (n in e) {
         Ht(n, e[n], t, i);
       }
       return r.join("&");
-    }, S.fn.extend({
+    }, C.fn.extend({
       serialize: function serialize() {
-        return S.param(this.serializeArray());
+        return C.param(this.serializeArray());
       },
       serializeArray: function serializeArray() {
         return this.map(function () {
-          var e = S.prop(this, "elements");
-          return e ? S.makeArray(e) : this;
+          var e = C.prop(this, "elements");
+          return e ? C.makeArray(e) : this;
         }).filter(function () {
           var e = this.type;
-          return this.name && !S(this).is(":disabled") && Lt.test(this.nodeName) && !qt.test(e) && (this.checked || !ge.test(e));
+          return this.name && !C(this).is(":disabled") && Lt.test(this.nodeName) && !qt.test(e) && (this.checked || !ge.test(e));
         }).map(function (e, t) {
-          var n = S(this).val();
-          return null == n ? null : Array.isArray(n) ? S.map(n, function (e) {
+          var n = C(this).val();
+          return null == n ? null : Array.isArray(n) ? C.map(n, function (e) {
             return {
               name: t.name,
               value: e.replace(Nt, "\r\n")
@@ -3439,7 +3439,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       function s(a) {
         var l;
-        return i[a] = !0, S.each(e[a] || [], function (e, a) {
+        return i[a] = !0, C.each(e[a] || [], function (e, a) {
           var u = a(t, n, r);
           return "string" != typeof u || o || i[u] ? o ? !(l = u) : void 0 : (t.dataTypes.unshift(u), s(u), !1);
         }), l;
@@ -3451,16 +3451,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function Ut(e, t) {
       var n,
           r,
-          i = S.ajaxSettings.flatOptions || {};
+          i = C.ajaxSettings.flatOptions || {};
 
       for (n in t) {
         void 0 !== t[n] && ((i[n] ? e : r || (r = {}))[n] = t[n]);
       }
 
-      return r && S.extend(!0, e, r), e;
+      return r && C.extend(!0, e, r), e;
     }
 
-    _t.href = Et.href, S.extend({
+    _t.href = Et.href, C.extend({
       active: 0,
       lastModified: {},
       etag: {},
@@ -3493,7 +3493,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           "* text": String,
           "text html": !0,
           "text json": JSON.parse,
-          "text xml": S.parseXML
+          "text xml": C.parseXML
         },
         flatOptions: {
           url: !0,
@@ -3501,7 +3501,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       },
       ajaxSetup: function ajaxSetup(e, t) {
-        return t ? Ut(Ut(e, S.ajaxSettings), t) : Ut(S.ajaxSettings, e);
+        return t ? Ut(Ut(e, C.ajaxSettings), t) : Ut(C.ajaxSettings, e);
       },
       ajaxPrefilter: zt(Ft),
       ajaxTransport: zt(Bt),
@@ -3517,16 +3517,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             f,
             p,
             d,
-            h = S.ajaxSetup({}, t),
+            h = C.ajaxSetup({}, t),
             g = h.context || h,
-            m = h.context && (g.nodeType || g.jquery) ? S(g) : S.event,
-            v = S.Deferred(),
-            y = S.Callbacks("once memory"),
+            m = h.context && (g.nodeType || g.jquery) ? C(g) : C.event,
+            v = C.Deferred(),
+            y = C.Callbacks("once memory"),
             x = h.statusCode || {},
             b = {},
             w = {},
             T = "canceled",
-            C = {
+            S = {
           readyState: 0,
           getResponseHeader: function getResponseHeader(e) {
             var t;
@@ -3551,7 +3551,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           },
           statusCode: function statusCode(e) {
             var t;
-            if (e) if (c) C.always(e[C.status]);else for (t in e) {
+            if (e) if (c) S.always(e[S.status]);else for (t in e) {
               x[t] = [x[t], e[t]];
             }
             return this;
@@ -3562,7 +3562,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         };
 
-        if (v.promise(C), h.url = ((e || h.url || Et.href) + "").replace(It, Et.protocol + "//"), h.type = t.method || t.type || h.method || h.type, h.dataTypes = (h.dataType || "*").toLowerCase().match(M) || [""], null == h.crossDomain) {
+        if (v.promise(S), h.url = ((e || h.url || Et.href) + "").replace(It, Et.protocol + "//"), h.type = t.method || t.type || h.method || h.type, h.dataTypes = (h.dataType || "*").toLowerCase().match(M) || [""], null == h.crossDomain) {
           u = s.createElement("a");
 
           try {
@@ -3572,18 +3572,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }
 
-        if (h.data && h.processData && "string" != typeof h.data && (h.data = S.param(h.data, h.traditional)), Xt(Ft, h, t, C), c) return C;
+        if (h.data && h.processData && "string" != typeof h.data && (h.data = C.param(h.data, h.traditional)), Xt(Ft, h, t, S), c) return S;
 
-        for (p in (f = S.event && h.global) && 0 == S.active++ && S.event.trigger("ajaxStart"), h.type = h.type.toUpperCase(), h.hasContent = !Mt.test(h.type), i = h.url.replace(Pt, ""), h.hasContent ? h.data && h.processData && 0 === (h.contentType || "").indexOf("application/x-www-form-urlencoded") && (h.data = h.data.replace(Ot, "+")) : (d = h.url.slice(i.length), h.data && (h.processData || "string" == typeof h.data) && (i += (Dt.test(i) ? "&" : "?") + h.data, delete h.data), !1 === h.cache && (i = i.replace(Rt, "$1"), d = (Dt.test(i) ? "&" : "?") + "_=" + At++ + d), h.url = i + d), h.ifModified && (S.lastModified[i] && C.setRequestHeader("If-Modified-Since", S.lastModified[i]), S.etag[i] && C.setRequestHeader("If-None-Match", S.etag[i])), (h.data && h.hasContent && !1 !== h.contentType || t.contentType) && C.setRequestHeader("Content-Type", h.contentType), C.setRequestHeader("Accept", h.dataTypes[0] && h.accepts[h.dataTypes[0]] ? h.accepts[h.dataTypes[0]] + ("*" !== h.dataTypes[0] ? ", " + $t + "; q=0.01" : "") : h.accepts["*"]), h.headers) {
-          C.setRequestHeader(p, h.headers[p]);
+        for (p in (f = C.event && h.global) && 0 == C.active++ && C.event.trigger("ajaxStart"), h.type = h.type.toUpperCase(), h.hasContent = !Mt.test(h.type), i = h.url.replace(Pt, ""), h.hasContent ? h.data && h.processData && 0 === (h.contentType || "").indexOf("application/x-www-form-urlencoded") && (h.data = h.data.replace(Ot, "+")) : (d = h.url.slice(i.length), h.data && (h.processData || "string" == typeof h.data) && (i += (Dt.test(i) ? "&" : "?") + h.data, delete h.data), !1 === h.cache && (i = i.replace(Rt, "$1"), d = (Dt.test(i) ? "&" : "?") + "_=" + At++ + d), h.url = i + d), h.ifModified && (C.lastModified[i] && S.setRequestHeader("If-Modified-Since", C.lastModified[i]), C.etag[i] && S.setRequestHeader("If-None-Match", C.etag[i])), (h.data && h.hasContent && !1 !== h.contentType || t.contentType) && S.setRequestHeader("Content-Type", h.contentType), S.setRequestHeader("Accept", h.dataTypes[0] && h.accepts[h.dataTypes[0]] ? h.accepts[h.dataTypes[0]] + ("*" !== h.dataTypes[0] ? ", " + $t + "; q=0.01" : "") : h.accepts["*"]), h.headers) {
+          S.setRequestHeader(p, h.headers[p]);
         }
 
-        if (h.beforeSend && (!1 === h.beforeSend.call(g, C, h) || c)) return C.abort();
+        if (h.beforeSend && (!1 === h.beforeSend.call(g, S, h) || c)) return S.abort();
 
-        if (T = "abort", y.add(h.complete), C.done(h.success), C.fail(h.error), r = Xt(Bt, h, t, C)) {
-          if (C.readyState = 1, f && m.trigger("ajaxSend", [C, h]), c) return C;
+        if (T = "abort", y.add(h.complete), S.done(h.success), S.fail(h.error), r = Xt(Bt, h, t, S)) {
+          if (S.readyState = 1, f && m.trigger("ajaxSend", [S, h]), c) return S;
           h.async && h.timeout > 0 && (l = n.setTimeout(function () {
-            C.abort("timeout");
+            S.abort("timeout");
           }, h.timeout));
 
           try {
@@ -3601,7 +3601,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               b,
               w,
               T = t;
-          c || (c = !0, l && n.clearTimeout(l), r = void 0, o = a || "", C.readyState = e > 0 ? 4 : 0, u = e >= 200 && e < 300 || 304 === e, s && (b = function (e, t, n) {
+          c || (c = !0, l && n.clearTimeout(l), r = void 0, o = a || "", S.readyState = e > 0 ? 4 : 0, u = e >= 200 && e < 300 || 304 === e, s && (b = function (e, t, n) {
             for (var r, i, o, s, a = e.contents, l = e.dataTypes; "*" === l[0];) {
               l.shift(), void 0 === r && (r = e.mimeType || t.getResponseHeader("Content-Type"));
             }
@@ -3625,7 +3625,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               o = o || s;
             }
             if (o) return o !== l[0] && l.unshift(o), n[o];
-          }(h, C, s)), b = function (e, t, n, r) {
+          }(h, S, s)), b = function (e, t, n, r) {
             var i,
                 o,
                 s,
@@ -3660,29 +3660,29 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               state: "success",
               data: t
             };
-          }(h, b, C, u), u ? (h.ifModified && ((w = C.getResponseHeader("Last-Modified")) && (S.lastModified[i] = w), (w = C.getResponseHeader("etag")) && (S.etag[i] = w)), 204 === e || "HEAD" === h.type ? T = "nocontent" : 304 === e ? T = "notmodified" : (T = b.state, p = b.data, u = !(d = b.error))) : (d = T, !e && T || (T = "error", e < 0 && (e = 0))), C.status = e, C.statusText = (t || T) + "", u ? v.resolveWith(g, [p, T, C]) : v.rejectWith(g, [C, T, d]), C.statusCode(x), x = void 0, f && m.trigger(u ? "ajaxSuccess" : "ajaxError", [C, h, u ? p : d]), y.fireWith(g, [C, T]), f && (m.trigger("ajaxComplete", [C, h]), --S.active || S.event.trigger("ajaxStop")));
+          }(h, b, S, u), u ? (h.ifModified && ((w = S.getResponseHeader("Last-Modified")) && (C.lastModified[i] = w), (w = S.getResponseHeader("etag")) && (C.etag[i] = w)), 204 === e || "HEAD" === h.type ? T = "nocontent" : 304 === e ? T = "notmodified" : (T = b.state, p = b.data, u = !(d = b.error))) : (d = T, !e && T || (T = "error", e < 0 && (e = 0))), S.status = e, S.statusText = (t || T) + "", u ? v.resolveWith(g, [p, T, S]) : v.rejectWith(g, [S, T, d]), S.statusCode(x), x = void 0, f && m.trigger(u ? "ajaxSuccess" : "ajaxError", [S, h, u ? p : d]), y.fireWith(g, [S, T]), f && (m.trigger("ajaxComplete", [S, h]), --C.active || C.event.trigger("ajaxStop")));
         }
 
-        return C;
+        return S;
       },
       getJSON: function getJSON(e, t, n) {
-        return S.get(e, t, n, "json");
+        return C.get(e, t, n, "json");
       },
       getScript: function getScript(e, t) {
-        return S.get(e, void 0, t, "script");
+        return C.get(e, void 0, t, "script");
       }
-    }), S.each(["get", "post"], function (e, t) {
-      S[t] = function (e, n, r, i) {
-        return y(n) && (i = i || r, r = n, n = void 0), S.ajax(S.extend({
+    }), C.each(["get", "post"], function (e, t) {
+      C[t] = function (e, n, r, i) {
+        return y(n) && (i = i || r, r = n, n = void 0), C.ajax(C.extend({
           url: e,
           type: t,
           dataType: i,
           data: n,
           success: r
-        }, S.isPlainObject(e) && e));
+        }, C.isPlainObject(e) && e));
       };
-    }), S._evalUrl = function (e, t) {
-      return S.ajax({
+    }), C._evalUrl = function (e, t) {
+      return C.ajax({
         url: e,
         type: "GET",
         dataType: "script",
@@ -3693,13 +3693,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           "text script": function textScript() {}
         },
         dataFilter: function dataFilter(e) {
-          S.globalEval(e, t);
+          C.globalEval(e, t);
         }
       });
-    }, S.fn.extend({
+    }, C.fn.extend({
       wrapAll: function wrapAll(e) {
         var t;
-        return this[0] && (y(e) && (e = e.call(this[0])), t = S(e, this[0].ownerDocument).eq(0).clone(!0), this[0].parentNode && t.insertBefore(this[0]), t.map(function () {
+        return this[0] && (y(e) && (e = e.call(this[0])), t = C(e, this[0].ownerDocument).eq(0).clone(!0), this[0].parentNode && t.insertBefore(this[0]), t.map(function () {
           for (var e = this; e.firstElementChild;) {
             e = e.firstElementChild;
           }
@@ -3709,9 +3709,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       wrapInner: function wrapInner(e) {
         return y(e) ? this.each(function (t) {
-          S(this).wrapInner(e.call(this, t));
+          C(this).wrapInner(e.call(this, t));
         }) : this.each(function () {
-          var t = S(this),
+          var t = C(this),
               n = t.contents();
           n.length ? n.wrapAll(e) : t.append(e);
         });
@@ -3719,19 +3719,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       wrap: function wrap(e) {
         var t = y(e);
         return this.each(function (n) {
-          S(this).wrapAll(t ? e.call(this, n) : e);
+          C(this).wrapAll(t ? e.call(this, n) : e);
         });
       },
       unwrap: function unwrap(e) {
         return this.parent(e).not("body").each(function () {
-          S(this).replaceWith(this.childNodes);
+          C(this).replaceWith(this.childNodes);
         }), this;
       }
-    }), S.expr.pseudos.hidden = function (e) {
-      return !S.expr.pseudos.visible(e);
-    }, S.expr.pseudos.visible = function (e) {
+    }), C.expr.pseudos.hidden = function (e) {
+      return !C.expr.pseudos.visible(e);
+    }, C.expr.pseudos.visible = function (e) {
       return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
-    }, S.ajaxSettings.xhr = function () {
+    }, C.ajaxSettings.xhr = function () {
       try {
         return new n.XMLHttpRequest();
       } catch (e) {}
@@ -3740,8 +3740,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       0: 200,
       1223: 204
     },
-        Qt = S.ajaxSettings.xhr();
-    v.cors = !!Qt && "withCredentials" in Qt, v.ajax = Qt = !!Qt, S.ajaxTransport(function (e) {
+        Qt = C.ajaxSettings.xhr();
+    v.cors = !!Qt && "withCredentials" in Qt, v.ajax = Qt = !!Qt, C.ajaxTransport(function (e) {
       var _t3, r;
 
       if (v.cors || Qt && !e.crossDomain) return {
@@ -3780,9 +3780,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           _t3 && _t3();
         }
       };
-    }), S.ajaxPrefilter(function (e) {
+    }), C.ajaxPrefilter(function (e) {
       e.crossDomain && (e.contents.script = !1);
-    }), S.ajaxSetup({
+    }), C.ajaxSetup({
       accepts: {
         script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
       },
@@ -3791,17 +3791,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       },
       converters: {
         "text script": function textScript(e) {
-          return S.globalEval(e), e;
+          return C.globalEval(e), e;
         }
       }
-    }), S.ajaxPrefilter("script", function (e) {
+    }), C.ajaxPrefilter("script", function (e) {
       void 0 === e.cache && (e.cache = !1), e.crossDomain && (e.type = "GET");
-    }), S.ajaxTransport("script", function (e) {
+    }), C.ajaxTransport("script", function (e) {
       var t, _n;
 
       if (e.crossDomain || e.scriptAttrs) return {
         send: function send(r, i) {
-          t = S("<script>").attr(e.scriptAttrs || {}).prop({
+          t = C("<script>").attr(e.scriptAttrs || {}).prop({
             charset: e.scriptCharset,
             src: e.url
           }).on("load error", _n = function n(e) {
@@ -3816,54 +3816,54 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var Yt,
         Gt = [],
         Kt = /(=)\?(?=&|$)|\?\?/;
-    S.ajaxSetup({
+    C.ajaxSetup({
       jsonp: "callback",
       jsonpCallback: function jsonpCallback() {
-        var e = Gt.pop() || S.expando + "_" + At++;
+        var e = Gt.pop() || C.expando + "_" + At++;
         return this[e] = !0, e;
       }
-    }), S.ajaxPrefilter("json jsonp", function (e, t, r) {
+    }), C.ajaxPrefilter("json jsonp", function (e, t, r) {
       var i,
           o,
           s,
           a = !1 !== e.jsonp && (Kt.test(e.url) ? "url" : "string" == typeof e.data && 0 === (e.contentType || "").indexOf("application/x-www-form-urlencoded") && Kt.test(e.data) && "data");
       if (a || "jsonp" === e.dataTypes[0]) return i = e.jsonpCallback = y(e.jsonpCallback) ? e.jsonpCallback() : e.jsonpCallback, a ? e[a] = e[a].replace(Kt, "$1" + i) : !1 !== e.jsonp && (e.url += (Dt.test(e.url) ? "&" : "?") + e.jsonp + "=" + i), e.converters["script json"] = function () {
-        return s || S.error(i + " was not called"), s[0];
+        return s || C.error(i + " was not called"), s[0];
       }, e.dataTypes[0] = "json", o = n[i], n[i] = function () {
         s = arguments;
       }, r.always(function () {
-        void 0 === o ? S(n).removeProp(i) : n[i] = o, e[i] && (e.jsonpCallback = t.jsonpCallback, Gt.push(i)), s && y(o) && o(s[0]), s = o = void 0;
+        void 0 === o ? C(n).removeProp(i) : n[i] = o, e[i] && (e.jsonpCallback = t.jsonpCallback, Gt.push(i)), s && y(o) && o(s[0]), s = o = void 0;
       }), "script";
-    }), v.createHTMLDocument = ((Yt = s.implementation.createHTMLDocument("").body).innerHTML = "<form></form><form></form>", 2 === Yt.childNodes.length), S.parseHTML = function (e, t, n) {
-      return "string" != typeof e ? [] : ("boolean" == typeof t && (n = t, t = !1), t || (v.createHTMLDocument ? ((r = (t = s.implementation.createHTMLDocument("")).createElement("base")).href = s.location.href, t.head.appendChild(r)) : t = s), o = !n && [], (i = q.exec(e)) ? [t.createElement(i[1])] : (i = Ce([e], t, o), o && o.length && S(o).remove(), S.merge([], i.childNodes)));
+    }), v.createHTMLDocument = ((Yt = s.implementation.createHTMLDocument("").body).innerHTML = "<form></form><form></form>", 2 === Yt.childNodes.length), C.parseHTML = function (e, t, n) {
+      return "string" != typeof e ? [] : ("boolean" == typeof t && (n = t, t = !1), t || (v.createHTMLDocument ? ((r = (t = s.implementation.createHTMLDocument("")).createElement("base")).href = s.location.href, t.head.appendChild(r)) : t = s), o = !n && [], (i = q.exec(e)) ? [t.createElement(i[1])] : (i = Se([e], t, o), o && o.length && C(o).remove(), C.merge([], i.childNodes)));
       var r, i, o;
-    }, S.fn.load = function (e, t, n) {
+    }, C.fn.load = function (e, t, n) {
       var r,
           i,
           o,
           s = this,
           a = e.indexOf(" ");
-      return a > -1 && (r = bt(e.slice(a)), e = e.slice(0, a)), y(t) ? (n = t, t = void 0) : t && "object" == _typeof(t) && (i = "POST"), s.length > 0 && S.ajax({
+      return a > -1 && (r = bt(e.slice(a)), e = e.slice(0, a)), y(t) ? (n = t, t = void 0) : t && "object" == _typeof(t) && (i = "POST"), s.length > 0 && C.ajax({
         url: e,
         type: i || "GET",
         dataType: "html",
         data: t
       }).done(function (e) {
-        o = arguments, s.html(r ? S("<div>").append(S.parseHTML(e)).find(r) : e);
+        o = arguments, s.html(r ? C("<div>").append(C.parseHTML(e)).find(r) : e);
       }).always(n && function (e, t) {
         s.each(function () {
           n.apply(this, o || [e.responseText, t, e]);
         });
       }), this;
-    }, S.each(["ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend"], function (e, t) {
-      S.fn[t] = function (e) {
+    }, C.each(["ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend"], function (e, t) {
+      C.fn[t] = function (e) {
         return this.on(t, e);
       };
-    }), S.expr.pseudos.animated = function (e) {
-      return S.grep(S.timers, function (t) {
+    }), C.expr.pseudos.animated = function (e) {
+      return C.grep(C.timers, function (t) {
         return e === t.elem;
       }).length;
-    }, S.offset = {
+    }, C.offset = {
       setOffset: function setOffset(e, t, n) {
         var r,
             i,
@@ -3871,15 +3871,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             s,
             a,
             l,
-            u = S.css(e, "position"),
-            c = S(e),
+            u = C.css(e, "position"),
+            c = C(e),
             f = {};
-        "static" === u && (e.style.position = "relative"), a = c.offset(), o = S.css(e, "top"), l = S.css(e, "left"), ("absolute" === u || "fixed" === u) && (o + l).indexOf("auto") > -1 ? (s = (r = c.position()).top, i = r.left) : (s = parseFloat(o) || 0, i = parseFloat(l) || 0), y(t) && (t = t.call(e, n, S.extend({}, a))), null != t.top && (f.top = t.top - a.top + s), null != t.left && (f.left = t.left - a.left + i), "using" in t ? t.using.call(e, f) : c.css(f);
+        "static" === u && (e.style.position = "relative"), a = c.offset(), o = C.css(e, "top"), l = C.css(e, "left"), ("absolute" === u || "fixed" === u) && (o + l).indexOf("auto") > -1 ? (s = (r = c.position()).top, i = r.left) : (s = parseFloat(o) || 0, i = parseFloat(l) || 0), y(t) && (t = t.call(e, n, C.extend({}, a))), null != t.top && (f.top = t.top - a.top + s), null != t.left && (f.left = t.left - a.left + i), "using" in t ? t.using.call(e, f) : c.css(f);
       }
-    }, S.fn.extend({
+    }, C.fn.extend({
       offset: function offset(e) {
         if (arguments.length) return void 0 === e ? this : this.each(function (t) {
-          S.offset.setOffset(this, e, t);
+          C.offset.setOffset(this, e, t);
         });
         var t,
             n,
@@ -3902,72 +3902,72 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             top: 0,
             left: 0
           };
-          if ("fixed" === S.css(r, "position")) t = r.getBoundingClientRect();else {
-            for (t = this.offset(), n = r.ownerDocument, e = r.offsetParent || n.documentElement; e && (e === n.body || e === n.documentElement) && "static" === S.css(e, "position");) {
+          if ("fixed" === C.css(r, "position")) t = r.getBoundingClientRect();else {
+            for (t = this.offset(), n = r.ownerDocument, e = r.offsetParent || n.documentElement; e && (e === n.body || e === n.documentElement) && "static" === C.css(e, "position");) {
               e = e.parentNode;
             }
 
-            e && e !== r && 1 === e.nodeType && ((i = S(e).offset()).top += S.css(e, "borderTopWidth", !0), i.left += S.css(e, "borderLeftWidth", !0));
+            e && e !== r && 1 === e.nodeType && ((i = C(e).offset()).top += C.css(e, "borderTopWidth", !0), i.left += C.css(e, "borderLeftWidth", !0));
           }
           return {
-            top: t.top - i.top - S.css(r, "marginTop", !0),
-            left: t.left - i.left - S.css(r, "marginLeft", !0)
+            top: t.top - i.top - C.css(r, "marginTop", !0),
+            left: t.left - i.left - C.css(r, "marginLeft", !0)
           };
         }
       },
       offsetParent: function offsetParent() {
         return this.map(function () {
-          for (var e = this.offsetParent; e && "static" === S.css(e, "position");) {
+          for (var e = this.offsetParent; e && "static" === C.css(e, "position");) {
             e = e.offsetParent;
           }
 
           return e || se;
         });
       }
-    }), S.each({
+    }), C.each({
       scrollLeft: "pageXOffset",
       scrollTop: "pageYOffset"
     }, function (e, t) {
       var n = "pageYOffset" === t;
 
-      S.fn[e] = function (r) {
+      C.fn[e] = function (r) {
         return X(this, function (e, r, i) {
           var o;
           if (x(e) ? o = e : 9 === e.nodeType && (o = e.defaultView), void 0 === i) return o ? o[t] : e[r];
           o ? o.scrollTo(n ? o.pageXOffset : i, n ? i : o.pageYOffset) : e[r] = i;
         }, e, r, arguments.length);
       };
-    }), S.each(["top", "left"], function (e, t) {
-      S.cssHooks[t] = Qe(v.pixelPosition, function (e, n) {
-        if (n) return n = Ve(e, t), ze.test(n) ? S(e).position()[t] + "px" : n;
+    }), C.each(["top", "left"], function (e, t) {
+      C.cssHooks[t] = Qe(v.pixelPosition, function (e, n) {
+        if (n) return n = Ve(e, t), ze.test(n) ? C(e).position()[t] + "px" : n;
       });
-    }), S.each({
+    }), C.each({
       Height: "height",
       Width: "width"
     }, function (e, t) {
-      S.each({
+      C.each({
         padding: "inner" + e,
         content: t,
         "": "outer" + e
       }, function (n, r) {
-        S.fn[r] = function (i, o) {
+        C.fn[r] = function (i, o) {
           var s = arguments.length && (n || "boolean" != typeof i),
               a = n || (!0 === i || !0 === o ? "margin" : "border");
           return X(this, function (t, n, i) {
             var o;
-            return x(t) ? 0 === r.indexOf("outer") ? t["inner" + e] : t.document.documentElement["client" + e] : 9 === t.nodeType ? (o = t.documentElement, Math.max(t.body["scroll" + e], o["scroll" + e], t.body["offset" + e], o["offset" + e], o["client" + e])) : void 0 === i ? S.css(t, n, a) : S.style(t, n, i, a);
+            return x(t) ? 0 === r.indexOf("outer") ? t["inner" + e] : t.document.documentElement["client" + e] : 9 === t.nodeType ? (o = t.documentElement, Math.max(t.body["scroll" + e], o["scroll" + e], t.body["offset" + e], o["offset" + e], o["client" + e])) : void 0 === i ? C.css(t, n, a) : C.style(t, n, i, a);
           }, t, s ? i : void 0, s);
         };
       });
-    }), S.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function (e, t) {
-      S.fn[t] = function (e, n) {
+    }), C.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function (e, t) {
+      C.fn[t] = function (e, n) {
         return arguments.length > 0 ? this.on(t, null, e, n) : this.trigger(t);
       };
-    }), S.fn.extend({
+    }), C.fn.extend({
       hover: function hover(e, t) {
         return this.mouseenter(e).mouseleave(t || e);
       }
-    }), S.fn.extend({
+    }), C.fn.extend({
       bind: function bind(e, t, n) {
         return this.on(e, null, t, n);
       },
@@ -3980,24 +3980,24 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       undelegate: function undelegate(e, t, n) {
         return 1 === arguments.length ? this.off(e, "**") : this.off(t, e || "**", n);
       }
-    }), S.proxy = function (e, t) {
+    }), C.proxy = function (e, t) {
       var n, r, i;
       if ("string" == typeof t && (n = e[t], t = e, e = n), y(e)) return r = l.call(arguments, 2), (i = function i() {
         return e.apply(t || this, r.concat(l.call(arguments)));
-      }).guid = e.guid = e.guid || S.guid++, i;
-    }, S.holdReady = function (e) {
-      e ? S.readyWait++ : S.ready(!0);
-    }, S.isArray = Array.isArray, S.parseJSON = JSON.parse, S.nodeName = N, S.isFunction = y, S.isWindow = x, S.camelCase = Y, S.type = T, S.now = Date.now, S.isNumeric = function (e) {
-      var t = S.type(e);
+      }).guid = e.guid = e.guid || C.guid++, i;
+    }, C.holdReady = function (e) {
+      e ? C.readyWait++ : C.ready(!0);
+    }, C.isArray = Array.isArray, C.parseJSON = JSON.parse, C.nodeName = N, C.isFunction = y, C.isWindow = x, C.camelCase = Y, C.type = T, C.now = Date.now, C.isNumeric = function (e) {
+      var t = C.type(e);
       return ("number" === t || "string" === t) && !isNaN(e - parseFloat(e));
     }, void 0 === (r = function () {
-      return S;
+      return C;
     }.apply(t, [])) || (e.exports = r);
     var Jt = n.jQuery,
         Zt = n.$;
-    return S.noConflict = function (e) {
-      return n.$ === S && (n.$ = Zt), e && n.jQuery === S && (n.jQuery = Jt), S;
-    }, i || (n.jQuery = n.$ = S), S;
+    return C.noConflict = function (e) {
+      return n.$ === C && (n.$ = Zt), e && n.jQuery === C && (n.jQuery = Jt), C;
+    }, i || (n.jQuery = n.$ = C), C;
   });
 }, function (e, t) {
   /*!
@@ -4670,7 +4670,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           new Waypoint({
             element: n,
             handler: function handler(t) {
-              "down" === t && (e.links.removeClass("highlight-on-scroll"), i()(n.dataset.link).addClass("highlight-on-scroll"));
+              var r = i()(n.dataset.link);
+              "down" === t ? (e.links.removeClass("highlight-on-scroll"), r.addClass("highlight-on-scroll")) : "#our-features-link" === n.dataset.link && r.removeClass("highlight-on-scroll");
             },
             offset: "25%"
           }), new Waypoint({

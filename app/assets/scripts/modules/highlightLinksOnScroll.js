@@ -14,14 +14,16 @@ class highlightLinksOnScroll {
       new Waypoint({
         element: ele,
         handler: direction => {
+          const currLink = $(ele.dataset.link);
          if (direction === 'down') {
           that.links.removeClass('highlight-on-scroll');
-          $(ele.dataset.link).addClass('highlight-on-scroll');
+          currLink.addClass('highlight-on-scroll');
+         } else if (ele.dataset.link === '#our-features-link') {
+          currLink.removeClass('highlight-on-scroll');
          }
         },
         offset: '25%'
       });
-
       new Waypoint({
         element: ele,
         handler: direction => {

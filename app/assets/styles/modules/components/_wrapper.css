@@ -2,6 +2,7 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  
     @mixin atMedium {
       width: 100%;
       max-width:620px;

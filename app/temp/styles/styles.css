@@ -594,6 +594,10 @@ template {
 * {
   box-sizing: border-box;
 }
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 body {
   font-family: Roboto, serif;
 }
@@ -1155,7 +1159,8 @@ picture img{
     left: 30%;
   }
 .slide-left-on-scroll {
-  right: -100%;
+  overflow: hidden;
+  right: -600px;
   transition: right 1000ms;
 }
 .slide-left-on-scroll--is-visible {

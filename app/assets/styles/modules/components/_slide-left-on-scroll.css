@@ -1,5 +1,6 @@
 .slide-left-on-scroll {
-  right: -100%;
+  overflow: hidden;
+  right: -600px;
   transition: right 1000ms;
 
   &--is-visible {
