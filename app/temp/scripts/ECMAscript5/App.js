@@ -4699,10 +4699,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }), new s(i()("#helped-people"), "90%", {
     number: 1393600,
     speed: 3041
-  }), new s(i()("#total-volunteers"), "90%", {
+  }), new s(i()("#total-volunteers"), "95%", {
     number: 304823,
     speed: 641
-  }), new s(i()("#succeeded-missions"), "90%", {
+  }), new s(i()("#succeeded-missions"), "95%", {
     number: 834329,
     speed: 1832
   }), new a();

@@ -15,11 +15,11 @@ new CounterOnScroll($('#helped-people'), '90%', {
   number :1393600,
   speed: 3041
 });
-new CounterOnScroll($('#total-volunteers'), '90%', {
+new CounterOnScroll($('#total-volunteers'), '95%', {
   number :304823,
   speed: 641
 });
-new CounterOnScroll($('#succeeded-missions'), '90%', {
+new CounterOnScroll($('#succeeded-missions'), '95%', {
   number :834329,
   speed: 1832
 });
