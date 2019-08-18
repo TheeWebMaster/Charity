@@ -493,6 +493,7 @@ template {
   background-color: #14182dc5;
   width: 100%;
   height: 50px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0, .3);
 }
 @media (min-width: 750px) {
 .header {
