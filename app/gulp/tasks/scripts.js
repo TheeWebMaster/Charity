@@ -4,12 +4,12 @@ const webpack = require('webpack-stream'),
 const config = require('../../../webpack.config.js');
 
 const bundle = () => {
-  return gulp.src('./app/assets/scripts/App.js')
+  return gulp.src('./app/assets/scripts/*.js')
          .pipe(webpack(config))
          .pipe(gulp.dest('./app/temp/scripts/bundled/'));
 };
 const es5 = () => {
-  return gulp.src('./app/temp/scripts/bundled/App.js')
+  return gulp.src('./app/temp/scripts/bundled/*.js')
          .pipe(babel({
            presets: ['@babel/env']
          }))
