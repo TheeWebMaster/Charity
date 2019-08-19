@@ -1,7 +1,7 @@
 const gulp = require('gulp'),
       svgSprite = require('gulp-svg-sprite');
 var config = {
-}
+};
 const createSprite = () => {
   return gulp.src('./app/assets/images/icons/**/*.svg')
              .pipe(svgSprite(config))
