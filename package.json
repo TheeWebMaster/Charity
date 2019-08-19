@@ -9,6 +9,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-svg-sprite": "^1.1.1",
     "gulp-watch": "^5.0.1",
     "postcss-hexrgba": "^1.0.2",
     "postcss-import": "^12.0.1",
