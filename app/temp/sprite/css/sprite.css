@@ -1,0 +1,73 @@
+    .icon {
+      background-image: url('/assets/images/sprites/sprite-cb7838a7.svg');
+    }
+  .icon--at {
+    height: 32px;
+    width: 32px;
+    background-position: 0 81.0126582278481%;
+  }
+  .icon--calender {
+    height: 15px;
+    width: 15px;
+    background-position: 0 100%;
+  }
+  .icon--chevron-right {
+    height: 32px;
+    width: 20px;
+    background-position: 65.25531914893617% 0;
+  }
+  .icon--comment {
+    height: 16px;
+    width: 15px;
+    background-position: 91.91919191919192% 67.36842105263158%;
+  }
+  .icon--compass {
+    height: 32px;
+    width: 31px;
+    background-position: 24.096385542168676% 40.50632911392405%;
+  }
+  .icon--envelope {
+    height: 32px;
+    width: 32px;
+    background-position: 99.1951219512195% 0;
+  }
+  .icon--head {
+    height: 32px;
+    width: 29.18px;
+    background-position: 95.8971940580052% 40.50632911392405%;
+  }
+  .icon--heart {
+    height: 32px;
+    width: 27.56px;
+    background-position: 39.07913003239241% 0;
+  }
+  .icon--mobile {
+    height: 32px;
+    width: 20px;
+    background-position: 54.255319148936174% 40.50632911392405%;
+  }
+  .icon--money-box {
+    height: 32px;
+    width: 24px;
+    background-position: 35.55555555555556% 81.0126582278481%;
+  }
+  .icon--pig {
+    height: 32px;
+    width: 33.78px;
+    background-position: 0 0;
+  }
+  .icon--signal {
+    height: 18px;
+    width: 18px;
+    background-position: 58.333333333333336% 68.81720430107526%;
+  }
+  .icon--sort-down {
+    height: 32px;
+    width: 20px;
+    background-position: 0 40.50632911392405%;
+  }
+  .icon--target {
+    height: 16.97px;
+    width: 17px;
+    background-position: 76.28865979381443% 68.06338402637456%;
+  }
