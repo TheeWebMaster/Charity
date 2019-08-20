@@ -11,4 +11,4 @@ const eye = () => {
   watch('./app/assets/scripts/**/*.js', gulp.series(scripts.bundle, scripts.es5,server.reloadBrowser));
 };
 
-gulp.task('default', eye);
+gulp.task('watch', eye);

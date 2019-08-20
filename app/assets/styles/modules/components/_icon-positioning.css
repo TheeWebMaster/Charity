@@ -3,7 +3,7 @@
   bottom: 3px;
 
   &--small {
-    bottom: 1px;
+    bottom: -1px;
   }
   &--to-bottom {
     top: 5px
