@@ -2,11 +2,11 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       svgSprite = require('gulp-svg-sprite'),
       clean = require('gulp-clean');
-var config = {
-  shape : {
-    dimension : {
-      dimension: 32,
-      maxHeight: 32
+
+const config = {
+  shape: {
+    id: {
+      separator: '-'
     }
   },
   mode: {
@@ -20,6 +20,7 @@ var config = {
     }
   }
 };
+
 const createSprite = () => {
   return gulp.src('./app/assets/images/icons/**/*.svg')
              .pipe(svgSprite(config))
@@ -38,4 +39,5 @@ const deletePrevSvg = () => {
   return gulp.src(['./app/temp/sprite/css','./app/assets/images/sprites'], {read : false, allowEmpty: true})
              .pipe(clean())
 };
+
 gulp.task('createSprite', gulp.series(deletePrevSvg, createSprite, copySpriteCss, moveSpriteSvg));
