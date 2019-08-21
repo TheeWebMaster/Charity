@@ -1,1 +1,6 @@
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile" class="svg-inline--fa fa-mobile fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10pt" height="16pt" viewBox="0 0 10 16" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:#7f7f7f;fill-opacity:1;" d="M 8.5 0 L 1.5 0 C 0.671875 0 0 0.671875 0 1.5 L 0 14.5 C 0 15.328125 0.671875 16 1.5 16 L 8.5 16 C 9.328125 16 10 15.328125 10 14.5 L 10 1.5 C 10 0.671875 9.328125 0 8.5 0 Z M 5 15 C 4.445312 15 4 14.554688 4 14 C 4 13.445312 4.445312 13 5 13 C 5.554688 13 6 13.445312 6 14 C 6 14.554688 5.554688 15 5 15 Z M 5 15 "/>
+</g>
+</svg>
