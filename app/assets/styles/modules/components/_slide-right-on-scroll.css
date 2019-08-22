@@ -3,6 +3,9 @@
   transition: left 1000ms;
   
   &--is-visible {
-    left: 30%;
+    left: 50%;
+    @mixin atLarge {
+      left: 30%;
+    }
   }
 }

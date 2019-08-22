@@ -4679,7 +4679,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             handler: function handler(t) {
               "up" === t && (e.links.removeClass("highlight-on-scroll"), i()(n.dataset.link).addClass("highlight-on-scroll"));
             },
-            offset: "-40%"
+            offset: "-15%"
           });
         });
       }
@@ -4693,16 +4693,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return a;
   }();
 
-  new o(i()(".grid__item"), "75%", "reveal-item"), new o(i()(".slide-right"), "80%", "slide-right-on-scroll"), new o(i()(".slide-left"), "55%", "slide-left-on-scroll"), new s(i()("#total-collections"), "90%", {
+  new o(i()(".grid__item"), "75%", "reveal-item"), new o(i()(".slide-right"), "60%", "slide-right-on-scroll"), new o(i()(".slide-left"), "40%", "slide-left-on-scroll"), new s(i()("#total-collections"), "99%", {
     number: 589393600,
     speed: 1233041
-  }), new s(i()("#helped-people"), "90%", {
+  }), new s(i()("#helped-people"), "99%", {
     number: 1393600,
     speed: 3041
-  }), new s(i()("#total-volunteers"), "95%", {
+  }), new s(i()("#total-volunteers"), "99%", {
     number: 304823,
     speed: 641
-  }), new s(i()("#succeeded-missions"), "95%", {
+  }), new s(i()("#succeeded-missions"), "99%", {
     number: 834329,
     speed: 1832
   }), new a();

@@ -15,6 +15,11 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 15px;
+    
+    @mixin atLarge {
+      margin-bottom: 7px;
+    }
 
     @mixin atLarge {
       left: 0;
@@ -57,12 +62,6 @@
   }
   &__page-section {
     padding: 2.5em 0;
-  }
-  &__headline-text-space {
-    margin-bottom: 15px;
-    @mixin atLarge {
-      margin-bottom: 40px;      
-    }
   }
   &__margin-b {
     margin-bottom: 1em;

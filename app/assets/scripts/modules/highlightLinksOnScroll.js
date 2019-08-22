@@ -32,7 +32,7 @@ class highlightLinksOnScroll {
           $(ele.dataset.link).addClass('highlight-on-scroll');
          }
         },
-        offset: '-40%'
+        offset: '-15%'
       });
     });
   }

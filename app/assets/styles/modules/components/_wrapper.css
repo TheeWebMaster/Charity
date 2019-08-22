@@ -26,4 +26,9 @@
   &--on-top {
     z-index: 1;
   }
+  &--no-padding-right {
+    @mixin atMedium {
+      padding-right: 0;
+    }
+  }
 }
