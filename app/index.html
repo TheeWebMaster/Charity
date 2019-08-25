@@ -313,7 +313,12 @@
     <div class="flex flex--no-wrap-at-m flex--gap flex--justify-content-center">
       <div class="testimonials testimonials--500px-w-atLarge">
         <div class="testimonials__image-wrapper">
-          <img class="lazyload testimonials__image  testimonials__image--bottom-position" data-src="./assets/images/kid-with-a-pet.jpg" alt="kid with a pet">
+          <picture>
+            <source data-srcset="./assets/images/blog/volunteersgroup--large.jpg" media="(min-width:1200px)">
+            <source data-srcset="./assets/images/blog/volunteersgroup--medium.jpg" media="(min-width:750px)">
+            <source data-srcset="./assets/images/blog/volunteersgroup--small.jpg" media="(min-width:530px)">
+            <img class="lazyload" data-src="./assets/images/blog/volunteersgroup--smaller.jpg" alt="A group of volunteers holding hands">
+          </picture>
         </div>
         <div class="testimonials__edge-touch">
           <h2 class="headline headline--black headline--small headline--margin-bottom-large ">First cattle which earth unto let health for can get and see what you and see what you can give for in</h2>
