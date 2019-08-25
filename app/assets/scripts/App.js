@@ -1,6 +1,7 @@
 import RevealOnScroll from './modules/RevealOnScroll';
 import CounterOnScroll from './modules/CounterOnScroll';
 import highlightLinksOnScroll from './modules/highlightLinksOnScroll';
+import changeIconColorOnHover from './modules/changeIconColorOnHover';
 import $ from 'jquery';
 
 new RevealOnScroll($('.grid__item'), '75%', 'reveal-item');
@@ -25,3 +26,4 @@ new CounterOnScroll($('#succeeded-missions'), '99%', {
 });
 
 new highlightLinksOnScroll();
+new changeIconColorOnHover();

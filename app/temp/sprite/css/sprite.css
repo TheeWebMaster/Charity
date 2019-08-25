@@ -1,55 +1,55 @@
     .icon {
-      background-image: url('/assets/images/sprites/sprite-8a4d6b48.svg');
+      background-image: url('/assets/images/sprites/sprite-bf6bec63.svg');
     }
   .icon--at {
     height: 16px;
     width: 16px;
-    background-position: 100% 20.253164556962027%;
+    background-position: 55.88235294117647% 100%;
   }
   .icon--calender {
     height: 15px;
     width: 15px;
-    background-position: 98.96907216494846% 80%;
+    background-position: 70.87378640776699% 98.95833333333333%;
   }
   .icon--comment {
     height: 16px;
     width: 15px;
-    background-position: 98.96907216494846% 40.50632911392405%;
+    background-position: 40.77669902912621% 100%;
   }
   .icon--compass {
     height: 16px;
     width: 16px;
-    background-position: 82.29166666666667% 88.60759493670886%;
+    background-position: 25.49019607843137% 100%;
   }
   .icon--envelope {
     height: 16px;
     width: 16px;
-    background-position: 100% 0;
+    background-position: 9.803921568627452% 100%;
   }
   .icon--head {
     height: 34px;
     width: 31px;
-    background-position: 0 59.01639344262295%;
+    background-position: 0 46.753246753246756%;
   }
   .icon--header-small-screens-menu {
     height: 20px;
     width: 20px;
-    background-position: 81.52173913043478% 48%;
+    background-position: 97.95918367346938% 54.94505494505494%;
   }
   .icon--heart {
     height: 36px;
     width: 31px;
-    background-position: 80.24691358024691% 0;
+    background-position: 43.67816091954023% 0;
   }
   .icon--mobile {
     height: 16px;
     width: 10px;
-    background-position: 94.11764705882354% 60.75949367088607%;
+    background-position: 0 100%;
   }
   .icon--money-box {
     height: 36px;
     width: 27px;
-    background-position: 44.705882352941174% 0;
+    background-position: 75.82417582417582% 0;
   }
   .icon--pig {
     height: 36px;
@@ -59,30 +59,50 @@
   .icon--signal {
     height: 18px;
     width: 18px;
-    background-position: 46.808510638297875% 90.9090909090909%;
+    background-position: 96% 75.26881720430107%;
   }
   .icon--target {
     height: 16.97px;
     width: 17px;
-    background-position: 65.26315789473684% 89.70908624887863%;
+    background-position: 74.25742574257426% 38.28565351483569%;
   }
-  .icon--testimonials-facebook {
+  .icon--testimonials-facebook-black {
     height: 25px;
     width: 22px;
-    background-position: 58.888888888888886% 51.42857142857143%;
+    background-position: 100% 29.069767441860463%;
   }
-  .icon--testimonials-instagram {
+  .icon--testimonials-facebook-white {
     height: 25px;
     width: 22px;
-    background-position: 24.444444444444443% 100%;
+    background-position: 100% 0;
   }
-  .icon--testimonials-skype {
+  .icon--testimonials-instagram-black {
     height: 25px;
     width: 22px;
-    background-position: 34.44444444444444% 51.42857142857143%;
+    background-position: 45.833333333333336% 81.3953488372093%;
   }
-  .icon--testimonials-twitter {
+  .icon--testimonials-instagram-white {
     height: 25px;
     width: 22px;
-    background-position: 0 100%;
+    background-position: 0 81.3953488372093%;
+  }
+  .icon--testimonials-skype-black {
+    height: 25px;
+    width: 22px;
+    background-position: 32.291666666666664% 41.86046511627907%;
+  }
+  .icon--testimonials-skype-white {
+    height: 25px;
+    width: 22px;
+    background-position: 68.75% 81.3953488372093%;
+  }
+  .icon--testimonials-twitter-black {
+    height: 25px;
+    width: 22px;
+    background-position: 22.916666666666668% 81.3953488372093%;
+  }
+  .icon--testimonials-twitter-white {
+    height: 25px;
+    width: 22px;
+    background-position: 55.208333333333336% 41.86046511627907%;
   }
