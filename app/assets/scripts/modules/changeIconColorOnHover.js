@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
 class changeIconColorOnHover {
-  constructor() {
-     this.icons = $('.testimonials__icon-container > i');
+  constructor(icons) {
+     this.icons = icons;
      this.events();
   }
   events() {

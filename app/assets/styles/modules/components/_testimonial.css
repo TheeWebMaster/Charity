@@ -50,22 +50,6 @@
       }
     }
   }
-  &--scale {
-    @mixin atLarge {
-      transition-duration: 300ms;
-      &:hover {
-        box-shadow:0 0 10px -2px rgba(0,0,0,0.4);
-      }
-    }
-  }
-  &--increase-shadow {
-    @mixin atLarge {
-      transition-duration: 300ms;
-      &:hover {
-        transform: scale(1.01);
-      }
-    }
-  }
 
   &--pointer {
    @mixin atLarge {

@@ -1,0 +1,12 @@
+.hover-increase-shadow {
+  @mixin atLarge {
+    transition-duration: 200ms;
+    &:hover {
+      box-shadow:0 0 15px $shadowColor;
+    }
+
+    &--small:hover {
+      box-shadow:0 0 13px -3px $shadowColor;
+    }
+  }
+}

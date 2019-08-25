@@ -26,4 +26,4 @@ new CounterOnScroll($('#succeeded-missions'), '99%', {
 });
 
 new highlightLinksOnScroll();
-new changeIconColorOnHover();
+new changeIconColorOnHover( $('.testimonials__icon-container > i'));

@@ -4696,10 +4696,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var l =
   /*#__PURE__*/
   function () {
-    function l() {
+    function l(e) {
       _classCallCheck(this, l);
 
-      this.icons = i()(".testimonials__icon-container > i"), this.events();
+      this.icons = e, this.events();
     }
 
     _createClass(l, [{
@@ -4737,5 +4737,5 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }), new s(i()("#succeeded-missions"), "99%", {
     number: 834329,
     speed: 1832
-  }), new a(), new l();
+  }), new a(), new l(i()(".testimonials__icon-container > i"));
 }]);
