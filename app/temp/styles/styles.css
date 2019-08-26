@@ -1118,8 +1118,12 @@ picture img{
 .highlight-on-scroll {
   background-color: #00c424;
 }
+/* this file is generated automatically by a gulp task DO NOT change this file manually but instead chage the template file in ./app/gulp/templates/ */
 .icon {
       background-image: url('/assets/images/sprites/sprite-bf6bec63.svg');
+    }
+.no-svg .icon {
+      background-image: url('/assets/images/sprites/sprite-bf6bec63.png');
     }
 .icon--at {
     height: 16px;

@@ -54,7 +54,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 5);
+  }, n.p = "", n(n.s = 7);
 }([function (e, t, n) {
   var r;
   /*!
@@ -346,8 +346,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           B = ":(" + M + ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" + I + ")*)|.*)\\)|)",
           F = new RegExp(R + "+", "g"),
           $ = new RegExp("^" + R + "+|((?:^|[^\\\\])(?:\\\\.)*)" + R + "+$", "g"),
-          _ = new RegExp("^" + R + "*," + R + "*"),
-          z = new RegExp("^" + R + "*([>+~]|" + R + ")" + R + "*"),
+          z = new RegExp("^" + R + "*," + R + "*"),
+          _ = new RegExp("^" + R + "*([>+~]|" + R + ")" + R + "*"),
           X = new RegExp(R + "|>"),
           U = new RegExp(B),
           V = new RegExp("^" + M + "$"),
@@ -1075,7 +1075,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (c) return t ? 0 : c.slice(0);
 
         for (a = e, l = [], u = r.preFilter; a;) {
-          for (s in n && !(i = _.exec(a)) || (i && (a = a.slice(i[0].length) || a), l.push(o = [])), n = !1, (i = z.exec(a)) && (n = i.shift(), o.push({
+          for (s in n && !(i = z.exec(a)) || (i && (a = a.slice(i[0].length) || a), l.push(o = [])), n = !1, (i = _.exec(a)) && (n = i.shift(), o.push({
             value: n,
             type: i[0].replace($, " ")
           }), a = a.slice(n.length)), r.filter) {
@@ -1573,24 +1573,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         throw e;
       });
     };
+    var z = C.Deferred();
 
-    var _ = C.Deferred();
-
-    function z() {
-      s.removeEventListener("DOMContentLoaded", z), n.removeEventListener("load", z), C.ready();
+    function _() {
+      s.removeEventListener("DOMContentLoaded", _), n.removeEventListener("load", _), C.ready();
     }
 
     C.fn.ready = function (e) {
-      return _.then(e)["catch"](function (e) {
+      return z.then(e)["catch"](function (e) {
         C.readyException(e);
       }), this;
     }, C.extend({
       isReady: !1,
       readyWait: 1,
       ready: function ready(e) {
-        (!0 === e ? --C.readyWait : C.isReady) || (C.isReady = !0, !0 !== e && --C.readyWait > 0 || _.resolveWith(s, [C]));
+        (!0 === e ? --C.readyWait : C.isReady) || (C.isReady = !0, !0 !== e && --C.readyWait > 0 || z.resolveWith(s, [C]));
       }
-    }), C.ready.then = _.then, "complete" === s.readyState || "loading" !== s.readyState && !s.documentElement.doScroll ? n.setTimeout(C.ready) : (s.addEventListener("DOMContentLoaded", z), n.addEventListener("load", z));
+    }), C.ready.then = z.then, "complete" === s.readyState || "loading" !== s.readyState && !s.documentElement.doScroll ? n.setTimeout(C.ready) : (s.addEventListener("DOMContentLoaded", _), n.addEventListener("load", _));
 
     var X = function X(e, t, n, r, i, o, s) {
       var a = 0,
@@ -2332,7 +2331,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return e;
     }
 
-    function _e(e, t, n) {
+    function ze(e, t, n) {
       for (var r, i = t ? C.filter(t, e) : e, o = 0; null != (r = i[o]); o++) {
         n || 1 !== r.nodeType || C.cleanData(xe(r)), r.parentNode && (n && ae(r) && be(xe(r, "script")), r.parentNode.removeChild(r));
       }
@@ -2375,10 +2374,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }), C.fn.extend({
       detach: function detach(e) {
-        return _e(this, e, !0);
+        return ze(this, e, !0);
       },
       remove: function remove(e) {
-        return _e(this, e);
+        return ze(this, e);
       },
       text: function text(e) {
         return X(this, function (e) {
@@ -2467,7 +2466,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       };
     });
 
-    var ze = new RegExp("^(" + re + ")(?!px)[a-z%]+$", "i"),
+    var _e = new RegExp("^(" + re + ")(?!px)[a-z%]+$", "i"),
         Xe = function Xe(e) {
       var t = e.ownerDocument.defaultView;
       return t && t.opener || (t = n), t.getComputedStyle(e);
@@ -2480,7 +2479,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           o,
           s,
           a = e.style;
-      return (n = n || Xe(e)) && ("" !== (s = n.getPropertyValue(t) || n[t]) || ae(e) || (s = C.style(e, t)), !v.pixelBoxStyles() && ze.test(s) && Ue.test(t) && (r = a.width, i = a.minWidth, o = a.maxWidth, a.minWidth = a.maxWidth = a.width = s, s = n.width, a.width = r, a.minWidth = i, a.maxWidth = o)), void 0 !== s ? s + "" : s;
+      return (n = n || Xe(e)) && ("" !== (s = n.getPropertyValue(t) || n[t]) || ae(e) || (s = C.style(e, t)), !v.pixelBoxStyles() && _e.test(s) && Ue.test(t) && (r = a.width, i = a.minWidth, o = a.maxWidth, a.minWidth = a.maxWidth = a.width = s, s = n.width, a.width = r, a.minWidth = i, a.maxWidth = o)), void 0 !== s ? s + "" : s;
     }
 
     function Qe(e, t) {
@@ -2580,7 +2579,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           s = Ve(e, t, r),
           a = "offset" + t[0].toUpperCase() + t.slice(1);
 
-      if (ze.test(s)) {
+      if (_e.test(s)) {
         if (!n) return s;
         s = "auto";
       }
@@ -3409,7 +3408,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }).get();
       }
     });
-
     var Ot = /%20/g,
         Pt = /#.*$/,
         Wt = /([?&])_=[^&]*/,
@@ -3419,9 +3417,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         Bt = {},
         Ft = {},
         $t = "*/".concat("*"),
-        _t = s.createElement("a");
+        zt = s.createElement("a");
 
-    function zt(e) {
+    function _t(e) {
       return function (t, n) {
         "string" != typeof t && (n = t, t = "*");
         var r,
@@ -3460,7 +3458,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return r && C.extend(!0, e, r), e;
     }
 
-    _t.href = Et.href, C.extend({
+    zt.href = Et.href, C.extend({
       active: 0,
       lastModified: {},
       etag: {},
@@ -3503,8 +3501,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       ajaxSetup: function ajaxSetup(e, t) {
         return t ? Ut(Ut(e, C.ajaxSettings), t) : Ut(C.ajaxSettings, e);
       },
-      ajaxPrefilter: zt(Bt),
-      ajaxTransport: zt(Ft),
+      ajaxPrefilter: _t(Bt),
+      ajaxTransport: _t(Ft),
       ajax: function ajax(e, t) {
         "object" == _typeof(e) && (t = e, e = void 0), t = t || {};
         var r,
@@ -3566,7 +3564,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           u = s.createElement("a");
 
           try {
-            u.href = h.url, u.href = u.href, h.crossDomain = _t.protocol + "//" + _t.host != u.protocol + "//" + u.host;
+            u.href = h.url, u.href = u.href, h.crossDomain = zt.protocol + "//" + zt.host != u.protocol + "//" + u.host;
           } catch (e) {
             h.crossDomain = !0;
           }
@@ -3939,7 +3937,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       };
     }), C.each(["top", "left"], function (e, t) {
       C.cssHooks[t] = Qe(v.pixelPosition, function (e, n) {
-        if (n) return n = Ve(e, t), ze.test(n) ? C(e).position()[t] + "px" : n;
+        if (n) return n = Ve(e, t), _e.test(n) ? C(e).position()[t] + "px" : n;
       });
     }), C.each({
       Height: "height",
@@ -4554,7 +4552,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       preventDefault: !0
     };
   }) ? r.apply(t, i) : r) || (e.exports = o);
-},,, function (e, t, n) {
+},,,,, function (e, t, n) {
   "use strict";
 
   n.r(t);
@@ -4659,7 +4657,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function a() {
       _classCallCheck(this, a);
 
-      this.pageSections = i()(".page-section"), this.links = i()(".header__link"), this.createPageSectionsWaypoints(), this.enableSmoothScroll();
+      this.lazyload = i()(".lazylaod"), this.pageSections = i()(".page-section"), this.links = i()(".header__link"), this.createPageSectionsWaypoints(), this.enableSmoothScroll(), this.refreshWaypoints();
     }
 
     _createClass(a, [{
@@ -4687,6 +4685,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       key: "enableSmoothScroll",
       value: function enableSmoothScroll() {
         this.links.smoothScroll();
+      }
+    }, {
+      key: "refreshWaypoints",
+      value: function refreshWaypoints() {
+        this.lazyload.on("load", Waypoint.refreshAll);
       }
     }]);
 

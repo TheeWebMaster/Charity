@@ -3,10 +3,12 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class highlightLinksOnScroll {
   constructor() {
+    this.lazyload = $('.lazylaod');
     this.pageSections = $('.page-section');
     this.links = $('.header__link')
     this.createPageSectionsWaypoints();
     this.enableSmoothScroll();
+    this.refreshWaypoints();
   }
   createPageSectionsWaypoints() {
     const that = this;
@@ -38,6 +40,9 @@ class highlightLinksOnScroll {
   }
   enableSmoothScroll() {
     this.links.smoothScroll();
+  }
+  refreshWaypoints() {
+    this.lazyload.on('load', Waypoint.refreshAll);
   }
 };
 
