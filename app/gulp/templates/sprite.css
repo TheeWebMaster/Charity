@@ -1,7 +1,12 @@
+/* this file is generated automatically by a gulp task DO NOT change this file manually but instead chage the template file in ./app/gulp/templates/ */
 {{#shapes}}
   {{#first}}
     .icon {
       background-image: url('/assets/images/sprites/{{{sprite}}}');
+    }
+
+    .no-svg .icon {
+      background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
     }
   {{/first}}
   .icon--{{base}} {

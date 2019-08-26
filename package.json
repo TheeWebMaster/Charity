@@ -10,9 +10,11 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-image-resize": "^0.13.1",
+    "gulp-modernizr": "^3.3.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-svg-sprite": "^1.1.1",
+    "gulp-svg2png": "^2.0.2",
     "gulp-watch": "^5.0.1",
     "postcss-hexrgba": "^1.0.2",
     "postcss-import": "^12.0.1",
@@ -25,6 +27,7 @@
     "jquery": "^3.4.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^5.1.1",
+    "picturefill": "^3.0.3",
     "waypoints": "^4.0.1"
   }
 }
