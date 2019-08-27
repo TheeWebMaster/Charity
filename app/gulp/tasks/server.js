@@ -1,12 +1,14 @@
 const gulp = require('gulp'),
       browserSync = require('browser-sync').create();
       
-browserSync.init({
-  notify: false,
-  server: {
-    baseDir: 'app'
-  }
-});
+const createServer = () => {
+  browserSync.init({
+    notify: false,
+    server: {
+      baseDir: 'app'
+    }
+  });
+};
 
 const injectStyles = () => {
   return gulp.src('./app/temp/styles/styles.css')
@@ -15,5 +17,6 @@ const injectStyles = () => {
 
 module.exports = {
   injectStyles,
+  createServer,
   reloadBrowser: browserSync.reload
 }

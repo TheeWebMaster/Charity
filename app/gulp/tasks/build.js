@@ -5,7 +5,11 @@ const gulp = require('gulp'),
       cssnano = require('gulp-cssnano'),
       uglify = require('gulp-uglify'),
       rev = require('gulp-rev'),
-      browserSync = require('browser-sync').create();;
+      browserSync = require('browser-sync').create();
+
+const scripts = require('./scripts'),
+      styles = require('./styles'),
+      generateModernizrFile = require('./modernizr');;
 
 const wipeOutDist = () => {
   return gulp.src('./dist', {read: false, allowEmpty: true})
@@ -32,12 +36,13 @@ const usemin = () => {
              .pipe(gulp.dest('./dist'));
 };
 
-const preView = () => {
+const preViewDist = (done) => {
   browserSync.init({
     notify: false,
     server: {
       baseDir: 'dist'
     }
   });
+  done();
 };
-gulp.task('build', gulp.series(wipeOutDist, minifyImg, usemin, preView));
+gulp.task('build', gulp.series(wipeOutDist, minifyImg, generateModernizrFile, scripts.bundle, scripts.es5, styles.compileStyles,  usemin, preViewDist));
