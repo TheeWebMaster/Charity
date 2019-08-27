@@ -9,7 +9,8 @@ const gulp = require('gulp'),
 
 const scripts = require('./scripts'),
       styles = require('./styles'),
-      generateModernizrFile = require('./modernizr');;
+      generateModernizrFile = require('./modernizr'),
+      createSprite = require('./sprite');
 
 const wipeOutDist = () => {
   return gulp.src('./dist', {read: false, allowEmpty: true})
@@ -45,4 +46,4 @@ const preViewDist = (done) => {
   });
   done();
 };
-gulp.task('build', gulp.series(wipeOutDist, minifyImg, generateModernizrFile, scripts.bundle, scripts.es5, styles.compileStyles,  usemin, preViewDist));
+gulp.task('build', gulp.series(wipeOutDist, minifyImg, createSprite, styles.compileStyles, generateModernizrFile, scripts.bundle, scripts.es5,  usemin, preViewDist));

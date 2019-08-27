@@ -53,3 +53,5 @@ const pngCopy = () => {
              .pipe(gulp.dest('./app/assets/images/sprites/'))
 };
 gulp.task('createSprite', gulp.series(deletePrevSvg, createSprite, copySpriteCss, moveSpriteSvg, pngCopy));
+
+module.exports = gulp.series(deletePrevSvg, createSprite, copySpriteCss, moveSpriteSvg, pngCopy);
